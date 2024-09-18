@@ -1,0 +1,300 @@
+Σε ποιες ηλικίες μπορεί να χρησιμοποιηθεί η μάσκα;	mask_faq/mask_and_age
+Για ποιες ηλικίες είναι δυνατή η χρήση της μάσκας;	mask_faq/mask_and_age
+Είναι δυνατή η χρήση μάσκας για όλες τις ηλικίες;	mask_faq/mask_and_age
+Από ποια ηλικία τα παιδιά πρέπει να φορούν μάσκα;	mask_faq/mask_and_age
+Κάνει τα παιδιά να φορούν μάσκα;	mask_faq/mask_and_age
+Από ποια ηλικία και πάνω χρειάζεται να φορέσουν μάσκα τα παιδιά;	mask_faq/mask_and_age
+Από πότε πρέπει να φοράει μάσκα το παιδάκι μου;	mask_faq/mask_and_age
+Από πότε να φορέσει μάσκα το παιδάκι μου;	mask_faq/mask_and_age
+Έχω ακούσει ότι τα μικρά παιδιά δεν πρέπει να φοράνε μάσκα	mask_faq/mask_and_age
+Μπορεί να χρησιμοποιηθεί η μάσκα από παιδιά όλων των ηλικιών;	mask_faq/mask_and_age
+Ποιο είναι το ηλικιακό όριο για την χρήση μάσκας;	mask_faq/mask_and_age
+Ποια είναι η ελάχιστη ηλικία που πρέπει να έχει ένα παιδί για να φορέσει μάσκα;	mask_faq/mask_and_age
+Τα μικρά παιδιά πρέπει να φοράνε;	mask_faq/mask_and_age
+Από ποια ηλικία και πάνω πρέπει να φοράνε μάσκα τα παιδιά;	mask_faq/mask_and_age
+Υπάρχει ηλικιακό όριο για τη χρήση μάσκας	mask_faq/mask_and_age
+Τα παιδιά πρέπει να φοράνε μάσκα;	mask_faq/mask_and_age
+Από ποια ηλικία κάνει να φοράνε μάσκα τα παιδιά;	mask_faq/mask_and_age
+Από ποια ηλικία και πάνω φοράνε μάσκα τα παιδιά;	mask_faq/mask_and_age
+Ξέρεις αν κάνεις να την φορούν τα παιδιά;	mask_faq/mask_and_age
+Ναι, θα ήθελα να ξέρω, χρειάζεται τα παιδιά να φοράνε μάσκα;	mask_faq/mask_and_age
+Πρέπει να φοράω μάσκα;	mask_faq/mask_and_age
+Η χρήση της μάσκας δημιουργεί πρόβλημα στην αναπνοή των παιδιών;	mask_faq/mask_kids_breathing
+Υπάρχει περίπτωση η μάσκα να δημιουργεί προβλήματα στην αναπνοή των παιδιών;	mask_faq/mask_kids_breathing
+Υπάρχει περίπτωση να προκύψουν αναπνευστικά προβλήματα στα παιδιά από τις μάσκες;	mask_faq/mask_kids_breathing
+Είναι δυνατόν να πάθουν τα παιδιά αναπνευστικό επεισόδιο από την καθημερινή χρήση μάσκας;	mask_faq/mask_kids_breathing
+Προκαλεί αναπνευστικά προβλήματα η χρήση μάσκας στα παιδιά;	mask_faq/mask_kids_breathing
+Μπορεί να προκληθεί πρόβλημα στην αναπνοή εξαιτίας της μάσκας στα παιδιά;	mask_faq/mask_kids_breathing
+Αν τρέχει το παιδί μου μπορεί να το ενοχλήσει η μάσκα;	mask_faq/mask_kids_breathing
+Αν παίζει ένα παιδί μπορεί να είναι επικίνδυνη η χρήση μάσκας	mask_faq/mask_kids_breathing
+Είναι επικίνδυνη η μάσκα κατά το παιχνίδι των παιδιών	mask_faq/mask_kids_breathing
+Είναι επικίνδυνη η μάσκα κατά την γυμναστική;	mask_faq/mask_kids_breathing
+Είναι επικίνδυνη η μάσκα όταν παίζει το παιδι;	mask_faq/mask_kids_breathing
+Θα δημιουργηθεί πρόβλημα στην αναπνοή του παιδιού μου λόγω της μάσκας;	mask_faq/mask_kids_breathing
+Προκαλεί προβλήματα στην αναπνοή των παιδιών η μάσκα	mask_faq/mask_kids_breathing
+Προκαλεί προβλήματα στην αναπνοή των παιδιών η χρήση της μάσκας;	mask_faq/mask_kids_breathing
+Το παιδί μου θα έχει πρόβλημα στην αναπνοή του λόγω της μάσκας;	mask_faq/mask_kids_breathing
+Το παιδί μου θα έχει πρόβλημα στην αναπνοή επειδή φοράει μάσκα;	mask_faq/mask_kids_breathing
+Το μικρούλη μου χρειάζεται να βάλει μάσκα. Θα πάθει τίποτα;	mask_faq/mask_kids_breathing
+Η μάσκα παρεμβαίνει στην ανάπτυξη των πνευμόνων των παιδιών;	mask_faq/mask_lung_development_kids
+Παρεμβαίνει η μάσκα στην σωστή ανάπτυξη των πνευμόνων των παιδιών;	mask_faq/mask_lung_development_kids
+Αναπτύσσονται σωστά οι πνεύμονες των παιδιών ενώ φοράνε καθημερινά μάσκες;	mask_faq/mask_lung_development_kids
+Μπορεί να παρέμβει η μάσκα στην ανάπτυξη των πνευμόνων;	mask_faq/mask_lung_development_kids
+Υπάρχει περίπτωση οι πνεύμονες να μην αναπτυχθούν από την μάσκα;	mask_faq/mask_lung_development_kids
+Υπάρχει περίπτωση οι πνεύμονες να μην αναπτυχθούν από την χρήση της μάσκας;	mask_faq/mask_lung_development_kids
+Είναι επικίνδυνο να χρησιμοποιούν τα παιδιά μάσκες για την ανάπτυξη των πνευμόνων τους;	mask_faq/mask_lung_development_kids
+Μπορούν να επηρεαστούν οι πνεύμονες αν φοράνε μάσκες τα παιδιά;	mask_faq/mask_lung_development_kids
+Μπορούν οι πνεύμονες να επηρεαστούν από την χρήση μάσκας στα παιδιά;	mask_faq/mask_lung_development_kids
+Προκαλούνται προβλήματα στο αναπνευστικό σύστημα των παιδιών;	mask_faq/mask_lung_development_kids
+Το αναπνευστικό σύστημα του παιδιού μου έχει επιπτώσεις από την μάσκα;	mask_faq/mask_lung_development_kids
+Μπορεί η μάσκα να εξασθενήσει το ανοσολογικό σύστημα του παιδιού;	mask_faq/mask_v_immuneSystem
+Μπορεί η μάσκα να εξασθενήσει το αμυντικό σύστημα του παιδιού;	mask_faq/mask_v_immuneSystem
+Υπάρχει περίπτωση η μάσκα να επηρεάσει το ανοσοποιητικό σύστημα των παιδιών μου;	mask_faq/mask_v_immuneSystem
+Είναι δυνατό να επηρεαστεί το ανοσοποιητικό των παιδιών μου από τις μάσκες;	mask_faq/mask_v_immuneSystem
+Επηρεάζει η μάσκα το ανοσοποιητικό των παιδιών;	mask_faq/mask_v_immuneSystem
+Μπορεί να επηρεάσει η μάσκα το ανοσοποιητικό;	mask_faq/mask_v_immuneSystem
+Υπάρχει περίπτωση η μάσκα να επηρεάζει το ανοσοποιητικό σύστημα των παιδιών;	mask_faq/mask_v_immuneSystem
+Τα παιδιά μου έχουν πεσμένο ανοσοποιητικό επειδή φοράνε μάσκα;	mask_faq/mask_v_immuneSystem
+Η μάσκα μπορεί να εξασθενήσει το αμυντικό σύστημα των παιδιών;	mask_faq/mask_v_immuneSystem
+Πες μου σε παρακαλώ αν η μάσκα εξασθενεί το αμυντικό σύστημα των παιδιών	mask_faq/mask_v_immuneSystem
+Γνωρίζεις αν η μάσκα εξασθενεί το ανοσοποιητικό του παιδιού μου;	mask_faq/mask_v_immuneSystem
+Επηρεάζει άραγε η χρήση μάσκας το ανοσοποιητικό σύστημα του παιδιού;	mask_faq/mask_v_immuneSystem
+Ναι, αλλά όταν τρέχω για παράδειγμα;	mask_faq/mask_and_workout
+Τελικά, είναι ασφαλές να χρησιμοποιείται η μάσκα όταν αθλούμαστε;	mask_faq/mask_and_workout
+Είναι ασφαλές να χρησιμοποιείται η μάσκα κατά την άθληση;	mask_faq/mask_and_workout
+Θα πάθω κάτι αν αθλούμαι και φοράω μάσκα;	mask_faq/mask_and_workout
+Υπάρχει πρόβλημα αν φοράω μάσκα κατά την άθληση;	mask_faq/mask_and_workout
+Είναι θέμα να φοράω μάσκα όταν αθλούμαι;	mask_faq/mask_and_workout
+Είναι ασφαλές να χρησιμοποείται η μάσκα όταν αθλούμαστε;	mask_faq/mask_and_workout
+Όταν αθλούμαι κάνει να φοράω μάσκα;	mask_faq/mask_and_workout
+Όταν γυμνάζομαι να φοράω μάσκα;	mask_faq/mask_and_workout
+Όταν αθλούμαι είναι σωστό να φοράω μάσκα;	mask_faq/mask_and_workout
+Όταν αθλούμαι είναι επικίνδυνο να φοράω μάσκα;	mask_faq/mask_and_workout
+Είναι ασφαλής η χρήση μάσκας κάτα την άθληση;	mask_faq/mask_and_workout
+Είναι ασφαλές να φοράω μάσκα όταν τρέχω;	mask_faq/mask_and_workout
+Όταν κάνω γυμναστική κάνει να φοράω μάσκα;	mask_faq/mask_and_workout
+Να φοράω μάσκα όταν τρέχω;	mask_faq/mask_and_workout
+Πρέπει να φοράω μάσκα όταν τρέχω;	mask_faq/mask_and_workout
+Πρέπει να φοράω μάσκα όταν κάνω γυμναστική;	mask_faq/mask_and_workout
+Είσαι σωστό να φοράω μάσκα όταν γυμνάζομαι;	mask_faq/mask_and_workout
+Είναι ασφαλής η χρήση μάσκας κατά την άθληση;	mask_faq/mask_and_workout
+Να φοράω μάσκα όταν κάνω γυμναστική;	mask_faq/mask_and_workout
+Θα πάθω κάτι αν φοράω μάσκα όταν γυμνάζομαι;	mask_faq/mask_and_workout
+Θα πάθω κάτι αν φοράω μάσκα όταν κάνω γυμναστική;	mask_faq/mask_and_workout
+Θα πάθω κάτι αν φοράω μάσκα όταν αθλούμαι;	mask_faq/mask_and_workout
+Θα πάθω κάτι αν φοράω μάσκα όταν τρέχω;	mask_faq/mask_and_workout
+Να φοράω μάσκα όταν αθλούμαι;	mask_faq/mask_and_workout
+Κάνει να φοράω μάσκα όταν κάνω γυμναστική;	mask_faq/mask_and_workout
+Ναι, αλλά ότνα γυμνάζομαι;	mask_faq/mask_and_workout
+Όταν γυμνάζομαι κάνει να φοράω μάσκα;	mask_faq/mask_and_workout
+Πρέπει να φοράω διπλή μάσκα;	mask_faq/double_mask
+Για την διπλή μάσκα τι ξέρεις;	mask_faq/double_mask
+Μπορείς να μου πεις αν πρέπει να φοράω διπλή μάσκα;	mask_faq/double_mask
+Είναι υποχρεωτική η διπλή μάσκα;	mask_faq/double_mask
+Πότε να φοράω διπλή μάσκα;	mask_faq/double_mask
+Δύο μάσκες πρέπει να φοράμε πλέον;	mask_faq/double_mask
+Πότε πρέπει να φοράω δύο μάσκες;	mask_faq/double_mask
+Γιατί να φοράω διπλή μάσκα;	mask_faq/double_mask
+Τι ξέρεις για τη διπλή μάσκα;	mask_faq/double_mask
+Χρειάζεται πλέον να φοράω δύο μάσκες;	mask_faq/double_mask
+Γιατί λένε οι ειδικοί οτι πρέπει να φοράμε διπλή μάσκα;	mask_faq/double_mask
+Όταν λένε οτι πρέπει να φοράμε διπλή μάσκα τι εννοούν;	mask_faq/double_mask
+Τι εννοούν όταν λένε για διπλή μάσκα;	mask_faq/double_mask
+Για τη διπλή μάσκα πρέπει η μία να είναι υφασμάτινη και η άλλη χειρουργική;	mask_faq/double_mask
+Είναι αναγκαστικό να φοράω διπλή μάσκα;	mask_faq/double_mask
+Διπλή μάσκα πρέπει να φοράμε πλέον;	mask_faq/double_mask
+Ξέρεις αν είναι υποχρεωτική η χρήση διπλής μάσκας;	mask_faq/double_mask
+Γνωρίζεις αν πρέπει να φοράω διπλή μάσκα όταν βγαίνω έξω;	mask_faq/double_mask
+Η διπλή μάσκα έχει μεγαλύτερη αποτελεσματικότητα;	mask_faq/double_mask
+Χρειάζεται να φοράω διπλή μάσκα;	mask_faq/double_mask
+ποσες μασκεσ να βαζω;	mask_faq/double_mask
+Είναι επικίνδυνο το να φοράω συνεχώς μάσκα;	mask_faq/mask_is_dangerous
+Είναι κακό για την υγεία μου η χρήση μάσκας;	mask_faq/mask_is_dangerous
+Είναι κακή η μάσκα για την υγεία μου;	mask_faq/mask_is_dangerous
+Μπορεί η μάσκα να επηρεάσει την υγεία μου;	mask_faq/mask_is_dangerous
+Μπορεί η μάσκα να μου προκαλέσει προβλήματα;	mask_faq/mask_is_dangerous
+Υπάρχει δυνατότητα η μάσκα να με βλάψει;	mask_faq/mask_is_dangerous
+Είναι δυνατόν η μάσκα να μου κάνει κακό;	mask_faq/mask_is_dangerous
+Είναι επικίνδυνη η μάσκα;	mask_faq/mask_is_dangerous
+Είναι επικίνδυνη η μάσκα γενικά;	mask_faq/mask_is_dangerous
+είναι επικίνδυνη η χρήση της μάσκας γενικά;	mask_faq/mask_is_dangerous
+Πόσο επικίνδυνη είναι η συνεχής χρήση μάσκας;	mask_faq/mask_is_dangerous
+Είναι επικίνδυνη η συνεχής χρήση μάσκας;	mask_faq/mask_is_dangerous
+Είναι επικίνδυν να φοράω συνεχώς μάσκα;	mask_faq/mask_is_dangerous
+Πόσο επικίνδυνο είναι να φοράω μάσκα όλη μέρα;	mask_faq/mask_is_dangerous
+Πόσο επικίνδυνο είναι να φοράω μάσκα συνεχώς	mask_faq/mask_is_dangerous
+Μπορεί η μάσκα να γίνει επικίνδυνη για την υγεία μου;	mask_faq/mask_is_dangerous
+Η μάσκα είναι επικίνδυνη αν την φοράω συνεχώς;	mask_faq/mask_is_dangerous
+Η μάσκα είναι επικίνδυνη αν την φοράω για πολλές ώρες;	mask_faq/mask_is_dangerous
+Η μάσκα είναι επικίνδυνη αν την φοράω όλη μέρα;	mask_faq/mask_is_dangerous
+Πες μου πόσο επικίνδυνη είναι η μάσκα;	mask_faq/mask_is_dangerous
+Πες μου αν είναι είναι επικίνδυνη η συνεχής χρήση μάσκας;	mask_faq/mask_is_dangerous
+Πες μου είναι επικίνδυνη η συνεχής χρήση μάσκας;	mask_faq/mask_is_dangerous
+Ξέρεις αν είναι επικίνδυνη η συνεχής χρήση μάσκας;	mask_faq/mask_is_dangerous
+Η μάσκα προστατεύει μόνο από τον κορωνοϊό;	mask_faq/mask_protection_v_infections
+Προσφέρει η μάσκα προστασία και έναντι άλλων ασθενειών;	mask_faq/mask_protection_v_infections
+Είναι ικανή η μάσκα να προστατεύσει και από άλλες ασθένειες;	mask_faq/mask_protection_v_infections
+Μπορεί η μάσκα να με προστατέψει και από άλλες ασθένεις που κυκλοφορούν;	mask_faq/mask_protection_v_infections
+Προσφέρει η μάσκα προστασία έναντι της γρίπης;	mask_faq/mask_protection_v_infections
+Μπορεί η μάσκα να με βοηθήσει να μην κολλήσω τίποτα άλλο;	mask_faq/mask_protection_v_infections
+Μπορεί μια μάσκα να με προστατέψει από άλλες ασθένειες;	mask_faq/mask_protection_v_infections
+Μπορεί μια μάσκα να με προστατέψει να μην κολλήσω άλλες ασθένειες;	mask_faq/mask_protection_v_infections
+Τι είδους μάσκα πρέπει να χρησιμοποιούμε;	mask_faq/best_mask_type
+Υπάρχει σωστός τύπος μάσκας;	mask_faq/best_mask_type
+Πρέπει να χρησιμοποιήσω συγκεκριμένες μάσκες έναντι του κορωνοϊού;	mask_faq/best_mask_type
+Είναι οι υφασμάτινες μάσκες οι καλύτερες για τον κοβιντ;	mask_faq/best_mask_type
+Ποιες μάσκες είναι καλύτερες;	mask_faq/best_mask_type
+Ποιες μάσκες είναι καλύτερο να προτιμάμε;	mask_faq/best_mask_type
+Ποιου είδους μάσκες θα ήταν καλύτερο να αγοράζω;	mask_faq/best_mask_type
+Ποιου είδους μάσκα θα ήταν καλύτερο να προτιμάμε;	mask_faq/best_mask_type
+ποιες μάσκες είναι οι καλύτερες;	mask_faq/best_mask_type
+Ποια μάσκα θεωρείται η πιο κατάλληλη;	mask_faq/best_mask_type
+ποια μάσκα να προτιμήσω τη χειρουργική ή την υφασμάτινη;	mask_faq/best_mask_type
+Τι είδους μάσκα είναι η καλύτερη;	mask_faq/best_mask_type
+Τι μάσκα θα πρέπει να φοράω για να προστατευτώ;	mask_faq/best_mask_type
+Ποια είναι η καλύτερη μάσκα;	mask_faq/best_mask_type
+Ποια μάσκα μου προτείνεις να φοράω;	mask_faq/best_mask_type
+Ποια μάσκα είναι η καλύτερη;	mask_faq/best_mask_type
+Ποιος τύπος μάσκας είναι καλύτερος;	mask_faq/best_mask_type
+Ποιος τύπος μάσκας θεωρείται από τους επιστήμονες ως πιο καλός;	mask_faq/best_mask_type
+Ποια μάσκα λένε οτι είναι καλύτερη;	mask_faq/best_mask_type
+Ποια μάσκα με προστατεύει περισσότερο;	mask_faq/best_mask_type
+Ποιος τύπος μάσκας είναι πιο προστατευτικός;	mask_faq/best_mask_type
+Πες μου ποιο είδος μάσκας είναι καλύτερο;	mask_faq/best_mask_type
+Ποια μάσκα να προτιμήσω	mask_faq/best_mask_type
+Ποια μάσκα είναι καλύτερη;	mask_faq/best_mask_type
+ποια είναι η καλύτερη μάσκα	mask_faq/best_mask_type
+Υπάρχει σωστός τρόπος για να φορέσω την υφασμάτινη μάσκα;	mask_faq/mask_proper_wearing
+Υπάρχει σωστός τρόπος για να φορέσω μια μάσκα;	mask_faq/mask_proper_wearing
+Ποιος είναι ο σωστός τρόπος για να φορέσω την μάσκα ώστε να προστατευτώ από τον κοβιντ;	mask_faq/mask_proper_wearing
+Τι πρέπει να προσέξω για την σωστή εφαρμογή μιας μάσκας;	mask_faq/mask_proper_wearing
+Πως φοράω την μάσκα σωστά;	mask_faq/mask_proper_wearing
+Ποια είναι η σωστή χρήση της μάσκας;	mask_faq/mask_proper_wearing
+Πως πρέπει να βάζω την μάσκα;	mask_faq/mask_proper_wearing
+Πως πρέπει να βάζω σωστά μια μάσκα;	mask_faq/mask_proper_wearing
+Ποια διαδιακασία να ακολουθήσω για να βάλω μια μάσκα σωστά;	mask_faq/mask_proper_wearing
+Ποιος είναι ο κατάλληλος τρόπος για να φορέσω την μάσκα μου;	mask_faq/mask_proper_wearing
+Ποιος είναι ο σωστός τρόπος να φοράμε τη μάσκα;	mask_faq/mask_proper_wearing
+Πως να φορέσω σωστά τη μάσκα;	mask_faq/mask_proper_wearing
+Ξέρεις να φοράς μια μάσκα;	mask_faq/mask_proper_wearing
+Πώς φοράω την μάσκα;	mask_faq/mask_proper_wearing
+Γνωρίζεις πως να φορέσω την μάσκα μου	mask_faq/mask_proper_wearing
+Θέλω να μου πεις ποια είναι η σωστη χρήση της μάσκας	mask_faq/mask_proper_wearing
+Ξέρεις πώς να φορέσω μια μάσκα σωστά;	mask_faq/mask_proper_wearing
+Πώς φοράω μάσκα μου;	mask_faq/mask_proper_wearing
+Πώς φοράω μάσκΑ;	mask_faq/mask_proper_wearing
+Γνωρίζεις πώς να φορέσω μια μάσκα σωστά;	mask_faq/mask_proper_wearing
+Πώς φοράω σωστά την μάσκα μου;	mask_faq/mask_proper_wearing
+Ποιος είναι ο σωστός τρόπος να φορέσω μια μάσκα;	mask_faq/mask_proper_wearing
+Πως πρέπει να φοράω σωστά τη μάσκα;	mask_faq/mask_proper_wearing
+Γεια σου. Γνωρίζεις για το πώς να φορέσω μια μάσκα σωστά;	mask_faq/mask_proper_wearing
+πώς πρέπει να φοραω μάσκα;	mask_faq/mask_proper_wearing
+Πως φοράμε τη μάσκα	mask_faq/mask_proper_wearing
+Πώς φοράω σωστά τη μάσκα;	mask_faq/mask_proper_wearing
+Ναι θέλω να μου πεις ποια είναι η σωστή χρήση της μάσκας	mask_faq/mask_proper_wearing
+Ναι πες μου ποια είναι η σωστή χρήση της μάσκας	mask_faq/mask_proper_wearing
+Πως φοράμε μια μάσκα σωστά;	mask_faq/mask_proper_wearing
+πώς φοράω τη μάσκα;	mask_faq/mask_proper_wearing
+Ναι πες μου για την σωστή χρήση της μάσκας	mask_faq/mask_proper_wearing
+Πως να φορεσω την μασκα;	mask_faq/mask_proper_wearing
+Με ποιον τρόπο πρέπει να φοράμε τη μάσκα μας	mask_faq/mask_proper_wearing
+τη μάσκα στο πηγούνι, ε	mask_faq/mask_proper_wearing
+πως βάζω μάσκα	mask_faq/mask_proper_wearing
+πως φοραω την μασκα;	mask_faq/mask_proper_wearing
+Πως φοραω μασκα;	mask_faq/mask_proper_wearing
+πώς φοράμε σωστά τη μάσκα;	mask_faq/mask_proper_wearing
+Ποια είναι τα οφέλη από τη χρήση της μάσκας;	mask_faq/mask_benefits
+Υπάρχουν οφέλη από την καθημερινή χρήση μιας μάσκας;	mask_faq/mask_benefits
+Με βοηθάει η καθημερινή χρήση μάσκας;	mask_faq/mask_benefits
+Υπάρχει κάποιο όφελος από την χρήση μάσκας;	mask_faq/mask_benefits
+Τι κερδίζω με το να φοράω μάσκα;	mask_faq/mask_benefits
+Σε τι οφελεί η μάσκα;	mask_faq/mask_benefits
+Που θα με οφελήσει η χρήση μάσκας;	mask_faq/mask_benefits
+Ποια τα οφέλη της μάσκας;	mask_faq/mask_benefits
+Που με οφελεί η μάσκα;	mask_faq/mask_benefits
+Που με βοηθάει η μάσκα;	mask_faq/mask_benefits
+Που θα με βοηθήσει η χρήση της μάσκας;	mask_faq/mask_benefits
+Πώς μπορεί να με βοηθήσει το να φοράω μάσκα;	mask_faq/mask_benefits
+Να φοράω μάσκα;	mask_faq/mask_benefits
+Η χρήση μάσκας με βοηθάει;	mask_faq/mask_benefits
+Γιατί είναι σημαντικό να φοράμε μάσκα;	mask_faq/mask_benefits
+Άκουσα ότι δεν πρέπει να φοράω μάσκα	mask_faq/mask_benefits
+Άρα είναι καλό να φοράω μάσκα γενικά;	mask_faq/mask_benefits
+Ποια είναι τα θετικά χρήσης της μάσκας;	mask_faq/mask_benefits
+Ποια είναι τα θετικά του να φοράω μάσκα;	mask_faq/mask_benefits
+Τι κερδίζω όταν φοράω μάσκα;	mask_faq/mask_benefits
+Οφελούμαι σε κάτι όταν φοράω μάσκα;	mask_faq/mask_benefits
+Ποιο είναι το κέρδος μου όταν φοράω μάσκα;	mask_faq/mask_benefits
+Υπάρχει κάποιο όφελος όταν φοράω μάσκα;	mask_faq/mask_benefits
+μασκες	mask_faq/mask_benefits
+Είναι ασφαλές να μην φοράω μάσκα;	mask_faq/mask_benefits
+Πώς προστατεύω ένα βρέφος που είναι πολύ μικρό για να φορέσει μάσκα;	mask_faq/mask_and_babies
+Πώς προστατεύω ένα βρέφος που είναι πολύ μικρό για μάσκα;	mask_faq/mask_and_babies
+Πώς προστατεύω ένα βρέφος που δεν μπορεί να φορέσει μάσκα;	mask_faq/mask_and_babies
+Τι κάνω αν η μάσκα είναι πολύ μεγάλη για το παιδί μου;	mask_faq/mask_and_babies
+Τι πρέπει να κάνω σε περίπτωση όπου είναι πολύ μεγάλη η μάσκα για το μωρό μου;	mask_faq/mask_and_babies
+Πώς να προστατέψω ένα μωράκι που δεν μπορεί να βάλει μάσκα;	mask_faq/mask_and_babies
+Αν ένα μωράκι δεν μπορεί να φορέσει μάσκα πώς μπορώ να το προστατέψω;	mask_faq/mask_and_babies
+Τι γίνεται με τα βρέφη που δεν μπορούν να φορέσουν μάσκα;	mask_faq/mask_and_babies
+Για τα παιδάκια που είναι πολύ μικρά γνωρίζεις πώς να τα προστατέψω;	mask_faq/mask_and_babies
+Για τα πολύ μικρά παιδάκια υπάρχει τρόπος προστασίας;	mask_faq/mask_and_babies
+Γνωρίζεις πώς να προστατέψω τα βρέφη που δεν μπορούν να φορέσουν μάσκα;	mask_faq/mask_and_babies
+Γνωρίζεις τίποτα για τα βρέφη και τις μάσκες;	mask_faq/mask_and_babies
+Πως να προστατέψω το παιδί μου που είναι πολύ μικρό για να φοράει μάσκα;	mask_faq/mask_and_babies
+Πως προστατεύω ένα βρέφος;	mask_faq/mask_and_babies
+Τα βρέφη πως τα προστατεύω, αφού δεν μπορώ να τους βάλω μάσκα;	mask_faq/mask_and_babies
+Με ποιον τρόπο μπορώ να προστατεύω το μωρό μου που είναι πολύ μικρό για να φοράει μάσκα;	mask_faq/mask_and_babies
+Ποιος είναι ο σωστός τρόπος να προστατεύω ένα βρέφος, αφού είναι μικρό για να του φορέσω μάσκα;	mask_faq/mask_and_babies
+Γιατί να μην το πιάσω;	mask_faq/why_not_touch_front_of_mask
+Γιατί να μην πιάσω το μπροστινό μέρος της μάσκας;	mask_faq/why_not_touch_front_of_mask
+Γιατί να μην το ακουμπήσω;	mask_faq/why_not_touch_front_of_mask
+Γιατί να μην ακουμπήσω το μπροστινό μέρος της μάσκας;	mask_faq/why_not_touch_front_of_mask
+Πες μου γιατί να μην ακουμπήσω το μπροστικό κομμάτι	mask_faq/why_not_touch_front_of_mask
+Γιατί να μην ακουμπήσω το μπροστικό κομμάτι;	mask_faq/why_not_touch_front_of_mask
+Και για ποιο λόγο να μην πιάσω το μπροστινό μέρος;	mask_faq/why_not_touch_front_of_mask
+Για ποιο λόγο μου λες να μην πιάσω το μπροστινό μέρος;	mask_faq/why_not_touch_front_of_mask
+Για ποιο λόγο να μην ακουμπήσω το μπροστικό μέρος της μάσκας;	mask_faq/why_not_touch_front_of_mask
+Για ποιο λόγο να μην πιάσω το μπροστινό μέρος;	mask_faq/why_not_touch_front_of_mask
+Για ποιο λόγο να μην το πιάσω;	mask_faq/why_not_touch_front_of_mask
+Για ποιο λόγο να μην το ακουμπήσω;	mask_faq/why_not_touch_front_of_mask
+Και γιατί λες να μην το ακουμπήσω;	mask_faq/why_not_touch_front_of_mask
+Και γιατί να προσέξω να μην πιάσω το μπροστινό μέρος;	mask_faq/why_not_touch_front_of_mask
+Πες μου γιατί με αποτρέπεις από το να ακουμπήσω το μπροστά μέρος της μάσκας;	mask_faq/why_not_touch_front_of_mask
+Γιατί να μην το αγγίξω;	mask_faq/why_not_touch_front_of_mask
+Γιατί να μην αγγίξω το μπροστινό μέρος της μάσκας;	mask_faq/why_not_touch_front_of_mask
+πώς και κάθε πότε πρέπει να πλένεται η υφασμάτινη μάσκα	mask_faq/washing_mask
+δεν μου είπες πώς πρέπει να πλένω τη μάσκα	mask_faq/washing_mask
+πώς πρέπει να πλένεται η υφασμάτινη μάσκα	mask_faq/washing_mask
+κάθε πότε πρέπει να αλλάζουμε μάσκα;	mask_faq/washing_mask
+Πως να πλύνω τη μάσκα;	mask_faq/washing_mask
+Πως πλένεται η υφασμάτινη μάσκα;	mask_faq/washing_mask
+Πως πλένεται η μάσκα;	mask_faq/washing_mask
+Πως να πλύνω την υφασμάτινη μάσκα;	mask_faq/washing_mask
+Κάθε πότε πρέπει να πλύνω τη μάσκα;	mask_faq/washing_mask
+Κάθε πότε να αλλάζω μάσκα;	mask_faq/washing_mask
+Μετά από πόσες χρήσεις να πετάω τη μάσκα;	mask_faq/washing_mask
+Την χειρουργική μάσκα πόσο καιρό να τη φοράω;	mask_faq/washing_mask
+Κάθε πόσο να πλένω τη μάσκα	mask_faq/washing_mask
+Πόσο συχνά να πλύνω την μάσκα;	mask_faq/washing_mask
+πότε πρέπει να φοράμε μάσκα;	mask_faq/is_mask_mandatory
+πρέπει να τη φοράω παντού;	mask_faq/is_mask_mandatory
+πού πρέπει να φοράω μάσκα;	mask_faq/is_mask_mandatory
+η μάσκα είναι υποχρεωτική;	mask_faq/is_mask_mandatory
+Όχι. Για το αν φοράνε μάσκες υποχρεωτικά	mask_faq/is_mask_mandatory
+Πότε χρειάζεται να φοράω μάσκα;	mask_faq/is_mask_mandatory
+Είναι υποχρεωτική η χρήση μάσκας στο εξωτερικό;	mask_faq/is_mask_mandatory
+Η μάσκα είναι υποχρεωτική μόνο σε εσωτερικούς χώρουςς	mask_faq/is_mask_mandatory
+Χρειάζεται να φοράω μάσκα όταν είμαι έξω;	mask_faq/is_mask_mandatory
+Όταν είμαι έξω χρειάζεται να φοράω μάσκα;	mask_faq/is_mask_mandatory
+Πότε πρέπει να φοράω μάσκα;	mask_faq/is_mask_mandatory
+Είναι υποχρεωτική η μάσκα;	mask_faq/is_mask_mandatory
+Είναι υποχρεωτική η χρήση μάσκας σε εξωτερικούς χώρους;	mask_faq/is_mask_mandatory
+Στην Ελλάδα είναι υποχρεωτική η μάσκα;	mask_faq/is_mask_mandatory
+Υποχρεωτικά πρέπει να φοράω μάσκα;	mask_faq/is_mask_mandatory
+Υποχρεωτική είναι η μάσκα;	mask_faq/is_mask_mandatory
+υποχρεωτική είναι η χρήση μάσκας;	mask_faq/is_mask_mandatory
+Στην χώρα μας είναι υποχρεωτική η μάσκα;	mask_faq/is_mask_mandatory
+Η χρήση μάσκας είναι υποχρεωτική;	mask_faq/is_mask_mandatory
+Η χρήση μάσκας είναι υποχρεωτική πλέον;	mask_faq/is_mask_mandatory
+Ακόμα είναι υποχρωτική η χρήση μάσκας;	mask_faq/is_mask_mandatory
+Ακόμα είναι υποχρωτική η χρήση μάσκας σε εξωτερικούς χώρους;	mask_faq/is_mask_mandatory

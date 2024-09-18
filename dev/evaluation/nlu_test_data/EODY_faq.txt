@@ -1,0 +1,785 @@
+Από πού προέρχονται οι κορωνοϊοί;	EODY_faq/origin
+Ποια είναι η προέλευση του κορωνοϊού;	EODY_faq/origin
+Απο πού προέρχεται ο κορωνοϊός;	EODY_faq/origin
+Πώς προέκυψε ο κορωνοϊός;	EODY_faq/origin
+Από που προήλθε ο covid;	EODY_faq/origin
+Είναι γνωστό το από που προήλθε ο κορωνοϊός;	EODY_faq/origin
+Γνωρίζεις που προέκυψε ο κορωνοϊός;	EODY_faq/origin
+Γνωρίζεις από που προήλθε ο κορωνοϊός;	EODY_faq/origin
+Πες μου από που προέρχεται ο κορωνοϊός;	EODY_faq/origin
+Ποια είναι η προέλευση του ιού	EODY_faq/origin
+Ο ιός από που έχει προέλθει;	EODY_faq/origin
+Ο κόβιντ από που προήλθε τελικά;	EODY_faq/origin
+Ξέρεις για την προέλευση του κορωνοϊού;	EODY_faq/origin
+Γνωρίζεις από που προήλθε ο κόβιντ;	EODY_faq/origin
+Πες μου πως προέκυψε ο κορωνοϊός	EODY_faq/origin
+Μπορείς να μου πεις από που προέρχεται ο κορωνοϊός;	EODY_faq/origin
+γιατί υπάρχει ο κορωνοι ός;	EODY_faq/origin
+πες μου για τον κωρονοιο	EODY_faq/origin
+Κορωναίος	EODY_faq/origin
+πες μου για τον κορωνοιο	EODY_faq/origin
+πες μου για το COVID	EODY_faq/origin
+COVID-19	EODY_faq/origin
+covid 19	EODY_faq/origin
+πες μου για τον covid	EODY_faq/origin
+από που ήρθε ο κορωνοι ός	EODY_faq/origin
+Από πού προήλθε ο Κορωναίος της Κίνας	EODY_faq/origin
+Από πού προήλθε ο sars κοβ	EODY_faq/origin
+Από που προήλθε ο κορονωιός;	EODY_faq/origin
+Ο παγκολίνος με ποιον τρόπο μετάδοσε τον νέο κοροναι ό στον άνθρωπο	EODY_faq/origin
+Συνδέεται η COVID-19 με την εμφάνιση διαβήτη στα παιδιά;	EODY_faq/covid_and_kids_diabetes_increment
+Aυξάνει τον κίνδυνο εμφάνισης σακχαρώδη διαβήτη στα παιδιά η COVID-19;	EODY_faq/covid_and_kids_diabetes_increment
+Υπάρχει κίνδυνος διαβήτη στα παιδιά με κόβιντ;	EODY_faq/covid_and_kids_diabetes_increment
+Μπορούν να εμφανίσουν διαβήτη τα παιδιά που κόλλησαν κοβιντ;	EODY_faq/covid_and_kids_diabetes_increment
+Υπάρχει ένδειξη αύξησης της εμφάνισης διαβήτη στα παιδιά που έχουν κολλήσει κόβιντ 19;	EODY_faq/covid_and_kids_diabetes_increment
+Μπορεί ο κορωνοϊός να προκαλέσει διαβήτη στα παιδιά;	EODY_faq/covid_and_kids_diabetes_increment
+Σχετίζεται η εμφάνιση διαβήτη με τον covid-19 στα παιδιά;	EODY_faq/covid_and_kids_diabetes_increment
+Μπορεί το παιδί μου να εμφανίσει διαβήτη λόγω του κορωνοϊού;	EODY_faq/covid_and_kids_diabetes_increment
+Τι είναι πανδημία	EODY_faq/pandemic_definition
+Τι σημαίνει ο όρος πανδημία	EODY_faq/pandemic_definition
+Πως ορίζεται η πανδημία;	EODY_faq/pandemic_definition
+Τι σημαίνει πανδημία;	EODY_faq/pandemic_definition
+Τι είναι πανδημία Θεανώ;	EODY_faq/pandemic_definition
+Ξέρεις τι είναι πανδημία;	EODY_faq/pandemic_definition
+Ξέρεις τι σημαίνει πανδημία;	EODY_faq/pandemic_definition
+Ξέρεις πως ορίζεται η πανδημία;	EODY_faq/pandemic_definition
+Πες μου τι είναι η πανδημία;	EODY_faq/pandemic_definition
+Θέλω να μου πεις τι είναι πανδημία	EODY_faq/pandemic_definition
+Γνωρίζεις να μου πεις τι είναι πανδημία;	EODY_faq/pandemic_definition
+Τι είναι ο κορωνοϊός;	EODY_faq/what_is_covid
+Πες μου τι είναι ο κορωνοϊός;	EODY_faq/what_is_covid
+Πως ορίζεται ο κορωνοϊός;	EODY_faq/what_is_covid
+Εξήγησέ μου τι είναι ο κορωνοϊός	EODY_faq/what_is_covid
+Πες μου τι είναι ο κορωνοϊός	EODY_faq/what_is_covid
+Ο κορωνοϊός τι είναι;	EODY_faq/what_is_covid
+Ξέρεις τι είναι ο κορωνοϊός;	EODY_faq/what_is_covid
+Γνωρίζεις τι είναι ο κορωνοϊός;	EODY_faq/what_is_covid
+Τι είναι ο κορωναϊός	EODY_faq/what_is_covid
+Καλώς! Πείτε μου τι είναι ο κορονοϊός	EODY_faq/what_is_covid
+Τι ακριβώς είναι ο covid 19?	EODY_faq/what_is_covid
+τι είναι ο covid-19 και τι ο Sars-Cov-2?	EODY_faq/what_is_covid
+Υπάρχει διαφορά ανάμεσα σε covid-19 και Sars-Cov-2?	EODY_faq/what_is_covid
+Τι είναι ο Sars-Cov-2?	EODY_faq/what_is_covid
+Ο κορωνοϊός είναι το ίδιο με το Sars-Cov-2?	EODY_faq/what_is_covid
+Γνωρίζεις τι είναι ο κορωνοϊός Θεανώ;	EODY_faq/what_is_covid
+Ποια είναι η διαφορά ανάμεσα σε κοβιντ και σαρσ;	EODY_faq/what_is_covid
+Τι σημαίνει Sars-Cov-2?	EODY_faq/what_is_covid
+Ξέρεις τι σημαίνει κορωνοϊος;	EODY_faq/what_is_covid
+Μπορείς να μου πεις τι είναι ο κορωνοϊός;	EODY_faq/what_is_covid
+Μπορείς να μου πεις τι είναι ο Sars-Cov-2?	EODY_faq/what_is_covid
+Τι ειναι ο κορονοιος	EODY_faq/what_is_covid
+τι ειναι ο κορονοιος	EODY_faq/what_is_covid
+τι ηνε κοβιτ	EODY_faq/what_is_covid
+Τι πιστεύεις για τον κορωνοΙ ό;	EODY_faq/what_is_covid
+τι είναι ο κορωνοι ός;	EODY_faq/what_is_covid
+Τι είναι ο κορωνοιος	EODY_faq/what_is_covid
+Τι είναι κορωνοι ός;	EODY_faq/what_is_covid
+Τι είναι ο κορονοι ός	EODY_faq/what_is_covid
+Τι είναι κορωνοιος	EODY_faq/what_is_covid
+Τι είναι αυτός ο ιός	EODY_faq/what_is_covid
+τι ειναι ο ιος	EODY_faq/what_is_covid
+Τί είναι ο covid	EODY_faq/what_is_covid
+Τι είναι ο κοροναι ός	EODY_faq/what_is_covid
+Τι είναι ο covid 19	EODY_faq/what_is_covid
+Τι ειναι κορωνοι ός	EODY_faq/what_is_covid
+τι ειναι ο κορωνοιος	EODY_faq/what_is_covid
+Ποιος είναι ο τρόπος μετάδοσης του ιού;	EODY_faq/way_of_transmission
+Πώς μεταδίδεται ο κορωνοϊός;	EODY_faq/way_of_transmission
+Με ποιον τρόπο εξαπλώνεται;	EODY_faq/way_of_transmission
+Με ποιον τρόπο μεταδίδεται ο κορωνοϊός;	EODY_faq/way_of_transmission
+Ξέρεις τον τρόπο μετάδοσης;	EODY_faq/way_of_transmission
+Γνωρίζεις με ποιον τρόπο μεταδίδεται ο covid;	EODY_faq/way_of_transmission
+Ξέρεις ποιος είναι ο τρόπος μετάδοσης του SARS-CoV-2 ;	EODY_faq/way_of_transmission
+Ξέρεις ποιος είναι ο τρόπος μετάδοσης του κορωνoϊού ;	EODY_faq/way_of_transmission
+Πως κολλαει ο κορονοιος;	EODY_faq/way_of_transmission
+Ξέρεις ποιος είναι ο τρόπος μετάδοσης του κορωναϊού ;	EODY_faq/way_of_transmission
+Ξέρεις ποιος είναι ο τρόπος μετάδοσης του covid;	EODY_faq/way_of_transmission
+Με ποιο τρόπο μεταδίδεται;	EODY_faq/way_of_transmission
+Πώς μεταδίδεται ο κορονοϊός;	EODY_faq/way_of_transmission
+Μπορείς να μου πεις πως μεταδίδεται ο κορονοϊός;	EODY_faq/way_of_transmission
+Πως μεταδίδεται ο κορονοιός;	EODY_faq/way_of_transmission
+Πως κολλαω covid?	EODY_faq/way_of_transmission
+Ο κορονοϊός μεταδίδεται μέσα στο νερό;	EODY_faq/way_of_transmission
+Ποιος είναι ο τρόπος μετάδοσης;	EODY_faq/way_of_transmission
+πώς μεταδίδεται	EODY_faq/way_of_transmission
+ο τρόπος μετάδοσης ποιος είναι;	EODY_faq/way_of_transmission
+πώς μεταδίδεται ο κορωνοϊός	EODY_faq/way_of_transmission
+πώς μεταδίδεται ο κόβιντ;	EODY_faq/way_of_transmission
+πώς μεταδίδεται ο ιος;	EODY_faq/way_of_transmission
+Μεταδίδεται ο κορωνοϊός με την επαφή;	EODY_faq/way_of_transmission
+Πώς μεταδίδεται ο ιός;	EODY_faq/way_of_transmission
+Πως μεταδίδεται ο κορωνοϊός?	EODY_faq/way_of_transmission
+Πως μεταδίδεται ο κορωνοϊος;	EODY_faq/way_of_transmission
+Ήθελα να σε ρωτήσω για τη μετάδοση	EODY_faq/way_of_transmission
+μετάδοση	EODY_faq/way_of_transmission
+ο ιός μεταδίδεται με την αφή;	EODY_faq/way_of_transmission
+τρόπος μετάδοσης	EODY_faq/way_of_transmission
+Με ποιον τρόπο κολλάει ο κόβιντ;	EODY_faq/way_of_transmission
+Πώς είναι πιθανό να κολλήσω κόβιντ;	EODY_faq/way_of_transmission
+Ξέρεις με ποιον τρόπο μπορεί να κολλάει κάποιος κορωνοϊό;	EODY_faq/way_of_transmission
+Με ποιον τρόπο κολλάς κορώνα;	EODY_faq/way_of_transmission
+Με ποιους τρόπους μπορεί κάποιος να κολλήσει κόβιντ;	EODY_faq/way_of_transmission
+Πως μεταδίδεται ο κορωνοϊό;	EODY_faq/way_of_transmission
+όταν γελάω μπορώ να μεταδόσω τον ιό;	EODY_faq/way_of_transmission
+Πώς κολλάει ο κορωνοι ός;	EODY_faq/way_of_transmission
+Πώς κολλάει ο Covid;	EODY_faq/way_of_transmission
+Πως μεταδίδεται;	EODY_faq/way_of_transmission
+Πώς μεταδίδεται ο κορονοι ός	EODY_faq/way_of_transmission
+πως μεταδιδεται ο κορωνοιος	EODY_faq/way_of_transmission
+Ποιος είναι ο κυριότερος τρόπος μετάδοσης του;	EODY_faq/way_of_transmission
+Ποιοι οι τρόποι μετάδοσης του κορονοι ού;	EODY_faq/way_of_transmission
+Ποιοι οι τρόποι μετάδοσης του κορονοιου	EODY_faq/way_of_transmission
+Ξέρεις ποιος είναι ο τρόπος μετάδοσης του κορωνοιού;	EODY_faq/way_of_transmission
+πώς κολλάει ο κορονοι ός	EODY_faq/way_of_transmission
+Πώς μεταδίδεται	EODY_faq/way_of_transmission
+Ποιος είναι ο χρόνος επώασης για την εμφάνιση της νόσου;	EODY_faq/time_before_symptoms
+Πόσο καιρό μετά εμφανίζονται συμπτώματα;	EODY_faq/time_before_symptoms
+Πόσες ημέρες πρέπει να περιμένω για να εμφανίσω συμπτώματα αν έχω κολλήσει κορωνοϊό;	EODY_faq/time_before_symptoms
+Μετά από πόσες μέρες εμφανίζονται τα συμπτώματα;	EODY_faq/time_before_symptoms
+Πόσες μέρες μετά την έκθεση στον ιό εμφανίζονται συμπτώματα;	EODY_faq/time_before_symptoms
+Μετά από πόσες μέρες θα εμφανιστούν συμπτώματα;	EODY_faq/time_before_symptoms
+Γνωρίζεις τον μέσο όρο χρόνου για την εμφάνιση συμπτωμάτων;	EODY_faq/time_before_symptoms
+Πόσο πρέπει να περιμένω για να δω συμπτώματα;	EODY_faq/time_before_symptoms
+Υπάρχει συγκεκριμένος χρόνος όπου εμφανίζονται συμπτώματα;	EODY_faq/time_before_symptoms
+Σε πόσες μέρες γίνεται η εμφάνιση συμπτωμάτων;	EODY_faq/time_before_symptoms
+Σε πόσες μέρες εμφανίζονται τα συμπτώματα;	EODY_faq/time_before_symptoms
+Πότε θα εμφανιστούν συμπτώματα αν είμαι φορέας;	EODY_faq/time_before_symptoms
+Αν έχω κολλήσει σε πόσες μέρες θα εμφανιστούν συμπτώματα;	EODY_faq/time_before_symptoms
+Πόσο καιρό κάνουν να εμφανιστούν συμπτώματα από όταν κολλήσει κάποιος κορωνοϊό;	EODY_faq/time_before_symptoms
+πότε εκδηλώνονται συνήθως τα συμπτώματα;	EODY_faq/time_before_symptoms
+Πότε μια περίπτωση της νόσου θεωρείται περισσότερο μεταδοτική;	EODY_faq/infectious
+Υπάρχουν συγκεκριμένες περιπτώσεις επαφών όπου είναι πιο μεταδοτικός ο κορωνοϊός;	EODY_faq/infectious
+Ποιος μεταδίδει περισσότερο τον Covid-19;	EODY_faq/infectious
+Ποιες περιπτώσεις θεωρούνται πιο μεταδοτικές;	EODY_faq/infectious
+Ποιος είναι πιο μεταδοτικός φορέας;	EODY_faq/infectious
+Πότε κάποιος είναι πιο μεταδοτικός;	EODY_faq/infectious
+Πες μου ποιος θεωρείτε περισσότερο μεταδοτικός;	EODY_faq/infectious
+Πότε είναι πιο μεταδοτικός ο ιός;	EODY_faq/infectious
+Γνωρίζεις περιπτώσεις όπου ο ιός είναι πιο μεταδοτικός;	EODY_faq/infectious
+Ποιες επαφές είναι πιο μεταδοτικές;	EODY_faq/infectious
+Πότε κάποιες επαφές είναι περισσότερο μεταδοτικές;	EODY_faq/infectious
+Γνωρίζεις ποιες επαφές είναι περισσότερο μεταδοτικές;	EODY_faq/infectious
+Ποιος φορέας θεωρείται περισσότερο μεταδοτικός	EODY_faq/infectious
+Ξέρεις πότε μια περίπτωση της νόσου θεωρείται περισσότερο μεταδοτική;	EODY_faq/infectious
+Για πες μου ποιος μεταδίδει περισσότερο τον Covid-19;	EODY_faq/infectious
+Υπάρχει θεραπεία για τον κορωνοϊό;	EODY_faq/therapy
+Υπάρχει θεραπεία για την λοίμωξη από κορωνοϊό;	EODY_faq/therapy
+Ποια είναι η θεραπεία για τον κορωνοϊό;	EODY_faq/therapy
+Τι φάρμακα δίνουν στους ασθενείς;	EODY_faq/therapy
+Ποια διαδικασία ακολουθείται για τη θεραπεία του κορωνοϊού;	EODY_faq/therapy
+Πως θεραπεύεται ο ιός;	EODY_faq/therapy
+Έχει βρεθεί κάποια θεραπεία για τον κορωνοϊό;	EODY_faq/therapy
+Είναι γνωστή καμία θεραπεία για τον κορωνοϊό;	EODY_faq/therapy
+Υπάρχει κάποιο φάρμακο για τον κορονοϊό;	EODY_faq/therapy
+υπάρχει θεραπεία;	EODY_faq/therapy
+Ποια είναι η θεραπεία;	EODY_faq/therapy
+Ποια θεραπεία υπάρχει;	EODY_faq/therapy
+Ποια είναι η θεραπεία κατά του κορωνοϊού;	EODY_faq/therapy
+Υπαρχει φαρμακο για τον κορωνοιο;	EODY_faq/therapy
+ποιο είναι το σχήμα για την υποστηρικτική θεραπεία από την νόσο;	EODY_faq/therapy
+Τι φάρμακα μπορεί να πάρει ένας ασθενής;	EODY_faq/therapy
+Τι φάρμακα περιλαμβάνει η υποστηρικτική θεραπεία	EODY_faq/therapy
+Πω θεραπεύεται	EODY_faq/therapy
+Τι να κάνω αν έχω στενή επαφή με κάποιον που έχει κορωνοϊό;	EODY_faq/in_touch
+Μένω μαζί με άτομο που πάσχει από κορωνοϊό. Τι να κάνω;	EODY_faq/in_touch
+Έχω έρθει σε επαφή με κάποιον που έχει κορωνοϊό, πρέπει να μπω σε καραντίνα;	EODY_faq/in_touch
+Όταν έχεις στενή επαφή με κάποιον με κορωνοϊό, τι κάνεις;	EODY_faq/in_touch
+Ήρθα σε επαφή με φορέα του ιού, τι πρέπει να κάνω;	EODY_faq/in_touch
+Πώς να κινηθώ αν έρθω σε επαφή με φορέα;	EODY_faq/in_touch
+Τι να κάνω αν βρεθώ με φορέα του ιού;	EODY_faq/in_touch
+Τι θα πρέπει να κάνω αν ξέρω ότι ήρθα σε επαφή με κάποιον που πάσχει από κορωνοϊό;	EODY_faq/in_touch
+Έχω συναντηθεί με κάποιον που έχει κορωνοϊό τι κάνω;	EODY_faq/in_touch
+Τι σημαίνει έχω έρθει σε επαφή με τον ιό;	EODY_faq/in_touch
+Ποιο άτομο θεωρείται υψηλού κινδύνου επαφή;	EODY_faq/in_touch
+Είναι ασφαλής η λήψη πακέτων ή δεμάτων από περιοχές με κυκλοφορία του ιού στην κοινότητα;	EODY_faq/packages
+Υπάρχει περίπτωση να κολλήσω αν πάρω κάποιο πακέτο από περιοχές με έντονο επιδημιολογικό φορτίο;	EODY_faq/packages
+Είναι επικίνδυνο το να λάβω κάποια δέματα από χώρες του εξωτερικού;	EODY_faq/packages
+Είναι ασφαλές να παίρνω πακέτα από το εξωτερικό;	EODY_faq/packages
+Είναι επικίνδυνη η παραλαβή πακέτων μέσω κούριερ;	EODY_faq/packages
+Είναι ασφαλές να παίρνω πράγματα και να μου αποστέλλονται με κούριερ;	EODY_faq/packages
+Γνωρίζεις αν υπάρχει κίνδυνος να κολλήσω από δέματα που πήρα στα ΕΛΤΑ;	EODY_faq/packages
+Είναι γνωστό αν κολλάω από δέματα που έχω πάρει από μεταφορικές;	EODY_faq/packages
+Γνωρίζουμε μπορείς να κολλήσεις από δέμα που έχει στείλει κάποιος που έχει κόβιντ;	EODY_faq/packages
+Ξέρεις αν υπάρχει περίπτωση να κολλήσω από δέματα που πήρα από τα ΕΛΤΑ;	EODY_faq/packages
+Γνωρίζεις αν υπάρχει κίνδυνος να κολλήσω από δέματα που παρήγγειλα;	EODY_faq/packages
+Είναι γνωστό αν κολλάω από δέματα που έχω παραγγείλει;	EODY_faq/packages
+Γνωρίζουμε μπορείς να κολλήσεις από δέμα που περιμένω;	EODY_faq/packages
+Ξέρεις αν υπάρχει περίπτωση να κολλήσω από δέματα που παρήγγειλα;	EODY_faq/packages
+Υπάρχει κίνδυνος να κολλήσω από πράγματα που παρήγγειλα;	EODY_faq/packages
+Είναι πιθανό να κολλήσω από πράγματα που θα έρθουν από το εξωτερικό;	EODY_faq/packages
+Είναι ασφαλής η λήψη δεμάτων από το εξωτερικό;	EODY_faq/packages
+στα πακέτα ζει ο κορωνοϊός; θα μου έρθει ένα	EODY_faq/packages
+Τι σημαίνει διασπορά στην κοινότητα;	EODY_faq/community_spread
+Ο όρος διασπορά στην κοινότητα τι σημαίνει;	EODY_faq/community_spread
+Έχω ακούσει για τον όρο διασπορά στην κοινότητα. Ποια είναι η σημασία του;	EODY_faq/community_spread
+Πως ορίζεται η διασπορά στην κοινότητα;	EODY_faq/community_spread
+Πες μου, τι είναι η διασπορά στην κοινότητα;	EODY_faq/community_spread
+Ξέρεις τι σημαίνει η διασπορά του κορωνοϊού στην κοινότητα;	EODY_faq/community_spread
+Διασπορά στην κοινότητα τι είναι;	EODY_faq/community_spread
+Διασπορά στην κοινότητα τι σημαίνει;	EODY_faq/community_spread
+Τι σημαίνει ο όρος διασπορά στην κοινότητα;	EODY_faq/community_spread
+Τι σημαίνει διασπορά στην κοινότητα ξέρεις;	EODY_faq/community_spread
+Υπάρχει κίνδυνος να προσβληθεί κανείς από την νόσο του κορωνοϊού μέσω των τροφίμων;	EODY_faq/food
+Υπάρχει περίπτωση να μεταδοθεί ο ιός μέσα από τα τρόφιμα;	EODY_faq/food
+Είναι δυνατόν να κολλήσω μέσω της τροφής;	EODY_faq/food
+Μπορεί να κολλήσω μέσω του φαγητού;	EODY_faq/food
+Υπάρχει περίπτωση να προσβληθώ από κορωνοϊού μέσω τροφίμων;	EODY_faq/food
+Ο κορωνοϊός μεταδίδεται μέσω του φαγητού;	EODY_faq/food
+Γίνεται μετάδοση του κορωνοϊού μέσω της τροφής;	EODY_faq/food
+Μεταδίδεται ο ιός μέσω των τροφίμων;	EODY_faq/food
+Μπορεί ο κόβιντ να μεταδοθεί από τα φαγητά;	EODY_faq/food
+Μπορεί ο κοβιντ να μεταδοθεί με τα τρόφιμα;	EODY_faq/food
+Μπορεί ο ιός να μεταφερθεί μέσω τροφίμων;	EODY_faq/food
+Μεταδίδεται ο ιός από τα τρόφιμα;	EODY_faq/food
+Μεταδίδεται ο κορωνοϊός από τα τρόφιμα;	EODY_faq/food
+Τα φαγητά είναι πηγή μετάδοσης του κορωνοϊού;	EODY_faq/food
+Τα τρόφιμα είναι πηγή μετάδοσης του κορωνοϊού;	EODY_faq/food
+Η τροφή είναι πηγή μετάδοσης του κορωνοϊού;	EODY_faq/food
+Τα τρόφιμα θεωρούνται πηγή μετάδοσης του κορωνοϊού;	EODY_faq/food
+κολλάει ο κορονοιός από το φαγητό	EODY_faq/food
+Τι είναι το σύνδρομο Long Covid και ποια είναι τα συμπτώματα του;	EODY_faq/long_covid
+Τι γνωρίζετε για το «σύνδρομο Long Covid» και ποιες είναι οι επιπτώσεις του στην υγεία του ανθρώπου;	EODY_faq/long_covid
+Τι είναι το σύνδρομο Long Covid;	EODY_faq/long_covid
+Ποιες είναι οι συνέπειες του «Long Covid» στον οργανισμό;	EODY_faq/long_covid
+Ποια είναι τα συμπτώματα του Long Covid;	EODY_faq/long_covid
+Ποιες είναι οι επιπτώσεις της Long Covid;	EODY_faq/long_covid
+Τι είναι το long covid και τι συμπτώματα έχει;	EODY_faq/long_covid
+Πώς μπορούμε να προστατευθούμε από το σύνδρομο Long Covid;	EODY_faq/long_covid_protection
+Ο εμβολιασμός μειώνει την πιθανότητα να εμφανίσω συμπτώματα του σύνδρομου Long Covid;	EODY_faq/long_covid_protection
+Ο εμβολιασμός μειώνει τον κίνδυνο Long Covid και τα συμπτώματα της;	EODY_faq/long_covid_protection
+Το εμβόλιο κατά του κορονοϊού μειώνει την πιθανότητα εμφάνισης συμπτωμάτων Long Covid;	EODY_faq/long_covid_protection
+Πώς μπορώ να προστατευτώ από το σύνδρομο Long Covid;	EODY_faq/long_covid_protection
+Ο εμβολιασμός περιορίζει τα συμπτώματα της Long Covid;	EODY_faq/long_covid_protection
+Τα εμβόλια μειώνουν τον κίνδυνο μόλυνσης και εκδήλωσης της Long Covid;	EODY_faq/long_covid_protection
+Τα εμβόλια βοηθούν στο να αποτρέψουν τον Long Covid;	EODY_faq/long_covid_protection
+Τα παιδιά πλήττονται από το σύνδρομο Long Covid;	EODY_faq/long_covid_children
+Το σύνδρομο Long Covid πλήττει μόνο τους ενήλικες;	EODY_faq/long_covid_children
+Το σύνδρομο Long Covid πλήττει μόνο τους ενήλικες ή και τα παιδιά;	EODY_faq/long_covid_children
+Το Long Covid πώς επηρεάζει τα παιδιά;	EODY_faq/long_covid_children
+Τι επιπτώσεις έχει στην ψυχολογία των παιδιών το σύνδρομο Long Covid;	EODY_faq/long_covid_children
+Τα παιδιά μπορούν να εμφανίσουν long covid;	EODY_faq/long_covid_children
+Πώς πρέπει να πλένω τα χέρια μου;	EODY_faq/how_to_wash_hands
+Υπάρχει σωστός τρόπος πλυσίματος;	EODY_faq/how_to_wash_hands
+Πως πρέπει να πλένω τα χέρια μου σωστά;	EODY_faq/how_to_wash_hands
+Μπορείς να μου πεις πώς πλένω τα χέρια μου;	EODY_faq/how_to_wash_hands
+Μπορείς να μου πεις πως να πλύνω τα χέρια μου σωστά;	EODY_faq/how_to_wash_hands
+Πώς μπορώ να πλένω τα χέρια μου σωστά;	EODY_faq/how_to_wash_hands
+Ξέρεις πως να πλένω σωστά τα χέρια μου;	EODY_faq/how_to_wash_hands
+Πως πρέπει να πλένουμε τα χέρια μας;	EODY_faq/how_to_wash_hands
+Ποιος είναι ο σωστός τρόπος για να πλύνω τα χέρια μου;	EODY_faq/how_to_wash_hands
+Θέλω να μάθω τον ενδεδειγμένο τρόπο για να πλένω τα χέρια μου.	EODY_faq/how_to_wash_hands
+Πως προτείνουν οι ειδικοί να πλένουμε τα χέρια μας;	EODY_faq/how_to_wash_hands
+Πως να πλύνω τα χέρια μου σωστά;	EODY_faq/how_to_wash_hands
+Πως πρέπει να πλένω τα χέρια μου;	EODY_faq/how_to_wash_hands
+πώς πρέπει να πλένω τα χέρια μου;	EODY_faq/how_to_wash_hands
+πώς πλένουμε τα χέρια μας;	EODY_faq/how_to_wash_hands
+σωστό πλύσιμο χεριών	EODY_faq/how_to_wash_hands
+πόσο πρέπει να διαρκεί το πλύσιμο χεριών;	EODY_faq/how_to_wash_hands
+πως μπορώ να πλύνο τα χέρια μου;	EODY_faq/how_to_wash_hands
+Πώς πλένω τα χέρια μου;	EODY_faq/how_to_wash_hands
+Ποιος είναι ο σωστός τρόπος πλυσίματος των χεριών;	EODY_faq/how_to_wash_hands
+Πώς πρέπει να πλένουμε τα χέρια μας;	EODY_faq/how_to_wash_hands
+Έχεις μήπως καμιά συμβουλή για το πλύσιμο των χεριών;	EODY_faq/how_to_wash_hands
+πώς πρέπει να πλένω τα χέρια μου δηλαδή;	EODY_faq/how_to_wash_hands
+ναι πως πλενω τα χερια	EODY_faq/how_to_wash_hands
+Πως να πλύνω τα χέρια μου;	EODY_faq/how_to_wash_hands
+πώς γίνεται το σωστό πλύσιμο των χεριών;	EODY_faq/how_to_wash_hands
+πώς πλένω σωστά τα χέρια μου;	EODY_faq/how_to_wash_hands
+Πως πλενω χερια;	EODY_faq/how_to_wash_hands
+Πρέπει να κρατάω απόσταση από τους άλλους ανθρώπους;	EODY_faq/social_distancing
+Γνωρίζεις αν υπάρχει κατάλληλη απόσταση που πρέπει να κρατάω για να μην κολλήσω;	EODY_faq/social_distancing
+Υπάρχει κατάλληλη απόσταση για να μην γίνω φορέας του κορωνοϊού;	EODY_faq/social_distancing
+Αν κρατάω απόσταση από τους άλλους ανθρώπους υπάρχει περίπτωση να κολλήσω;	EODY_faq/social_distancing
+Υπάρχει βέλτιστη απόσταση για να μην κολλήσω;	EODY_faq/social_distancing
+Τι σημαίνει κρατάω αποστάσεις ασφαλείας;	EODY_faq/social_distancing
+Ποια είναι η σωστή απόσταση που πρέπει να κρατάμε από τους άλλους;	EODY_faq/social_distancing
+Τι είναι το social distancing?	EODY_faq/social_distancing
+Social distancing τι σημαίνει;	EODY_faq/social_distancing
+Όταν λένε να κρατάμε αποστάσεις τι ακριβώς εννοούν;	EODY_faq/social_distancing
+Τι είναι η κοινωνική αποστασιοποίηση;	EODY_faq/social_distancing
+Ποια είναι η σωστή κοινωνική αποστασιοποίηση;	EODY_faq/social_distancing
+Πες μου για κοινωνική αποστασιοποίηση	EODY_faq/social_distancing
+Τι εννούν όταν λένε "κρατάμε αποστάσεις";	EODY_faq/social_distancing
+αν καθομαι 3 μετρα μακρια απο καποιον φορεα ειμαι ασφαλης;	EODY_faq/social_distancing
+ποση αποσταση πρεπει να κραταω	EODY_faq/social_distancing
+Τι απόσταση θεωρείται ασφαλής;	EODY_faq/social_distancing
+Υπάρχει σωστός τρόπος να βήχω, ώστε να μην μεταδώσω τον ιό;	EODY_faq/how_to_cough
+Πώς μπορώ να βήξω ώστε να μην μεταδόσω τον ιό;	EODY_faq/how_to_cough
+Πως πρέπει να βήχω;	EODY_faq/how_to_cough
+Πες μου ποιος είναι ο σωστός τρόπος να βήχω	EODY_faq/how_to_cough
+Πώς βήχω;	EODY_faq/how_to_cough
+Πώς πρέπει να βήξω σωστά;	EODY_faq/how_to_cough
+Ποιος είναι ο βέλτιστος τρόπος για να βήχεις ώστε να μην κολλήσεις κορωνοϊό;	EODY_faq/how_to_cough
+Υπάρχει σωστός τρόπος για να βήξω;	EODY_faq/how_to_cough
+Υπάρχει τρόπος να βήξω για να μην κολλήσω;	EODY_faq/how_to_cough
+Γνωρίζεις αν μπορώ να βήξω με κάποιον τρόπο ώστε να μην κολλήσω τους άλλους;	EODY_faq/how_to_cough
+υπάρχει σωστός τρόπος βηξίματος;	EODY_faq/how_to_cough
+Ποιες είναι οι ευπαθείς ομάδες;	EODY_faq/high_risk_groups
+Ποιοι ανήκουν στην ομάδα υψηλού κινδύνου;	EODY_faq/high_risk_groups
+Μόνο οι ηλικιωμένοι θεωρούνται ευπαθής ομάδα;	EODY_faq/high_risk_groups
+Ποιοι ανήκουν στις ευπαθείς ομάδες;	EODY_faq/high_risk_groups
+Ποια είναι η ομάδα υφηλού κινδύνου για τον κορωνοϊό;	EODY_faq/high_risk_groups
+Ποιοι θεωρούνται ευπαθείς ομάδες λόγω του κορωνοϊού;	EODY_faq/high_risk_groups
+Ξέρεις ποιοι ανήκουν στην ομάδα υψηλού κινδύνου για την πανδημία;	EODY_faq/high_risk_groups
+Ποιοι είναι πιο ευάλωτοι στον κορωνοϊό;	EODY_faq/high_risk_groups
+Ποιοι είναι πιο ευπαθείς για τον κορωνοϊό;	EODY_faq/high_risk_groups
+Ποιοι κινδυνεύουν περισσότερο από τον κορωνοϊό;	EODY_faq/high_risk_groups
+Ποιοι κινδυνεύουν παραπάνω;	EODY_faq/high_risk_groups
+Ποιες ομάδες είναι πιο ευάλωτες στον κορονοϊό;	EODY_faq/high_risk_groups
+Ποιοι αντιμετωπίζουν υψηλότερους κινδύνους σοβαρής ασθένειας από κορωνοϊό;	EODY_faq/high_risk_groups
+ποιος αντιμετωπίζει υψηλότερους κινδύνους σοβαρής ασθένειας;	EODY_faq/high_risk_groups
+Ποιες είναι οι ομάδες υψηλού κινδύνου;	EODY_faq/high_risk_groups
+Έχω πάθει έμφραγμα. Κινδυνεύω από τον κορονοϊό;	EODY_faq/high_risk_groups
+Ανήκω σε ομάδα υψηλού κινδύνου επειδή είμαι καπνίστρια;	EODY_faq/high_risk_groups
+Έχουν μεγαλύτερο κίνδυνο, οι καπνιστές;	EODY_faq/high_risk_groups
+Κινδενεύουν περισσότεροι αυτού που καπνίζουν;	EODY_faq/high_risk_groups
+Είναι περισσότερες οι πιθανότητες να αρρωστήσει κάποιος βαριά λόγω καπνίσματος;	EODY_faq/high_risk_groups
+Οι χρόνιοι καπνιστές είναι σε μεγαλύτερο κίνδυνο σοβαρής νοσηλείας;	EODY_faq/high_risk_groups
+Οι καπνιστές νοσούν περισσότερο;	EODY_faq/high_risk_groups
+Οι καπνιστές έχουν περισσότερες πιθανότητες να νοσήσουν βαριά;	EODY_faq/high_risk_groups
+Νοσούν πιο βαριά οι καπνιστές;	EODY_faq/high_risk_groups
+Είναι περισσότεροι οι καπνιστές νοσούντες;	EODY_faq/high_risk_groups
+Ποιες είναι οι εγκαταστάσεις μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Ποιες εγκαταστάσεις λέγονται μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Τι είναι οι εγκαταστάσεις μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Τι περιλαμβάνεται στις εγκαταστάσεις μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Τι σημαίνει εγκαταστάσεις μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Ποιες δομές περιλαμβάνουν οι εγκαταστάσεις μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Όταν λες εγκαταστάσεις μακροχρόνιας περίθαλψης εννοείς τους οίκους ευγηρίας;	EODY_faq/care_facilities
+Όταν λες εγκαταστάσεις μακροπρόθεσμης περίθαλψης εννοείς τα γηροκομεία;	EODY_faq/care_facilities
+Στα γηροκομεία αναφέρεσαι όταν λες για εγκαταστάσεις μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Τα γηροκομεία περιλαμβάνονται στις εγκαταστάσεις μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Ποιες δομές αποτελούν τις εγκαταστάσεις μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Πες μου ποιες είναι οι εγκαταστάσεις μακροχρόνιας περίθαλψης;	EODY_faq/care_facilities
+Εξήγησέ μου ποιες είναι οι δομές μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Πες μου ποιες έιναι οι δομές μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Θέλω να μάθω ποιες είναι οι εγκαταστάσεις μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Θα ήθελα να μάθω ποιες είναι οι εγκαταστάσεις μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Πες μου ποιες είναι οι εγκαταστάσεις μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Τι σημαίνει όταν λες εγκαταστάσεις μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Τι είναι άραγε οι εγκαταστάσεις μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Ποιες δομές περιλαμβάνονται στις εγκαταστάσεις μακροπρόθεσμης περίθαλψης;	EODY_faq/care_facilities
+Ποιες εγκαταστάσεις μακροπρόθεσμης περίθαλψης ξέρεις;	EODY_faq/care_facilities
+Ποιο είναι το τηλέφωνο του ΕΟΔΥ;	EODY_faq/phone_number
+Σε ποιο τηλέφωνο να πάρω τον εοδυ;	EODY_faq/phone_number
+ξέρετε το τηλέφωνο του ΕΟΔΥ;	EODY_faq/phone_number
+Σε ποιο τηλέφωνο μπορώ να καλέσω τον ΕΟΔΥ;	EODY_faq/phone_number
+ποιο τηλέφωνο μπορώ να πάρω αν είμαι άρρωστος;	EODY_faq/phone_number
+σε ποιο τηλέφωνο μπορώ να μιλήσω με τον ΕΟΔΥ;	EODY_faq/phone_number
+και που θα βρω τον ΕΟΔΥ;	EODY_faq/phone_number
+που να παρω τον ΕΟΔΥ;	EODY_faq/phone_number
+Βρες μου το τηλέφωνο του ΕΟΔΥ	EODY_faq/phone_number
+Θέλω να μου πεις το τηλ του ΕΟΔΥ	EODY_faq/phone_number
+ποιο είναι το τηλ του εοδυ;	EODY_faq/phone_number
+Σε ποιο τηλέφωνο μπορώ να καλέσω για να ρωτήσω πληροφορίες	EODY_faq/phone_number
+πως μπορω να επικοινωνήσω με τον ΕΟΔΥ;	EODY_faq/phone_number
+ψαχνω τηλέφωνο ΕΟΔΥ	EODY_faq/phone_number
+Δώσε μου ένα τηλέφωνο για να καλέσω τον ΕΟΔΥ	EODY_faq/phone_number
+πως μπορώ να επικοινωνήσω με τον ΕΟΔΥ	EODY_faq/phone_number
+Πού να απευθυνθώ εάν έχω συμπτώματα covid-19?	EODY_faq/phone_number
+Ποιο είναι το τηλέφωνο του ΕΟΔΥ	EODY_faq/phone_number
+Τηλέωνο ΕΟΔΥ	EODY_faq/phone_number
+Θέλω να επικοινωνήσ με τον ΕΟΔΥ	EODY_faq/phone_number
+Πως μπορώ να επικοινωνήσω με τον ΕΟΔΥ	EODY_faq/phone_number
+Ποιο είναι το τηλέφωνο στο οποίο μπορώ να πάρω τον ΕΟΔΥ	EODY_faq/phone_number
+Δώσε μου το τηλ του ΕΟΔΥ	EODY_faq/phone_number
+Το τηλ του εοδυ ποιο είναι;	EODY_faq/phone_number
+έχεις τις διευθύνσεις του ΕΟΔΥ;	EODY_faq/phone_number
+πως μπορω να επικοινωνησω με τον εοδυ	EODY_faq/phone_number
+ΤΗΛΕΦΩΝΟ ΕΟΔΥ	EODY_faq/phone_number
+Θέλω να αυτοκτονήσω	EODY_faq/psychological_support_phone_number
+Αυτοκτονία	EODY_faq/psychological_support_phone_number
+Θα αυτοκτονήσω	EODY_faq/psychological_support_phone_number
+Έχω τάσεις αυτοκτονίας	EODY_faq/psychological_support_phone_number
+Νιώθω ένα σφίξιμο στο στομάχι	EODY_faq/psychological_support_phone_number
+Δεν είμαι καλά ψυχολογικά	EODY_faq/psychological_support_phone_number
+Έχω κάνει απόπειρα αυτοκτονίας	EODY_faq/psychological_support_phone_number
+Πού μπορώ να λάβω ψυχολογική υποστήριξη;	EODY_faq/psychological_support_phone_number
+Ρώτησα πού μπορώ να απευθυνθώ για ψυχολογική υποστήριξη	EODY_faq/psychological_support_phone_number
+Υπάρχει κάποιο τηλέφωνο που θα μπορούσα να καλέσω για ψυχολογική βοήθεια;	EODY_faq/psychological_support_phone_number
+Νιώθω καταθλιπτικός	EODY_faq/psychological_support_phone_number
+Έχω την ανάγκη να μιλήσω με κάποιον ψυχολόγο	EODY_faq/psychological_support_phone_number
+Έχω κατάθλιψη. Θέλω να μιλήσω με κάποιον	EODY_faq/psychological_support_phone_number
+Ξέρεις που μπορώ να λάβω ψυχολογική υποστήριξη	EODY_faq/psychological_support_phone_number
+Θέλω να απευθυνθώ σε κάποιον ψυχολόγο	EODY_faq/psychological_support_phone_number
+Νιώθω καταθλιπτικός. Ξέρεις κάποιο τηλέφωνο για ψυχολογική υποστήριξη;	EODY_faq/psychological_support_phone_number
+Υπάρχει κάποιος αριθμός για ψυχολογική βοήθεια;	EODY_faq/psychological_support_phone_number
+Νιώθω σαν να έχω κατάθλιψη. Που μπορώ να μιλήσω με κάποιον ψυχολόγο;	EODY_faq/psychological_support_phone_number
+Γνωρίζεις κάποιο τηλέφωνο για ψυχολογική υποστήριξη;	EODY_faq/psychological_support_phone_number
+Πρέπει να μιλήσω με κάποιον ψυχολόγο, έχεις κάποιο τηλέφωνο;	EODY_faq/psychological_support_phone_number
+Υπάρχει κάποιο τηλέφωνο για να μιλήσω με έναν ψυχολόγο;	EODY_faq/psychological_support_phone_number
+Χρειάζομαι άμεσα ψυχολογική υποστήριξη	EODY_faq/psychological_support_phone_number
+Θέλω να μιλήσω με ψυχολόγο	EODY_faq/psychological_support_phone_number
+Πρέπει να μιλήσω με ψυχολόγο	EODY_faq/psychological_support_phone_number
+Έχω ανάγκη να μιλήσω με ψυχολόγο	EODY_faq/psychological_support_phone_number
+Έχεις κανένα τηλέφωνο ψυχολογικής υποστήριξης;	EODY_faq/psychological_support_phone_number
+Που μπορώ να απευθυνθώ για ψυχολογική υποστήριξη;	EODY_faq/psychological_support_phone_number
+Βρες μου ένα τηλέφωνο ψυχολόγου	EODY_faq/psychological_support_phone_number
+Πες μου το τηλέφωνο ψυχολογικής υποστήριξης του ΕΟΔΥ	EODY_faq/psychological_support_phone_number
+Είμαι μόνος	EODY_faq/psychological_support_phone_number
+Μεταδίδεται ο ιός μέσω επιφανειών;	EODY_faq/surfaces
+Μπορώ να κολλήσω από επιφάνειες;	EODY_faq/surfaces
+πόσο καιρό μένει ο ιός πάνω σε επιφάνειες;	EODY_faq/surfaces
+μπορεί να παραμείνει καιρό ο κορωνοϊός πάνω σε επιφάνειες;	EODY_faq/surfaces
+Πόσο καιρό επιβιώνει ο ιός στις επιφάνειες;	EODY_faq/surfaces
+Για πόσο χρονικό διάστημα μπορεί να επιβιώσει ο κόβιντ πάνω σε συσκευασίες;	EODY_faq/surfaces
+Για πόσο παραμένει ο κορονοιος σε συσκευασίες;	EODY_faq/surfaces
+ποσο επιβιωνει ο κορωνοιος σε επιφάνειες;	EODY_faq/surfaces
+πες μου μένει πολύ καιρό ο ιός πάνω σε επιφάνειες;	EODY_faq/surfaces
+Κολλάει ο κορωνοϊός από επιφάνειες;	EODY_faq/surfaces
+κολλάει από επιφάνειες;	EODY_faq/surfaces
+Πόσο καιρό επιζεί ο κορονοϊός πάνω στις επιφάνειες;	EODY_faq/surfaces
+Μεταδίδεται από επιφάνειες;	EODY_faq/surfaces
+Ο κορονοϊός μεταδίδεται από τις επιφάνειες;	EODY_faq/surfaces
+πόσο χρόνο ζει ο κορωνοϊός στις επιφάνειες;	EODY_faq/surfaces
+πόσο χρόνο ζει ο κορωνοϊός πάνω στο χαρτί;	EODY_faq/surfaces
+πόσο χρόνο ζει ο υιός πάνω στο χαρτί;	EODY_faq/surfaces
+Πόσο καιρό επιβιώνει ο κορονοϊός πάνω στις επιφάνειες;	EODY_faq/surfaces
+Για πόσο επιβιώνει ο ιός σε επιφάνειες;	EODY_faq/surfaces
+Μπορώ να κολλήσω κορωνοϊό από το κατοικίδιό μου;	EODY_faq/covid_from_pet
+Μεταδίδουν τα κατοικίδια τον κορωνοϊό;	EODY_faq/covid_from_pet
+Τα κατοικίδια μεταδίδουν τον κορωνοϊό;	EODY_faq/covid_from_pet
+Μεταδίδεται ο κορωνοϊός από τα κατοικίδια ζώα;	EODY_faq/covid_from_pet
+Το κατοικίδιό μου μπορεί να με κολλήσει κορωνοϊό;	EODY_faq/covid_from_pet
+Μπορώ να κολλήσω από την γάτα μου κορωνοϊό;	EODY_faq/covid_from_pet
+Μπορώ να κολλήσω από τον σκύλο μου κορωνοϊό;	EODY_faq/covid_from_pet
+Ο σκύλος μου μπορεί να με κολλήσει κορωνοϊό;	EODY_faq/covid_from_pet
+Μπορώ να κολλήσω κορωνοϊό από οικόσιτο ζώο;	EODY_faq/covid_from_pet
+Μεταδίδουν τα οικόσιτα ζώα τον κορωνοϊό;	EODY_faq/covid_from_pet
+Τα οικόσιτα ζώα μεταδίδουν τον κορωνοϊό;	EODY_faq/covid_from_pet
+Μεταδίδεται ο κορωνοϊός από τα οικόσιτα ζώα;	EODY_faq/covid_from_pet
+Ένα οικόσιτο ζώο μπορεί να με κολλήσει κορωνοϊό;	EODY_faq/covid_from_pet
+Η γάτα μου μπορεί να με κολλήσει κορωνοϊό;	EODY_faq/covid_from_pet
+Μπορώ να κολλήσω κορωνοϊό από ζώο συντροφιάς;	EODY_faq/covid_from_pet
+Μεταδίδουν τα ζώα συντροφιάς τον κορωνοϊό;	EODY_faq/covid_from_pet
+Τα ζώα συντροφιάς μεταδίδουν τον κορωνοϊό;	EODY_faq/covid_from_pet
+Μεταδίδεται ο κορωνοϊός από τα ζώα συντροφιάς;	EODY_faq/covid_from_pet
+Ένα ζώο συντροφιάς μπορεί να με κολλήσει κορωνοϊό;	EODY_faq/covid_from_pet
+Έχω γάτα, μπορεί να μου μεταδώσει τον ιό;	EODY_faq/covid_from_pet
+Έχω σκύλο, μπορεί να μου μεταδώσει τον ιό;	EODY_faq/covid_from_pet
+Έχω κατοικίδιο, μπορεί να με κολλήσει κορωνοϊό;	EODY_faq/covid_from_pet
+Έχω γάτα, μπορεί να με κολλήσει κορωνοϊό;	EODY_faq/covid_from_pet
+Έχω σκύλο, μπορεί να με κολλήσει κορωνοϊό;	EODY_faq/covid_from_pet
+Έχω γάτες.	EODY_faq/covid_from_pet
+Ο νέος κοροναι ός μεταδίδεται από άνθρωπο σε ζώο	EODY_faq/covid_from_pet
+Ο νέος κοροναι ός μεταδίδεται από ζώο σε άνθρωπο	EODY_faq/covid_from_pet
+Μεταδίδεται από άνθρωπο σε ζώο	EODY_faq/covid_from_pet
+Πότε θα τελειώσει η πανδημία;	EODY_faq/duration_of_pandemia
+Πότε θα σταματήσει η πανδημία;	EODY_faq/duration_of_pandemia
+Άντε επιτέλους πότε θα τελειώσει η πανδημία;	EODY_faq/duration_of_pandemia
+Πόσο θα κρατήσει η πανδημία;	EODY_faq/duration_of_pandemia
+Πόσο θα κρατήσει η επιδημία;	EODY_faq/duration_of_pandemia
+Πότε επιτέλους θα τελειώσει η πανδημία;	EODY_faq/duration_of_pandemia
+Πότε επιτέλους θα τελειώσει η επιδημία;	EODY_faq/duration_of_pandemia
+Πες μου πότε θα τελειώσει η επιδημία;	EODY_faq/duration_of_pandemia
+Πες μου πότε επιτέλους θα σταματήσει αυτή η κατάσταση.	EODY_faq/duration_of_pandemia
+Πότε θα τελειώσει αυτή η κατάσταση;	EODY_faq/duration_of_pandemia
+Πότε επιτέλους θα τελειώσει αυτή η κατάσταση με τον κορωνοϊό;	EODY_faq/duration_of_pandemia
+Πότε θα σταματήσει η κατάσταση αυτή;	EODY_faq/duration_of_pandemia
+Μπορείς να μου πεις πότε θα τελειώσει η επιδημία;	EODY_faq/duration_of_pandemia
+Πότε θα τελείωσει η πανδημία του κορωνοϊού;	EODY_faq/duration_of_pandemia
+Πότε θα σταματήσει ο κορωνοϊός;	EODY_faq/duration_of_pandemia
+Ξέρεις πότε θα τελειώσει η πανδημία;	EODY_faq/duration_of_pandemia
+Ξέρεις πότε θα σταματήσει η πανδημία;	EODY_faq/duration_of_pandemia
+Ξέρεις πόσο θα κρατήσει η πανδημία;	EODY_faq/duration_of_pandemia
+Γνωρίζεις πότε θα τελειώσει η πανδημία;	EODY_faq/duration_of_pandemia
+Γνωρίζεις πότε θα σταματήσει η πανδημία;	EODY_faq/duration_of_pandemia
+Γνωρίζεις πόσο θα κρατήσει η πανδημία;	EODY_faq/duration_of_pandemia
+Εσύ πότε νομίζεις οτι θα τελειώσει η πανδημία;	EODY_faq/duration_of_pandemia
+Πότε λες οτι θα τελειώσει η πανδημία;	EODY_faq/duration_of_pandemia
+μέχρι πότε θα έχουμε κορωνοϊό;	EODY_faq/duration_of_pandemia
+Πότε αυτό το πράγμα θα τελειώσει;	EODY_faq/duration_of_pandemia
+αχχ πότε θα τελειώσει όλο αυτό ρε παιδί μου;	EODY_faq/duration_of_pandemia
+Πότε θα τελειώσει αυτή η κατάσταση	EODY_faq/duration_of_pandemia
+ποτε θα τελειώσει ο covidq	EODY_faq/duration_of_pandemia
+'Εχω βαρεθεί την κλεισούρα. Πότε θα τελειώσει το λοκντάουν;	EODY_faq/duration_of_pandemia
+Θέλω να τελείωσει η πανδημία	EODY_faq/duration_of_pandemia
+φοβάμαι ότι αυτή η κατάσταση δεν θα τελειώσει ποτέ	EODY_faq/duration_of_pandemia
+Ποτέ θα τελειώσει ο κορωνοι ός;	EODY_faq/duration_of_pandemia
+ποτε θα τελειωσει η πανδημια	EODY_faq/duration_of_pandemia
+Πότε θα τελειώσει ο κορωναίος;	EODY_faq/duration_of_pandemia
+πότε θα τελειώσει ο κορωνοι ός;	EODY_faq/duration_of_pandemia
+Πότε θα τελειώσει ο κορωνοι ός;	EODY_faq/duration_of_pandemia
+Ποτέ θα τελειώσουν κορωνοιος	EODY_faq/duration_of_pandemia
+Ποτέ θα τελειώσουν κορωνοιος;	EODY_faq/duration_of_pandemia
+πότε θα τελειώσει ο κορωνοιός	EODY_faq/duration_of_pandemia
+Τι σημαίνει ασυμπτωματικός;	EODY_faq/asymptomatic
+Ποιος είναι ασυμπτωματικός;	EODY_faq/asymptomatic
+Τι σημαίνει ο όρος ασυμπτωματικός;	EODY_faq/asymptomatic
+Ποιος θεωρείται ασυμπτωματικός	EODY_faq/asymptomatic
+Πως ορίζεται ο ασυμπτωματικός;	EODY_faq/asymptomatic
+Πες μου τι σημαίνει ασυμπτωματικός;	EODY_faq/asymptomatic
+Πες μου ποιος είναι ασυμπτωματικός;	EODY_faq/asymptomatic
+Πες μου τι σημαίνει ο όρος ασυμπτωματικός;	EODY_faq/asymptomatic
+Πες μου ποιος θεωρείται ασυμπτωματικός	EODY_faq/asymptomatic
+Πες μου πως ορίζεται ο ασυμπτωματικός;	EODY_faq/asymptomatic
+Γνωρίζεις τι σημαίνει ασυμπτωματικός;	EODY_faq/asymptomatic
+Μπορείς να μου πεις τι σημαίνει ασυμπτωματικός;	EODY_faq/asymptomatic
+Γνωρίζεις ποιος είναι ασυμπτωματικός;	EODY_faq/asymptomatic
+Μπορείς να μου πεις ποιος είναι ασυμπτωματικός;	EODY_faq/asymptomatic
+Γνωρίζεις τι σημαίνει ο όρος ασυμπτωματικός;	EODY_faq/asymptomatic
+Μπορείς να μου πεις τι σημαίνει ο όρος ασυμπτωματικός;	EODY_faq/asymptomatic
+Γνωρίζεις ποιος θεωρείται ασυμπτωματικός	EODY_faq/asymptomatic
+Μπορείς να μου πεις ποιος θεωρείται ασυμπτωματικός	EODY_faq/asymptomatic
+Γνωρίζεις πως ορίζεται ο ασυμπτωματικός;	EODY_faq/asymptomatic
+Μπορείς να μου πεις πως ορίζεται ο ασυμπτωματικός;	EODY_faq/asymptomatic
+Ασυμπτωματικός ποιος είναι;	EODY_faq/asymptomatic
+Ο κορωνοϊός φτιάχτηκε σε εργαστήριο	EODY_faq/covid_was_made_in_lab
+Ο κορωνοϊός δημιουργήθηκε σε εργαστήριο	EODY_faq/covid_was_made_in_lab
+Ο κορωνοϊός είναι ανθρώπινο δημιούργημα	EODY_faq/covid_was_made_in_lab
+Είναι κατασκευασμένος σε εργαστήριο ο κορωνοϊός	EODY_faq/covid_was_made_in_lab
+Ο κορωνοϊός ξέφυγε από εργαστήριο στην Κίνα	EODY_faq/covid_was_made_in_lab
+Σε εργαστήριο έφτιαξαν τον κορωνοϊό	EODY_faq/covid_was_made_in_lab
+Φτιάχτηκε σε εργαστήριο ο κορωνοϊός	EODY_faq/covid_was_made_in_lab
+Είναι συνωμοσία ο κορωνοϊός	EODY_faq/covid_was_made_in_lab
+Άνθρωποι τον έφτιαξαν τον κορωνοϊό	EODY_faq/covid_was_made_in_lab
+Επιστήμονες δημιούργησαν τον κορωνοϊό	EODY_faq/covid_was_made_in_lab
+Είναι θεωρία συνωμοσίας ο κορωνοϊός	EODY_faq/covid_was_made_in_lab
+Από εργαστήριο ξέφυγε ο κορωνοϊός	EODY_faq/covid_was_made_in_lab
+Τους ξέφυγε από εργαστήριο	EODY_faq/covid_was_made_in_lab
+Από εργαστήριο στην Κίνα τους ξέφυγε ο κορωνοϊός	EODY_faq/covid_was_made_in_lab
+Σε εργαστήριο στην Κίνα έφτιαξαν τον κορωνοϊό	EODY_faq/covid_was_made_in_lab
+Είναι απάτη ο κορονοιός	EODY_faq/covid_was_made_in_lab
+ο κορωνοϊός είναι απάτη	EODY_faq/covid_was_made_in_lab
+Ο κορονοιός έχει σχέση με το 5G?	EODY_faq/covid_was_made_in_lab
+Υπάρχει κορονοιος;	EODY_faq/covid_was_made_in_lab
+Υπάρχει κορωνοϊός;	EODY_faq/covid_was_made_in_lab
+Υπάρχει ο κορωνοϊός;	EODY_faq/covid_was_made_in_lab
+Γνωρίζεις αν υπάρχει ο κορωνοϊός;	EODY_faq/covid_was_made_in_lab
+Ξέρεις αν υπάρχει ο κορωνοϊό;	EODY_faq/covid_was_made_in_lab
+Είναι απάτη ο κορωνοϊός;	EODY_faq/covid_was_made_in_lab
+Είναι υπαρκτός ο κορωνοϊός;	EODY_faq/covid_was_made_in_lab
+Ο κορωνοϊός δεν υπάρχει	EODY_faq/covid_was_made_in_lab
+Δεν υπάρχει κορωνοϊός	EODY_faq/covid_was_made_in_lab
+Ψέμα είναι ο κορωνοϊός	EODY_faq/covid_was_made_in_lab
+Ο κορωνοϊός είναι ένα μεγάλο ψέμα	EODY_faq/covid_was_made_in_lab
+Ο κορωνοϊός είναι μια μεγάλη απάτη	EODY_faq/covid_was_made_in_lab
+Υπάρχει άραγε ο covid?	EODY_faq/covid_was_made_in_lab
+ειναι ο κωρονοιος προπαγάνδα;	EODY_faq/covid_was_made_in_lab
+το 5g προκαλει κορωνοιο	EODY_faq/covid_was_made_in_lab
+ποιος εφτιαξε τον κορωνοιο	EODY_faq/covid_was_made_in_lab
+Υπάρχουν ενδείξεις ότι ο κορονοιός κατασκευάστικε στην Κίνα;	EODY_faq/covid_was_made_in_lab
+Υπάρχουν ενδείξεις ότι κατασκευάστικε στην Κίνα;	EODY_faq/covid_was_made_in_lab
+Υπάρχουν ενδείξεις ότι κατασκευάστηκε στη Κίνα.	EODY_faq/covid_was_made_in_lab
+Πως ξέρεις ότι δεν κατασκευάστηκε ο κορονωιός;	EODY_faq/covid_was_made_in_lab
+Υπάρχει ο κορονωιός;	EODY_faq/covid_was_made_in_lab
+Ποια είναι η ετυμολογία της λέξης κορωνοϊός	EODY_faq/covid_etymology
+Από που ετυμολογείται ο κορωνοϊός;	EODY_faq/covid_etymology
+Πες μου την ετυμολογία του κορωνοϊού	EODY_faq/covid_etymology
+Ο κορωνοϊός πως ετυμολογείται;	EODY_faq/covid_etymology
+Ο κορωνοϊός τι ετυμολογία έχει;	EODY_faq/covid_etymology
+Ποια είναι η ετυμολογία του κορωνοϊού;	EODY_faq/covid_etymology
+Ξέρεις την ετυμολογία του κορωνοϊού	EODY_faq/covid_etymology
+Γνωρίζεις την ετυμολογία του κορωνοϊού	EODY_faq/covid_etymology
+Μπορείς να μου πεις την ετυμολογία του κορωνοϊού	EODY_faq/covid_etymology
+Θα μου πεις την ετυμολογία του κορωνοϊού;	EODY_faq/covid_etymology
+Βρες μου την ετυμολογία του κορωνοϊού	EODY_faq/covid_etymology
+Πότε πρωτοεμφανίστηκε ο ιός και πού;	EODY_faq/start_of_covid
+Ξέρεις πότε ξεκίνησε ο κορωνοϊός;	EODY_faq/start_of_covid
+Πότε ξεκίνησε ο κοβιτν;	EODY_faq/start_of_covid
+Που εμφανίστηκε ο κορωνοϊός;	EODY_faq/start_of_covid
+Που εμφανίστηκε για πρώτη φορά ο κορωνοϊός;	EODY_faq/start_of_covid
+Πότε εμφανίστηκε ο κορωνοϊός;	EODY_faq/start_of_covid
+Πότε εμφανίστηκε για πρώτη φορά ο κορωνοϊός;	EODY_faq/start_of_covid
+Πες μου πότε εμφανίστηκε για πρώτη φορά ο κορωνοϊός;	EODY_faq/start_of_covid
+Ξέρεις πότε εμφανίστηκε για πρώτη φορά ο κορωνοϊός;	EODY_faq/start_of_covid
+Γνωρίζεις πότε εμφανίστηκε για πρώτη φορά ο κορωνοϊός;	EODY_faq/start_of_covid
+Μπορείς να μου πεις πότε εμφανίστηκε για πρώτη φορά ο κορωνοϊός;	EODY_faq/start_of_covid
+Πες μου πότε πρωτοεμφανίστηκε ο ιός και πού;	EODY_faq/start_of_covid
+Ξέρεις πότε πρωτοεμφανίστηκε ο ιός και πού;	EODY_faq/start_of_covid
+Μπορείς να μου πεις πότε πρωτοεμφανίστηκε ο ιός και πού;	EODY_faq/start_of_covid
+Γνωρίζεις πότε πρωτοεμφανίστηκε ο ιός και πού;	EODY_faq/start_of_covid
+Που εμφανίστηκε πρώτα ο ιός	EODY_faq/start_of_covid
+Πως δηιουργήθηκε ο κωρονοειος	EODY_faq/start_of_covid
+Πως δημιουργήθηκε ο κορωνοιος	EODY_faq/start_of_covid
+Πότε ξεκίνησε ο κορονοι ος στην Ελλάδα;	EODY_faq/start_of_covid
+Πώς ξεκίνησε	EODY_faq/start_of_covid
+Ποτε ξεκίνησε ο ιος;	EODY_faq/start_of_covid
+Που ακριβώς στη Κίνα εντοπιστηκε ο ιος;	EODY_faq/start_of_covid
+Είμαι καπνίστρια. Κινδυνεύω από τον κορονοϊό λόγω του καπνίσματος;	EODY_faq/smoking_is_dangerous_for_covid
+Κινδυνεύω να αρρωστήσω λόγω καπνίσματος;	EODY_faq/smoking_is_dangerous_for_covid
+Κινδυνεύω να νοσήσω βαριά λόγω καπνίσματος;	EODY_faq/smoking_is_dangerous_for_covid
+Το κάπνισμα επιδυνώνει τη νοσηλεία από κορωνοϊό	EODY_faq/smoking_is_dangerous_for_covid
+Καπνίζω, κινδυνεύω περισσότερο από τον κορωνοϊό;	EODY_faq/smoking_is_dangerous_for_covid
+Κινδυνεύω περισσότερο από τον κορωνοϊό επειδή καπνίζω;	EODY_faq/smoking_is_dangerous_for_covid
+Κινδυνεύω περισσότερο από τον κορωνοϊό λόγω καπνίσματος;	EODY_faq/smoking_is_dangerous_for_covid
+Κινδυνεύω περισσότερο από τον κορωνοϊό επειδή είμαι καπνιστής;	EODY_faq/smoking_is_dangerous_for_covid
+Το κάπνισμα με κάνει πιο ευάλωτο στον κορωνοϊό;	EODY_faq/smoking_is_dangerous_for_covid
+Είμαι πιο ευάλωτη στον κορωνοϊό επειδή καπνίζω;	EODY_faq/smoking_is_dangerous_for_covid
+Είμαι χρόνια καπνίστρια, κινδυνεύω να αρρωστήσω βαριά;	EODY_faq/smoking_is_dangerous_for_covid
+Είμαι καπνιστής, κινδυνεύω να αρρωστήσω βαριά;	EODY_faq/smoking_is_dangerous_for_covid
+Ξέρεις αν κινδυνεύω από τον κορονοϊό λόγω του καπνίσματος;	EODY_faq/smoking_is_dangerous_for_covid
+Γνωρίζεις αν κινδυνεύω να αρρωστήσω λόγω καπνίσματος;	EODY_faq/smoking_is_dangerous_for_covid
+Μπορείς να μου πεις αν κινδυνεύω να νοσήσω βαριά λόγω καπνίσματος;	EODY_faq/smoking_is_dangerous_for_covid
+Που μπορώ να βρω πληροφορίες για τον SARS-CoV-2	EODY_faq/info_websites
+Που μπορώ να βρω πληροφορίες για την πανδημία;	EODY_faq/info_websites
+Που μπορώ να βρω έγκυρες πληροφορίες για την πανδημία;	EODY_faq/info_websites
+Που μπορώ να μπω για να μάθω πληροφορίες για τον SARS-CoV-2	EODY_faq/info_websites
+Πες μου που μπορώ να βρω πληροφορίες για τον SARS-CoV-2	EODY_faq/info_websites
+Πες μου που μπορώ να βρω πληροφορίες για την πανδημία;	EODY_faq/info_websites
+Πες μου που μπορώ να βρω έγκυρες πληροφορίες για την πανδημία;	EODY_faq/info_websites
+Ξέρεις που μπορώ να βρω πληροφορίες για τον SARS-CoV-2	EODY_faq/info_websites
+Ξέρεις που μπορώ να βρω πληροφορίες για την πανδημία;	EODY_faq/info_websites
+Ξέρεις που μπορώ να βρω έγκυρες πληροφορίες για την πανδημία;	EODY_faq/info_websites
+Ξέρεις που μπορώ να μπω για να μάθω πληροφορίες για τον SARS-CoV-2	EODY_faq/info_websites
+Που μπορώ να βρω έγκυρες πληροφορίες για τον κορωνοϊό;	EODY_faq/info_websites
+Πες μου που βρίσκω έγκυρες πληροφορίες για τον κορωνοϊό;	EODY_faq/info_websites
+Που θα βρω έγκυρες πληροφορίες για τον κορωνοϊό;	EODY_faq/info_websites
+Πες μου που θα βρω έγκυρες πληροφορίες για τον κορωνοϊό;	EODY_faq/info_websites
+Έχεις ιστοσελίδες από τις οποίες μπορώ να ενημερώνομαι για τις εξελίξεις;	EODY_faq/info_websites
+Από που θα μου πρότεινες να μαθαίνω πληροφορίες για τον κοβιντ?	EODY_faq/info_websites
+Σε ποια ιστοσελίδα να μπαίνω για να μαθαίνω πληροφορίες;	EODY_faq/info_websites
+Τι είναι το 13033;	EODY_faq/what_is_13033
+Το 13033 τι είναι;	EODY_faq/what_is_13033
+Ξέρεις τι είναι το 13033;	EODY_faq/what_is_13033
+Γνωρίζεις τι είναι το 13033;	EODY_faq/what_is_13033
+Πες μου τι είναι το 13033;	EODY_faq/what_is_13033
+Μπορείς να μου πεις τι είναι το 13033;	EODY_faq/what_is_13033
+Θα μπορούσες να μου πεις τι είναι το 13033;	EODY_faq/what_is_13033
+Θεανώ, τι είναι το 13033;	EODY_faq/what_is_13033
+Τι ακριβώς είναι το 13033;	EODY_faq/what_is_13033
+Το 13033 πες μου τι είναι.	EODY_faq/what_is_13033
+Το 13033 ξέρεις τι είναι;	EODY_faq/what_is_13033
+Τι είναι το 13033 ξέρεις;	EODY_faq/what_is_13033
+13033	EODY_faq/what_is_13033
+Πες μου για το 13033	EODY_faq/what_is_13033
+Τι ξέρεις για το 13033	EODY_faq/what_is_13033
+Πες μου τι ξέρεις για το 13033	EODY_faq/what_is_13033
+Πες μου τι γνωρίζεις για το 13033	EODY_faq/what_is_13033
+Τι γνωρίζεις για το 13033;	EODY_faq/what_is_13033
+Ξέρεις για το 13033;	EODY_faq/what_is_13033
+Γνωρίζεις για το 13033;	EODY_faq/what_is_13033
+Μπορείς να μου πεις για το 13033;	EODY_faq/what_is_13033
+Μπορείς να μου πεις τι ξέρεις για το 13033;	EODY_faq/what_is_13033
+Πως να περάσω το χρόνο μου στην καραντίνα;	EODY_faq/what_to_do_in_quarantine
+Έχω βαρεθεί στην καραντίνα.	EODY_faq/what_to_do_in_quarantine
+Βαρέθηκα την καραντίνα	EODY_faq/what_to_do_in_quarantine
+Τι να κάνω στην καραντίνα;	EODY_faq/what_to_do_in_quarantine
+Πως να περάσω την καραντίνα	EODY_faq/what_to_do_in_quarantine
+Βαριέμαι που ζω, πως να περάσω την καραντίνα;	EODY_faq/what_to_do_in_quarantine
+Πως να περάσω δημιουργικά την καραντίνα;	EODY_faq/what_to_do_in_quarantine
+Πρότεινέ μου τρόπους να περάσω δημιουργικά τον χρόνο μου εν μέσω της καραντίνας	EODY_faq/what_to_do_in_quarantine
+Δώσε μου προτάσεις για να περάσω τον χρόνο μου στην καραντίνα	EODY_faq/what_to_do_in_quarantine
+Έχω βαρεθεί πια. Τι να κάνω;	EODY_faq/what_to_do_in_quarantine
+Τι να κάνω που έχω βαρεθεί στην καραντίνα;	EODY_faq/what_to_do_in_quarantine
+Βαρέθηκα την καραντίνα. Πες μου τι να κάνω	EODY_faq/what_to_do_in_quarantine
+Βαρέθηκα την καραντίνα. Τι να κάνω;	EODY_faq/what_to_do_in_quarantine
+Δεν ξέρω τι άλλο να κάνω στην καραντίνα. Πρότεινέ μου κάτι.	EODY_faq/what_to_do_in_quarantine
+Βαριέμαι αφάνταστα, πως να περα΄σω την καραντίνα;	EODY_faq/what_to_do_in_quarantine
+βαριέμαι υπερβολικά	EODY_faq/what_to_do_in_quarantine
+με έχει κουράσει αυτή η κατάσταση	EODY_faq/what_to_do_in_quarantine
+Πού μπορώ να κάνω τεστ;	EODY_faq/book_test
+Πού μπορώ να κάνω τεστ κορονοϊού;	EODY_faq/book_test
+Πού μπορώ να κάνω rapid test;	EODY_faq/book_test
+Που μπορώ να κάνω τεστ;	EODY_faq/book_test
+Που μπορώ να κάνω rapid test;	EODY_faq/book_test
+που μπορώ να κάνω τεστ	EODY_faq/book_test
+δωρεάν τεστ κόβιντ	EODY_faq/book_test
+πού να κάνω τεστ covid;	EODY_faq/book_test
+Ξέρετε πού μπορώ να κάνω τεστ ανίχνευσης κορονοϊού;	EODY_faq/book_test
+Πες μου που μπορώ να κάνω τεστ	EODY_faq/book_test
+Ξέρεις που μπορώ να κάνω τεστ κορωνοϊού;	EODY_faq/book_test
+Γνωρίζεις που να κάνω τεστ;	EODY_faq/book_test
+Μπορείς να μου πεις που μπορώ να κάνω τεστ κορωνοϊού;	EODY_faq/book_test
+Που μπορούν να μου κάνουν τεστ ανίχνευσης κορωνοϊού;	EODY_faq/book_test
+Που θα κάνω τεστ;	EODY_faq/book_test
+Που να κάνω τεστ;	EODY_faq/book_test
+Που μπορώ να κάνω δωρεάν τεστ;;	EODY_faq/book_test
+Που μπορώ να κάνω δωρεάν τεστ κορωνοϊού;	EODY_faq/book_test
+Που μπορώ να κλείσω ραντεβού για να κάνω τεστ;	EODY_faq/book_test
+Που μπορώ να κλείσω για να κάνω τεστ;	EODY_faq/book_test
+Που μπορώ να κλείσω τεστ;	EODY_faq/book_test
+Που μπορώ να κλείσω για τεστ;	EODY_faq/book_test
+Που μπορώ να κλείσω να κάνω τεστ;	EODY_faq/book_test
+Πες μου που να κάνω τεστ	EODY_faq/book_test
+που μπορώ να κάνω το rapid test?	EODY_faq/book_test
+που μπορώ να κάνω μοριακό τεστ;	EODY_faq/book_test
+που μπορώ να κάνω τεστ ταχείας ανίχνευσης αντιγόνου;	EODY_faq/book_test
+θέλω να κάνω τεστ ταχείας ανίχνευσης αντιγόνου	EODY_faq/book_test
+Που μπορώ να κάνω μοριακό τεστ	EODY_faq/book_test
+που μπορώ να κάνω τεστ;	EODY_faq/book_test
+που μπορω να κανω τεστ	EODY_faq/book_test
+που μπορω να κανω τεστς	EODY_faq/book_test
+που υπάρχουν rapid test;	EODY_faq/book_test
+Όχι, θέλω να μάθω πού μπορώ να κάνω τεστ.	EODY_faq/book_test
+Που μπορώ να κάνω τεστ σήμερα;	EODY_faq/book_test
+Πού γίνονται τεστ;	EODY_faq/book_test
+Θέλω να μάθω πού μπορώ να κάνω rapid test	EODY_faq/book_test
+που μπορω να κάνω τεστ	EODY_faq/book_test
+Πού μπορώ να κάνω δωρεαν rapid test ;	EODY_faq/book_test
+Ποθ μπορώ να κάνω τεστ pcr για να ταξιδεψω	EODY_faq/book_test
+Πού μπορώ να κάνω μοριακό τεστ;	EODY_faq/book_test
+που μπορώ να κάνω test	EODY_faq/book_test
+που κάνω rapid σήμερα	EODY_faq/book_test
+που κανω τεστ	EODY_faq/book_test
+Πότε πρέπει να κάνω τεστ	EODY_faq/book_test
+Ποια είναι τα καλά αντισηπτικά;	EODY_faq/antiseptic
+Βοηθάει η χρήση του αντισηπτικού;	EODY_faq/antiseptic
+Πώς πρέπει να χρησιμοποιώ το αντισηπτικό;	EODY_faq/antiseptic
+Πρέπει να χρησιμοποιούμε αντισηπτικό;	EODY_faq/antiseptic
+Τι αντισηπτικό να χρησιμοποιήσω;	EODY_faq/antiseptic
+Πως χρησιμοποιώ σωστά το αντισηπτικό;	EODY_faq/antiseptic
+Ποιο είναι το καλύτερο αντισηπτικό;	EODY_faq/antiseptic
+Τι να προσέξω όταν αγοράζω αντισηπτικό;	EODY_faq/antiseptic
+Πως χρησιμοποείται σωστά το αντισηπτικό;	EODY_faq/antiseptic
+Το αντισηπτικό είναι καλύτερο από το σαπούνι;	EODY_faq/antiseptic
+Καλύτερο είναι να χρησιμοποιώ αντισηπτικό παρά σαπούνι;	EODY_faq/antiseptic
+Τι ποσοστό αλκοόλ πρέπει να έχει το αντισηπτικό για να θεωρείται αποτελεσματικό ενάντια στον κορωνοϊό;	EODY_faq/antiseptic
+Το ποσοστό αλκοόλ πρέπει να περιέχει ένα αντισηπτικό για να δρα κατά του κορωνοϊού;	EODY_faq/antiseptic
+Ποιοι θεωρείται καλό αντισηπτικό;	EODY_faq/antiseptic
+Είναι καλό να χρησιμοποιώ αντισηπτικό;	EODY_faq/antiseptic
+Πες μου ποια είναι τα καλά αντισηπτικά;	EODY_faq/antiseptic
+Ξέρεις αν βοηθάει η χρήση του αντισηπτικού;	EODY_faq/antiseptic
+Γνωρίζεις με ποιόν τρόπο βοηθάει η χρήση του αντισηπτικού;	EODY_faq/antiseptic
+Πες μου πώς πρέπει να χρησιμοποιώ το αντισηπτικό;	EODY_faq/antiseptic
+Γνωρίζεις πώς πρέπει να χρησιμοποιώ το αντισηπτικό;	EODY_faq/antiseptic
+Γνωρίζεις αν πρέπει να χρησιμοποιούμε αντισηπτικό;	EODY_faq/antiseptic
+Είναι απαραίτητο άραγε να χρησιμοποιούμε αντισηπτικό;	EODY_faq/antiseptic
+Τι τύπου αντισηπτικό να χρησιμοποιήσω;	EODY_faq/antiseptic
+Πες μου πως χρησιμοποιώ σωστά το αντισηπτικό;	EODY_faq/antiseptic
+Μπορείς να μου πεις ποιο είναι το καλύτερο αντισηπτικό;	EODY_faq/antiseptic
+Θα μου πεις τι να προσέξω όταν αγοράζω αντισηπτικό;	EODY_faq/antiseptic
+Θεανώ ξέρεις πως χρησιμοποείται σωστά το αντισηπτικό;	EODY_faq/antiseptic
+Το αλκοολούχο διάλυμα είναι καλύτερο από το σαπούνι;	EODY_faq/antiseptic
+Καλύτερο είναι να χρησιμοποιώ αλκοολούχο διάλυμα παρά σαπούνι;	EODY_faq/antiseptic
+Τι ποσοστό αλκοόλ πρέπει να έχει το αλκοολούχο διάλυμα για να θεωρείται αποτελεσματικό ενάντια στον κορωνοϊό;	EODY_faq/antiseptic
+Το ποσοστό αλκοόλ πρέπει να περιέχει ένα αλκοολούχο διάλυμα για να δρα κατά του κορωνοϊού;	EODY_faq/antiseptic
+Ποιοι θεωρείται καλό αλκοολούχο διάλυμα;	EODY_faq/antiseptic
+Είναι καλό να χρησιμοποιώ αλκοολούχο διάλυμα;	EODY_faq/antiseptic
+Θα ήθελα να μάθω για τα αντισηπτικά	EODY_faq/antiseptic
+Γάντια πρέπει να φοραω;	EODY_faq/gloves
+Πρέπει να φοράω γάντια;	EODY_faq/gloves
+Πρέπει να φοράμε γάντια;	EODY_faq/gloves
+Είναι καλό να φοράω γάντια;	EODY_faq/gloves
+Να φοράω γάντια;	EODY_faq/gloves
+Πες μου γάντια πρέπει να φοραω;	EODY_faq/gloves
+Ξέρεις αν πρέπει να φοράω γάντια;	EODY_faq/gloves
+Γνωρίζεις εάν πρέπει να φοράω γάντια;	EODY_faq/gloves
+Μπορείς να μου πεις αν πρέπει να φοράμε γάντια;	EODY_faq/gloves
+Άραγε πρέπει να φοράμε γάντια;	EODY_faq/gloves
+Χρειάζεται να φοράμε γάντια;	EODY_faq/gloves
+Είναι απαραίτητο να φοράμε γάντια;	EODY_faq/gloves
+Τα γάντια με προστατεύουν;	EODY_faq/gloves
+Πόσο με προστατεύουν τα γάντια;	EODY_faq/gloves
+Να φοράω γάντια ως προστατευτικό μέσο ενάντια στον κορωνοϊό;	EODY_faq/gloves
+Ως προστατευτικό μέσο ενάντια στον κορωνοϊό είναι καλά τα γάντια;	EODY_faq/gloves
+Πες μου αν πρέπει να φοράμε γάντια;	EODY_faq/gloves
+Πόσο καλό είναι να φοράει κάποιος γάντια;	EODY_faq/gloves
+τι σαπούνι να βάλω;	EODY_faq/soap
+Με τι σαπούνι να πλένω τα χέρια μου;	EODY_faq/soap
+Τι σαπούνι πρέπει να χρησιμοοιώ	EODY_faq/soap
+τι σαπούνι πρέπει να χρησιμοποιώ	EODY_faq/soap
+Ποιο σαπούνι είναι το καλύτερο;	EODY_faq/soap
+Ποιο σαπούνι είναι κατάλληλο για να πλένω τα χέρια μου;	EODY_faq/soap
+Τι σαπούνι να χρησιμοποιώ;	EODY_faq/soap
+Με τι σαπούνι μου προτείνεις να πλένω τα χέρια μου;	EODY_faq/soap
+Και τι σαπούνι μου προτείνεις;	EODY_faq/soap
+Είναι κάποιο σαπούνι καλύτερο;	EODY_faq/soap
+Να προτιμήσω κάποιο σαπούνι;	EODY_faq/soap
+Τι σαπούνι να επιλέξω;	EODY_faq/soap
+Ξέρεις τι σαπούνι να βάλω;	EODY_faq/soap
+Με τι σαπούνι να τα πλύνω;	EODY_faq/soap
+Ποιο σαπούνι να βάλω;	EODY_faq/soap
+Θα πρότεινες κάποιο σαπούνι;	EODY_faq/soap
+Τι σαπούνι προτείνεις να βάλω;	EODY_faq/soap
+Τι σαπούνι προτείνεις να χρησιμοποιήσω;	EODY_faq/soap
