@@ -1,5 +1,5 @@
 {
-    "bm25_&_ranker": {
+    "bm25": {
         "1": {
             "Retriever": {
                 "recall_multi_hit": 0.47474747474747475,
@@ -901,7 +901,7 @@
             }
         }
     },
-    "embedding_retriever_&_ranker": {
+    "embedding": {
         "1": {
             "Retriever": {
                 "recall_multi_hit": 0.2828282828282828,
@@ -1803,7 +1803,7 @@
             }
         }
     },
-    "dpr_&_ranker": {
+    "dpr": {
         "1": {
             "Retriever": {
                 "recall_multi_hit": 0.050505050505050504,
