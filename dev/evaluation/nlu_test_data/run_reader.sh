@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # List of top_k and reader_top_k values
-top_k_ranker_params=(15)  # Values for Ranker top_k
-reader_top_k_values=(15)  # Values for Reader top_k
+top_k_ranker_params=(5 10 15 20)  # Values for Ranker top_k
+reader_top_k_values=(5 10 15 20)  # Values for Reader top_k
 
 # Loop through top_k_ranker and reader_top_k combinations
 for top_k in "${top_k_ranker_params[@]}"

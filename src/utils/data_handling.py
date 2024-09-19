@@ -33,7 +33,7 @@ def post_process_generator_answers (result):
 
 def truncate_incomplete_sentence(text):
     """
-    Truncates text at the last complete sentence while preserving enumerations and special cases like colons.
+    Truncate the text at the last complete sentence.
     
     Args:
         text (str): The text to be truncated.
@@ -41,42 +41,35 @@ def truncate_incomplete_sentence(text):
     Returns:
         str: The truncated text with only complete sentences.
     """
-    # Remove newline characters from the text
+    # Replace newline characters with spaces
     text = text.replace('\n', ' ')
 
-    # Tokenize text into sentences
+    # Split the text into sentences (we assume it's in Greek)
     sentences = nltk.sent_tokenize(text, language='greek')
     
-    # Define Greek sentence-ending punctuation marks
-    ending_punctuation = ('.', '!')
+    # Greek punctuation marks that indicate the end of a sentence
+    ending_punctuation = ('.', '!', ';')
 
-    enumeration_pattern = re.compile(r'^\s*\d+[.)]\s*$')  # Only a number and dot or parenthesis with no text after it
+    # Pattern to detect sentences like "1." or "2)" that are just enumerations
+    enumeration_pattern = re.compile(r'^\s*\d+[.)]\s*$')
 
-    # Define a pattern for colons used in certain contexts (e.g., "Here are the steps:")
-    #colon_pattern = re.compile(r'.*:$')
-
-    # Remove incomplete sentences or invalid endings, including numbers like "1."
+    # Process each sentence
     while sentences:
-        last_sentence = sentences[-1].strip()
-        
-        # Check if the last sentence is only a number and dot (e.g., "1.", "2.") and remove it
+        last_sentence = sentences[-1].strip()  # Check the last sentence
+
+        # If it's just an enumeration like "1.", remove it
         if enumeration_pattern.match(last_sentence):
             sentences.pop()
             continue
-        
-        # Check if the last sentence ends with proper punctuation
+
+        # If the sentence ends with valid punctuation, we're done
         if last_sentence.endswith(ending_punctuation):
             break
         
-        # Allow sentences that end with a colon to remain (e.g., "Here are the steps:")
-        #if colon_pattern.match(last_sentence):
-         #   sentences.pop()
-          #  continue
-        
-        # Otherwise, remove the last sentence
+        # Otherwise, remove incomplete sentences
         sentences.pop()
 
-    # Join all remaining sentences into the final truncated text
+    # Join the remaining complete sentences
     truncated_text = ' '.join(sentences)
     return truncated_text.strip()
 

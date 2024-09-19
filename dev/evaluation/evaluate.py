@@ -37,7 +37,7 @@ def index_eval_labels(document_store, eval_filename: str):
 
     label_preprocessor = PreProcessor(
         split_by="word",
-        split_length=128,
+        split_length=75,
         split_respect_sentence_boundary=False,
         clean_empty_lines=False,
         clean_whitespace=False,

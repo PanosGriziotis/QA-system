@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # List of top_k and max_new_tokens values
-top_k_params=(5 15 20)  # Add values, e.g., top_k_params=(10 20 30)
-max_new_tokens_params=(100)  # Add values, e.g., max_new_tokens_params=(50 100 150)
+top_k_params=(1 5 15 20)  # Add values, e.g., top_k_params=(10 20 30)
+max_new_tokens_params=(150)  # Add values, e.g., max_new_tokens_params=(50 100 150)
 
 # Loop through top_k and max_new_tokens combinations
 for top_k in "${top_k_params[@]}"

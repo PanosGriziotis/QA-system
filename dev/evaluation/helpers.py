@@ -91,7 +91,7 @@ def plot_retrievers_eval_report(json_path):
 
     method_titles = {
         'bm25': 'BM25',
-        'embedding_retriever': 'Embedding Retriever',
+        'embedding_retriever': 'SBERT',
         'dpr': 'DPR'
     }
 
@@ -111,7 +111,7 @@ def plot_retrievers_eval_report(json_path):
 
     # Derive the output file name from the input JSON file name
     base_name = os.path.splitext(os.path.basename(json_path))[0]
-    output_path = f'reports/{base_name}_performance_metrics_1.png'
+    output_path = f'reports/{base_name}_performance_metrics.png'
     plt.savefig(output_path)
     print(f"Combined plot saved as {output_path}")
 

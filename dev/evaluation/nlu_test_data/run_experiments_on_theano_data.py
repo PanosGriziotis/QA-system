@@ -52,7 +52,7 @@ def generate_results_for_queries_list (queries_intents_pairs:list,
             print (result)
             print (result ["answers"][0]["answer"])
             print ("\tc_rel:\t", result["answers"][0]["meta"]["context_relevance"])
-            print ("\tground:\t", result["answers"][0]["meta"]["goundedness"])
+            print ("\tground:\t", result["answers"][0]["meta"]["groundedness"])
             results.append (result)
 
         except Exception as e:

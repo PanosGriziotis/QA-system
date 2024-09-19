@@ -35,8 +35,8 @@ class Generator(BaseComponent):
     def __init__(self,
                 model_name = "ilsp/Meltemi-7B-Instruct-v1",
                 prompt_messages:List[Dict]=[
-                     {"role": "system", "content": 'Είσαι ένας ψηφιακός βοηθός για τον COVID-19. Δίνεις σύντομες αλλά περιεκτικές απαντήσεις στις ερωτήσεις που σου θέτει ο χρήστης.'},
-                     {"role": "user", "content": 'Ερώτηση:\n {query} \n Δώσε μία ολοκληρωμένη απάντηση με βάση τις παρακάτω πληροφορίες: \n {join(documents)}. \n Απάντηση: '}
+                     {"role": "system", "content": 'Είσαι ένα γλωσσικό μοντέλο για την ελληνική γλώσσα. Δώσε μία σύντομη, σαφή και ολοκληρωμένη απαντήση στην Ερώτηση του χρήστη με δικά σου λόγια. Η απάντηση πρέπει να βασίζεται στις Πληροφορίες που δίνονται.'},
+                     {"role": "user", "content": 'Ερώτηση:\n {query} \n Πληροφορίες: \n {join(documents)}. \n Απάντηση: \n'}
                      ]):
         
         self.model_name = model_name
@@ -48,7 +48,7 @@ class Generator(BaseComponent):
 
         super().__init__()
 
-    def run(self, query, documents, max_new_tokens:int=100, temperature:float = 0.75, top_p:float = 0.95, post_processing = True):
+    def run(self, query, documents, max_new_tokens:int=150, temperature:float = 0.75, top_p:float = 0.95, post_processing = True):
         """"""
         generation_kwargs={
                             'max_new_tokens': max_new_tokens,
@@ -123,9 +123,9 @@ def init_rag_pipeline (use_gpu:bool=True):
         top_k=20
         )
     
-    try:
-        ranker_model_name_or_path = os.path.join(SCRIPT_DIR, "models/bert-multilingual-passage-reranking-msmarco")
-    except IOError:
+    ranker_model_name_or_path  = os.path.join(SCRIPT_DIR, "models/bert-multilingual-passage-reranking-msmarco")
+    if not os.path.exists(ranker_model_name_or_path):
+
         ranker_model_name_or_path = "amberoad/bert-multilingual-passage-reranking-msmarco"
     
     ranker = SentenceTransformersRanker(
@@ -134,9 +134,9 @@ def init_rag_pipeline (use_gpu:bool=True):
         top_k=10
         )
     
-    try:
-        generator_model_name_or_path = os.path.join(SCRIPT_DIR, "models/Meltemi-7B-Instruct-v1")
-    except IOError:
+    generator_model_name_or_path=  os.path.join(SCRIPT_DIR, "models/Meltemi-7B-Instruct-v1")
+    if not os.path.exists(ranker_model_name_or_path):
+
         generator_model_name_or_path = "ilsp/Meltemi-7B-Instruct-v1"
 
     generator = Generator(model_name=generator_model_name_or_path)

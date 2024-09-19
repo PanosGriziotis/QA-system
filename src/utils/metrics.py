@@ -22,9 +22,10 @@ def compute_similarity (document_1:str, document_2:Union[str, List[str]], model_
     Generates Cosine Similarity scores between query and a document (or a list of documents) using a Bi-encoder and cosine similarity.
     """
     # Load Bi-encoder
-    try:
-        model_name_or_path = os.path.join(SCRIPT_DIR, "models/stsb-xlm-r-greek-transfer")
-    except IOError:
+    
+    model_name_or_path = os.path.join(SCRIPT_DIR, "models/stsb-xlm-r-greek-transfer")
+    if not os.path.exists(model_name_or_path):
+
         model_name_or_path = "lighteternal/stsb-xlm-r-greek-transfer"
 
     model = SentenceTransformer(model_name_or_path, device= "cuda")
