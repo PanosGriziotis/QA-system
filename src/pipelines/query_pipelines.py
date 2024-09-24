@@ -10,7 +10,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 import torch
 
 from haystack.pipelines import Pipeline
-from haystack.nodes import  EmbeddingRetriever, FARMReader, PromptNode, PromptTemplate, AnswerParser 
+from haystack.nodes import  EmbeddingRetriever,BM25Retriever, FARMReader, PromptNode, PromptTemplate, AnswerParser 
 from haystack.nodes.base import BaseComponent
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -19,7 +19,8 @@ sys.path.append(os.path.dirname(SCRIPT_DIR))
 from document_store.initialize_document_store import document_store as DOCUMENT_STORE
 from pipelines.ranker import SentenceTransformersRanker
 from utils.data_handling import post_process_generator_answers
-from utils.metrics import compute_similarity
+import pandas as pd
+from haystack.nodes import JoinDocuments
 
 logging.basicConfig(format="%(levelname)s - %(name)s -  %(message)s", level=logging.WARNING)
 logging.getLogger("haystack").setLevel(logging.INFO)
@@ -33,26 +34,24 @@ class Generator(BaseComponent):
     outgoing_edges = 1
 
     def __init__(self,
-                model_name = "ilsp/Meltemi-7B-Instruct-v1",
+                model_name = "ilsp/Meltemi-7B-Instruct-v1.5",
                 prompt_messages:List[Dict]=[
-                     {"role": "system", "content": 'Είσαι ένα γλωσσικό μοντέλο για την ελληνική γλώσσα. Δώσε μία σύντομη, σαφή και ολοκληρωμένη απαντήση στην Ερώτηση του χρήστη με δικά σου λόγια. Η απάντηση πρέπει να βασίζεται στις Πληροφορίες που δίνονται.'},
-                     {"role": "user", "content": 'Ερώτηση:\n {query} \n Πληροφορίες: \n {join(documents)}. \n Απάντηση: \n'}
+                     {"role": "system", "content": 'Είσαι ένας ψηφιακός βοηθός που απαντάει σε ερωτήσεις. Δώσε μία σαφή και ολοκληρωμένη απάντηση στην ερώτηση του χρήστη με βάση τις σχετικές πληροφορίες.'},
+                     {"role": "user", "content": 'Ερώτηση:\n {query} \n Πληροφορίες: \n {join(documents)} \n Απάντηση: \n'}
                      ]):
         
         self.model_name = model_name
         self.model = load_model(self.model_name)
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.prompt = self.tokenizer.apply_chat_template(prompt_messages, add_generation_prompt=True, tokenize=False)
-        self.prompt_template = PromptTemplate(prompt = self.prompt,
-                                            output_parser=AnswerParser(pattern = r"(?<=<\|assistant\|>\n)([\s\S]*)"))
-
+        self.prompt_template = PromptTemplate(prompt = self.prompt, output_parser=AnswerParser(pattern = r"(?<=<\|assistant\|>\n)([\s\S]*)")) # pattern = r"(?<=<\|assistant\|>\n)([\s\S]*)"
         super().__init__()
 
-    def run(self, query, documents, max_new_tokens:int=150, temperature:float = 0.75, top_p:float = 0.95, post_processing = True):
+    def run(self, query, documents, max_new_tokens:int=150, temperature:float = 0.75, top_p:float = 0.95, top_k:int=50, post_processing = True):
         """"""
         generation_kwargs={
                             'max_new_tokens': max_new_tokens,
-                            'top_k': 50,
+                            'top_k': top_k,
                             'top_p': top_p,
                             'temperature': temperature,
                             'do_sample': True
@@ -111,17 +110,53 @@ def load_model (model_name):
     
     return model
 
-
-
-
 def init_rag_pipeline (use_gpu:bool=True):
     
-    retriever = EmbeddingRetriever(
+    bm25_retriever  = BM25Retriever(document_store=DOCUMENT_STORE)
+    dense_retriever = EmbeddingRetriever(
         embedding_model="panosgriz/covid_el_paraphrase-multilingual-MiniLM-L12-v2",
         document_store=DOCUMENT_STORE,
-        use_gpu=False,
+        use_gpu=use_gpu,
         top_k=20
         )
+    
+    join_documents = JoinDocuments(join_mode="concatenate")
+
+    ranker_model_name_or_path  = os.path.join(SCRIPT_DIR, "models/bert-multilingual-passage-reranking-msmarco")
+    if not os.path.exists(ranker_model_name_or_path):
+
+        ranker_model_name_or_path = "amberoad/bert-multilingual-passage-reranking-msmarco"
+    
+    ranker = SentenceTransformersRanker(
+        model_name_or_path=ranker_model_name_or_path,
+        use_gpu=use_gpu,
+        top_k=10
+        )    
+    
+    generator = Generator()
+
+    p = Pipeline()
+    
+    p.add_node(component=bm25_retriever, name="BM25Retriever", inputs=["Query"])
+    p.add_node(component=dense_retriever, name="DenseRetriever", inputs=["Query"])
+    p.add_node(component=join_documents, name="JoinDocuments", inputs=["BM25Retriever", "DenseRetriever"])
+    p.add_node(component=ranker, name="Ranker", inputs=["JoinDocuments"])
+    p.add_node(component=generator, name="Generator", inputs=["Ranker"])
+
+    
+    return p
+
+def init_extractive_qa_pipeline (use_gpu:bool=True):
+
+    bm25_retriever  = BM25Retriever(document_store=DOCUMENT_STORE)
+    dense_retriever = EmbeddingRetriever(
+        embedding_model="panosgriz/covid_el_paraphrase-multilingual-MiniLM-L12-v2",
+        document_store=DOCUMENT_STORE,
+        use_gpu=use_gpu,
+        top_k=20
+        )
+    join_documents = JoinDocuments(join_mode="concatenate")
+
     
     ranker_model_name_or_path  = os.path.join(SCRIPT_DIR, "models/bert-multilingual-passage-reranking-msmarco")
     if not os.path.exists(ranker_model_name_or_path):
@@ -130,41 +165,7 @@ def init_rag_pipeline (use_gpu:bool=True):
     
     ranker = SentenceTransformersRanker(
         model_name_or_path=ranker_model_name_or_path,
-        use_gpu=True,
-        top_k=10
-        )
-    
-    generator_model_name_or_path=  os.path.join(SCRIPT_DIR, "models/Meltemi-7B-Instruct-v1")
-    if not os.path.exists(ranker_model_name_or_path):
-
-        generator_model_name_or_path = "ilsp/Meltemi-7B-Instruct-v1"
-
-    generator = Generator(model_name=generator_model_name_or_path)
-
-    p = Pipeline()
-    p.add_node(component=retriever, name ="Retriever", inputs=["Query"])
-    p.add_node(component=ranker, name="Ranker", inputs=["Retriever"])
-    p.add_node(component=generator, name ="Generator", inputs=["Ranker"])
-
-    return p
-
-def init_extractive_qa_pipeline (use_gpu:bool=True):
-
-    retriever = EmbeddingRetriever(
-        embedding_model="panosgriz/covid_el_paraphrase-multilingual-MiniLM-L12-v2",
-        document_store=DOCUMENT_STORE,
-        use_gpu=False,
-        top_k= 20
-        )
-
-    try:
-        ranker_model_name_or_path = os.path.join(SCRIPT_DIR, "models/bert-multilingual-passage-reranking-msmarco")
-    except IOError:
-        ranker_model_name_or_path = "amberoad/bert-multilingual-passage-reranking-msmarco"
-    
-    ranker = SentenceTransformersRanker(
-        model_name_or_path=ranker_model_name_or_path,
-        use_gpu=True,
+        use_gpu=use_gpu,
         top_k=10
         )
     
@@ -173,10 +174,11 @@ def init_extractive_qa_pipeline (use_gpu:bool=True):
         use_gpu=use_gpu,
         top_k = 10 
         )
-
+    
     p = Pipeline()
-    p.add_node(component=retriever, name ="Retriever", inputs=["Query"])
-    p.add_node(component=ranker, name="Ranker", inputs=["Retriever"])
+    p.add_node(component=bm25_retriever, name="BM25Retriever", inputs=["Query"])
+    p.add_node(component=dense_retriever, name="DenseRetriever", inputs=["Query"])
+    p.add_node(component=join_documents, name="JoinDocuments", inputs=["BM25Retriever", "DenseRetriever"])
+    p.add_node(component=ranker, name="Ranker", inputs=["JoinDocuments"])
     p.add_node(component=reader, name="Reader", inputs=["Ranker"])
-
     return p
