@@ -69,24 +69,32 @@ class Generator(BaseComponent):
         })
 
 
-        result, _ = generator.run(query=query, documents=documents)
-        # Remove invocation context from final result for being redundant information
-        result.pop("invocation_context")
+        result, _ = generator.run(query=query, documents=documents)        
 
         if post_processing:
-            # Post-process Generator's output: 
-            # a) remove trailing words in incomplete outputs that end abruptly.
-            # b) remove words or phrases in the output coming accidently from the prompt message (e.g., Ερώτηση:)
-
-            c_result = post_process_generator_answers(result)
+            # Post-process the Generator's output.
+            result = post_process_generator_answers(result)
             answer = result["answers"][0].answer.strip()
-
-            if answer == '' or (len(answer) == 1 and answer in string.punctuation):
-                pass
-            else:
-                return c_result, 'output_1'
+        else:
+            answer = result["answers"][0].answer.strip()
+            
+        max_attempts = 3
+        attempt = 0
         
-        return result, 'output_1'
+        # Retry generation in case of empty answer string
+        while (answer == '' or answer == "Συγγνώμη, αλλά δεν μπορώ να δώσω μία απάντηση σε αυτήν την ερώτηση.") and attempt < max_attempts:
+            result, _ = generator.run(query=query, documents=documents)
+            
+            if post_processing:
+                # Post-process Generator's output again after retry
+                result = post_process_generator_answers(result)
+                answer = result["answers"][0].answer.strip()
+            
+            attempt += 1
+        
+        result.pop("invocation_context", None)
+        
+        return result, answer  # Return the final result and answer
         
     def run_batch(
         self):
@@ -101,7 +109,6 @@ def load_model (model_name):
     bnb_4bit_quant_type="nf4",
     bnb_4bit_compute_dtype=torch.bfloat16,
     load_in_8bit_fp32_cpu_offload=True
-    
     )
 
     model = AutoModelForCausalLM.from_pretrained(model_name,  quantization_config=bnb_config, device_map="cuda")
@@ -111,6 +118,12 @@ def load_model (model_name):
     return model
 
 def init_rag_pipeline (use_gpu:bool=True):
+    """initialize generative pipeline"""
+
+    ranker_model_name_or_path  = os.path.join(SCRIPT_DIR, "models/bert-multilingual-passage-reranking-msmarco")
+    if not os.path.exists(ranker_model_name_or_path):
+
+        ranker_model_name_or_path = "amberoad/bert-multilingual-passage-reranking-msmarco"
     
     bm25_retriever  = BM25Retriever(document_store=DOCUMENT_STORE)
     dense_retriever = EmbeddingRetriever(
@@ -119,35 +132,30 @@ def init_rag_pipeline (use_gpu:bool=True):
         use_gpu=use_gpu,
         top_k=20
         )
-    
     join_documents = JoinDocuments(join_mode="concatenate")
-
-    ranker_model_name_or_path  = os.path.join(SCRIPT_DIR, "models/bert-multilingual-passage-reranking-msmarco")
-    if not os.path.exists(ranker_model_name_or_path):
-
-        ranker_model_name_or_path = "amberoad/bert-multilingual-passage-reranking-msmarco"
-    
     ranker = SentenceTransformersRanker(
         model_name_or_path=ranker_model_name_or_path,
         use_gpu=use_gpu,
         top_k=10
         )    
-    
     generator = Generator()
 
     p = Pipeline()
-    
     p.add_node(component=bm25_retriever, name="BM25Retriever", inputs=["Query"])
     p.add_node(component=dense_retriever, name="DenseRetriever", inputs=["Query"])
     p.add_node(component=join_documents, name="JoinDocuments", inputs=["BM25Retriever", "DenseRetriever"])
     p.add_node(component=ranker, name="Ranker", inputs=["JoinDocuments"])
     p.add_node(component=generator, name="Generator", inputs=["Ranker"])
-
-    
     return p
 
 def init_extractive_qa_pipeline (use_gpu:bool=True):
+    """initialize extractive qa pipeline"""
 
+    ranker_model_name_or_path  = os.path.join(SCRIPT_DIR, "models/bert-multilingual-passage-reranking-msmarco")
+    if not os.path.exists(ranker_model_name_or_path):
+
+        ranker_model_name_or_path = "amberoad/bert-multilingual-passage-reranking-msmarco"
+    
     bm25_retriever  = BM25Retriever(document_store=DOCUMENT_STORE)
     dense_retriever = EmbeddingRetriever(
         embedding_model="panosgriz/covid_el_paraphrase-multilingual-MiniLM-L12-v2",
@@ -155,23 +163,16 @@ def init_extractive_qa_pipeline (use_gpu:bool=True):
         use_gpu=use_gpu,
         top_k=20
         )
-    join_documents = JoinDocuments(join_mode="concatenate")
-
-    
-    ranker_model_name_or_path  = os.path.join(SCRIPT_DIR, "models/bert-multilingual-passage-reranking-msmarco")
-    if not os.path.exists(ranker_model_name_or_path):
-
-        ranker_model_name_or_path = "amberoad/bert-multilingual-passage-reranking-msmarco"
-    
     ranker = SentenceTransformersRanker(
         model_name_or_path=ranker_model_name_or_path,
         use_gpu=use_gpu,
         top_k=10
         )
-    
+    join_documents = JoinDocuments(join_mode="concatenate")
     reader = FARMReader(
         model_name_or_path="panosgriz/mdeberta-v3-base-squad2-covid-el_small",
         use_gpu=use_gpu,
+        use_confidence_scores=True,
         top_k = 10 
         )
     
