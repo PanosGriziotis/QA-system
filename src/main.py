@@ -15,8 +15,7 @@ import torch
 import gc
 from pipelines.query_pipelines import init_rag_pipeline, init_extractive_qa_pipeline
 from pipelines.indexing_pipeline import indexing_pipeline
-from utils.data_handling import add_eval_scores_to_result, compute_similarity, compute_groundedness_rouge_score
-import string 
+from utils.metrics import compute_groundedness_rouge_score, compute_context_relevance
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -70,7 +69,7 @@ async def ask_extractive_qa_pipeline(request: QueryRequest):
     """
     Use this endpoint to post queries as input to an Extractive QA pipeline (The output is a text span in the retrieved documents)
     """
-    # initialize pipeline
+    # Initialize pipeline
     query_pipeline = init_extractive_qa_pipeline(use_gpu = True)
     start_time = time.time()
 
@@ -85,12 +84,6 @@ async def ask_extractive_qa_pipeline(request: QueryRequest):
     if not "answers" in result:
         result["answers"] = []
 
-    # Add answer relevance and context relavance in top_1 answer metadata field.
-    #result = add_eval_scores_to_result(result=result)
-
-
-    print (result)
-
     logging.info(
         json.dumps({"request": request.dict(), "response": result, "time": f"{(time.time() - start_time):.2f}"}, default=str, ensure_ascii=False)
     )
@@ -100,7 +93,7 @@ async def ask_extractive_qa_pipeline(request: QueryRequest):
 @app.post("/rag-query")
 def ask_rag_pipeline(request: QueryRequest):
     """
-    #Use this endpoint to post queries as input to a Retrieval Augmented Generation (RAG) pipeline (The output answer is generated answer given the retrieved documents)
+    Use this endpoint to post queries as input to a Retrieval Augmented Generation (RAG) pipeline (The output answer is generated answer given the retrieved documents)
     """
     
     # initialize pipeline
@@ -118,14 +111,6 @@ def ask_rag_pipeline(request: QueryRequest):
     if not "answers" in result:
         result["answers"] = []
     
-    
-    context = " ".join([document.content for document in result["documents"]])
-    
-    result["answers"][0].meta["context_relevance"] = compute_similarity(document_1=request.query, document_2=context)  
-    result["answers"][0].meta["groundedness"] = compute_groundedness_rouge_score(result["answers"][0].answer, context=context)
-    torch.cuda.empty_cache()
-    gc.collect()
-
     logger.info(
         json.dumps({"request": request, "response": result, "time": f"{(time.time() - start_time):.2f}"}, default=str, ensure_ascii=False)
     )
