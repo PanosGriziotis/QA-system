@@ -4,17 +4,14 @@ import sys
 from typing import List, Union
 from haystack.schema import Document
 
-
-
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
-from sentence_transformers import SentenceTransformer, CrossEncoder
+from sentence_transformers import SentenceTransformer
 
 from rouge_score import rouge_scorer
 from nltk.tokenize import word_tokenize
 
-from haystack.schema import Document
 import re
 
 def compute_similarity (document_1:str, document_2:Union[str, List[str]], model_name_or_path="lighteternal/stsb-xlm-r-greek-transfer"):
@@ -29,103 +26,86 @@ def compute_similarity (document_1:str, document_2:Union[str, List[str]], model_
         model_name_or_path = "lighteternal/stsb-xlm-r-greek-transfer"
 
     model = SentenceTransformer(model_name_or_path, device= "cuda")
-    q_embedding = model.encode(document_1)
-    d_embedding = model.encode(document_2)
+    embedding_1 = model.encode(document_1)
+    embedding_2 = model.encode(document_2)
     
-    cos_sim = model.similarity(q_embedding, d_embedding)[0].tolist()
+    cos_sim = model.similarity(embedding_1, embedding_2)[0].tolist()
 
-    if len(cos_sim) > 1:
-        return cos_sim
-    else:
-        return cos_sim[0]   
+    return cos_sim[0]   
 
-def compute_context_relevance (answer, retrieved_documents):
-    """
-    Determines the relevance of the documents from which the answer was generated or extracted relative to the query.
-    This method calculates the mean relevance score of the documents that comprise the input context. 
-    In the case of an extractive QA pipeline, it returns a single relevance score, coming from the document that the 
-    answer was extracted from.
 
-    Args:
-        answer (Answer): The first Answer object in the result, which contains the extracted answer.
-        retrieved_documents (list of Document): A list of ranked Document objects, representing the documents retrieved for the query.
-    """
-    # Get the ids of the documents that the answer is generated from 
-    scores = []
-    answer_documents_ids = answer["document_ids"]
-
-    for doc in retrieved_documents:
-        if doc["id"] in answer_documents_ids:
-            scores.append(doc["score"])
-    
-    if len (scores) > 1:
-        return sum (scores) / len (scores)
-    else: 
-        return scores[0]
-
-def compute_answer_relevance(query: str, answer: str, context: str):
+def generate_questions(answer, context):
 
     from pipelines.query_pipelines import Generator
 
+    answer_text = answer
+    context_text = context
     prompt_messages = [
-        {"role": "system", "content": 'Είσαι το Μελτέμι, ένα γλωσσικό μοντέλο για την ελληνική γλώσσα. Είσαι ικανό να δημιουργείς ερωτήσεις που αντιστοιχούν στις απαντήσεις που σου δίνει ο χρήστης και σχετίζονται με την πανδημία του COVID-19.'},
-        {"role": "user", "content": f'Δώσε μου 3 σύντομες και απλοϊκές ερωτήσεις με βάση αυτήν την απάντηση: "{answer}"'}
+        {"role": "system", "content": 'Δημιούργησε ερωτήσεις με βάση την απάντηση που σου δίνει ο χρήστης. Για να σε βοηθήσω, σου δίνω κάποια παραδείγματα: \n Απάντηση: Ο Άλμπερτ Αϊνστάιν γεννήθηκε στη Γερμανία. \nΠερικείμενο: Ο Άλμπερτ Αϊνστάιν ήταν ένας γερμανικής καταγωγής θεωρητικός φυσικός, ο οποίος θεωρείται ευρέως ως ένας από τους μεγαλύτερους και πιο επιδραστικούς επιστήμονες όλων των εποχών \n Ερωτήσεις:\n 1. Πού γεννήθηκε ο Άλμπερτ Αϊνστάιν;\n 2. Ποιά είναι η χώρα γέννησης του Αϊνστάιν;\n 3. Σε ποιά χώρα γεννήθηκε Αϊνστάιν; \n\n Απάντηση: Everest \n Περικείμενο: Το ψηλότερο βουνό στη Γη, μετρούμενο από το επίπεδο της θάλασσας, είναι μια διάσημη κορυφή που βρίσκεται στα Ιμαλάια. \n Ερωτήσεις:\n 1. Ποιο είναι το ψηλότερο βουνό στη Γη;\n 2. Πώς ονομάζεται το πιο ψηλό βουνό στον κόσμο;\n 3. Ποιό βουνό θεωρείται αυτό με το πιο μεγάλο υψόμετρο;'},
+        {"role": "user", "content": f'Δημιούργησε 3 σύντομες και απλές ερωτήσεις με βάση την απάντηση. \n Απάντηση: {answer_text} \n Περικείμενο: {context_text} \n Ερωτήσεις: \n '}
     ]
-
     generator = Generator(prompt_messages=prompt_messages)
 
-    if not answer:
-        
-        answer_relevance = 0.0
-        return answer_relevance
+    result, _ = generator.run(query=answer_text, documents=[], max_new_tokens=100, post_processing=False)
 
-    result, _ = generator.run(query=answer, documents=[Document(content=context)], max_new_tokens=100, post_processing=False)
-    
     # Extract the matches (get generated questions into a list)
-    pattern = r'\d+\.\s(.*?)(?=\n\d+\.|\n*$)'
-    generated_queries = re.findall(pattern, result["answers"][0].answer, re.DOTALL)
-    print (generated_queries)
-    if len(generated_queries) < 3:
-        answer_relevance = 0.0
-        #raise ValueError(f"Less than 3 questions were generated for answer '{answer}' and ground truth question '{query}'")
+    pattern = r'(1\.|2\.|3\.)\s(.*?)(?=\n(1\.|2\.|3\.)|\n*$)'
+    matches = re.findall(pattern, result["answers"][0].answer)
+
+    # Extract only the questions (ignore the numbering)
+    generated_queries = [match[1] for match in matches]
+
+    return generated_queries
     
-    else:
-        scores = []
+def compute_answer_relevance(query: str, answer: str, context):
 
-        for generated_query in generated_queries:
-            score = compute_similarity (document_1=generated_query, document_2=query)
-            scores.append(score)
+    # Keep generating questions until we get at least 3
+    generated_queries = []
+    max_attempts = 5  # Set a limit to avoid infinite loops
+    attempt = 0
 
-        try:
-            answer_relevance = sum(scores) / len(scores)
+    while len(generated_queries) < 3 and attempt < max_attempts:
+        generated_queries = generate_questions(answer, context)
 
-        except ZeroDivisionError:
-            answer_relevance = 0.0
-            print(f"Error: Division by zero occurred when computing relevance for query '{query}' and answer '{answer}'. Returning None.")
+        attempt += 1
 
-        except Exception as e:
-            print(f"An unexpected error occurred: {str(e)}")
-            answer_relevance = 0.0
+    # If we still don't have 3 questions after retries, set relevance to 0
+    if len(generated_queries) < 3:
+        print(f"Failed to generate 3 questions after {attempt} attempts")
+        return 0.0
+
+    # Compute relevance if 3 questions are generated
+    scores = []
+    for generated_query in generated_queries:
+        score = compute_similarity(document_1=generated_query, document_2=query)
+        scores.append(score)
+
+    try:
+        answer_relevance = sum(scores) / len(scores)
+    except ZeroDivisionError:
+        print(f"Error: Division by zero occurred when computing relevance for query '{query}' and answer '{answer}'. Returning None.")
+        answer_relevance = 0.0
+    except Exception as e:
+        print(f"An unexpected error occurred: {str(e)}")
+        answer_relevance = 0.0
 
     return answer_relevance
 
-############### UNUSED FUNCTIONS #############
 
-def cross_encoder_similarity (sentences,query):
-    model = CrossEncoder(model_name="amberoad/bert-multilingual-passage-reranking-msmarco",  max_length=512)
-    scores = []
-    for sentence in sentences:
-        score = model.predict([query, sentence])
-        scores.append(score)
-    return scores
+def compute_context_relevance (query:str, retrieved_documents:List):
 
-def compute_groundedness_score (answer:str, retrieved_documents:List[str]):
-    """
-    Determines whether the output answer is grounded on the retrieved documents information using cosine similarity.
-    """
-    scores = compute_similarity(query=answer, document=retrieved_documents)
+    if len(retrieved_documents) != 0:
+        scores = []
 
-    return sum (scores)/ len(retrieved_documents)
+        for doc in retrieved_documents:
+            cos_sim = compute_similarity(document_1=query, document_2=doc)
+            scores.append(cos_sim)
+        
+        return sum(scores)/len(scores)
+    else: 
+        cos_sim = compute_similarity(document_1=query, document_2=retrieved_documents[0])
+        return cos_sim
+
 
 def compute_groundedness_rouge_score (answer:str, context:str):
     """
@@ -137,10 +117,8 @@ def compute_groundedness_rouge_score (answer:str, context:str):
     tokenizer = GreekTokenizer()
     scorer = rouge_scorer.RougeScorer(rouge_types = ['rougeL'], tokenizer=tokenizer)
     score = scorer.score(context, answer)["rougeL"].precision
-    
-
     return score
-
+    
 class GreekTokenizer:
     def __init__(self):
         pass  # No need for initialization with word_tokenize
