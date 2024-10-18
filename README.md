@@ -40,7 +40,7 @@ Before you begin, ensure you have Python and Docker installed on your system.
 
     Note: The haystack service requires some time to download and load the models after it starts.
 
-![alt text](https://github.com/PanosGriziotis/QA-subsystem-thesis/blob/main/qa_system_architecture_overview.pndg?raw=true)
+![alt text](https://github.com/PanosGriziotis/QA-subsystem-thesis/blob/main/qa_system_architecture_overview.png?raw=true)
 
 ## Indexing
 
