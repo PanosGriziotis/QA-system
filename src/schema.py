@@ -11,6 +11,10 @@ class CustomConfig:
         # if any of the documents contains an embedding field as an ndarray the latter needs to be converted to list of float
         np.ndarray: lambda x: x.tolist(),
         pd.DataFrame: lambda x: [x.columns.tolist()] + x.values.tolist(),
+        np.float32: lambda x: float(x),
+        np.float64: lambda x: float(x),
+        np.int32: lambda x: int(x),
+        np.int64: lambda x: int(x),
     }
 
 class RequestBaseModel(BaseModel):

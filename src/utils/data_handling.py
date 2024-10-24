@@ -8,6 +8,7 @@ from haystack.nodes import TransformersTranslator
 import string
 import gc
 import torch
+import numpy as np 
 
 def post_process_generator_answers (result):
     """ 
@@ -96,6 +97,17 @@ def translate_docs (docs:List[str], use_gpu:bool=False):
     except AttributeError:
         t_docs = ['<ukn>']
     return t_docs
+
+def convert_numpy_scalars(data):
+    if isinstance(data, (np.float32, np.float64)):
+        return float(data)
+    if isinstance(data, (np.int32, np.int64)):
+        return int(data)
+    if isinstance(data, list):
+        return [convert_numpy_scalars(item) for item in data]
+    if isinstance(data, dict):
+        return {k: convert_numpy_scalars(v) for k, v in data.items()}
+    return data
 
 def flash_cuda_memory():
     gc.collect()

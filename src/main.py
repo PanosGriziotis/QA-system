@@ -14,7 +14,7 @@ from schema import QueryRequest, QueryResponse
 
 from pipelines.query_pipelines import init_rag_pipeline, init_extractive_qa_pipeline
 from pipelines.indexing_pipeline import indexing_pipeline
-from utils.data_handling import flash_cuda_memory
+from utils.data_handling import flash_cuda_memory, convert_numpy_scalars
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -78,6 +78,7 @@ async def ask_extractive_qa_pipeline(request: QueryRequest):
     # Run query pipeline using input parameters
     result = query_pipeline.run(query=request.query, params=params)
     
+    result = convert_numpy_scalars(result)
     # Ensure answers and documents and answers exist, even if they're empty lists
     if "documents" not in result:
         result["documents"] = []
@@ -101,6 +102,7 @@ def ask_rag_pipeline(request: QueryRequest):
     # Run query pipeline using input parameters
     result = query_pipeline.run(query=request.query, params=params)
 
+    result = convert_numpy_scalars(result)
     # Ensure answers and documents exist, even if they're empty lists
     if not "documents" in result:
         result["documents"] = []

@@ -5,8 +5,7 @@ from haystack.nodes import FileTypeClassifier, JsonConverter, TextConverter, PDF
 from haystack.pipelines import Pipeline
 from haystack.nodes.base import BaseComponent
 from pathlib import Path
-import nltk
-nltk.download('punkt_tab')
+
 
 class JsonFileDetector (BaseComponent):
     """

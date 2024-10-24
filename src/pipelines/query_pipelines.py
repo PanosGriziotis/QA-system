@@ -19,65 +19,58 @@ from utils.data_handling import post_process_generator_answers, flash_cuda_memor
 from utils.metrics import ContextRelevanceEvaluator
 from haystack.nodes import JoinDocuments
 
-logging.basicConfig(format="%(levelname)s - %(name)s -  %(message)s", level=logging.DEBUG)
-logging.getLogger("haystack").setLevel(logging.DEBUG)
+logging.basicConfig(format="%(levelname)s - %(name)s -  %(message)s", level=logging.INFO)
+logging.getLogger("haystack").setLevel(logging.INFO)
 
 if DOCUMENT_STORE is None:
     raise ValueError("the imported document_store is None. Please make sure that the Elasticsearch service is properly launched")
 
 
 class Generator(BaseComponent):
-    """Loads a predefined instruction-following LLM for causal generation on a given prompt. Returns an object containing the answer and outputs of previous nodes (e.g., documents)."""
-
+    """"Loads a predefined instruction-following LLM for causal generation on a given prompt. Returns an object containing the answer and outputs of previous nodes (e.g., documents)."""
     outgoing_edges = 1
-    model = None
-    tokenizer = None
-    generator = None
 
-    def __init__(self, model_name="ilsp/Meltemi-7B-Instruct-v1.5", prompt_messages=None):
+    def __init__(self,
+                model_name = "ilsp/Meltemi-7B-Instruct-v1.5",
+                prompt_messages=[
+                     {"role": "system", "content": 'Είσαι ένας ψηφιακός βοηθός που απαντάει σε ερωτήσεις. Δώσε μία σαφή και ολοκληρωμένη απάντηση στην ερώτηση του χρήστη με βάση τις σχετικές πληροφορίες.'},
+                     {"role": "user", "content": 'Ερώτηση:\n {query} \n Πληροφορίες: \n {join(documents)} \n Απάντηση: \n'}
+                     ]):
         
-        if not Generator.model or not Generator.tokenizer:
-            Generator.model = load_model(model_name)
-            Generator.tokenizer = AutoTokenizer.from_pretrained (model_name)
-        
-        prompt_messages = prompt_messages or [
-            {"role": "system", "content": 'Είσαι ένας ψηφιακός βοηθός που απαντάει σε ερωτήσεις. Δώσε μία σαφή και ολοκληρωμένη απάντηση στην ερώτηση του χρήστη με βάση τις σχετικές πληροφορίες.'},
-            {"role": "user", "content": 'Ερώτηση:\n {query} \n Πληροφορίες: \n {join(documents)} \n Απάντηση: \n'}
-        ]
-
         self.model_name = model_name
-        self.prompt_template = PromptTemplate(
-            prompt=self.tokenizer.apply_chat_template(prompt_messages, add_generation_prompt=True, tokenize=False),
-            output_parser=AnswerParser(pattern=r"(?<=<\|assistant\|>\n)([\s\S]*)")
-        )
-
-        if not Generator.generator:
-            Generator.generator = PromptNode(
-                model_name_or_path=self.model_name,
-                default_prompt_template=self.prompt_template,
-                top_k=1,
-                use_gpu=True,
-                model_kwargs={'model': Generator.model, 'tokenizer': Generator.tokenizer, 'task_name': 'text2text-generation', 'device': None}
-            )
-
+        self.model = load_model(self.model_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+        self.prompt = self.tokenizer.apply_chat_template(prompt_messages, add_generation_prompt=True, tokenize=False)
+        self.prompt_template = PromptTemplate(prompt = self.prompt, output_parser=AnswerParser(pattern = r"(?<=<\|assistant\|>\n)([\s\S]*)")) # pattern = r"(?<=<\|assistant\|>\n)([\s\S]*)"
+        
         super().__init__()
 
-    def run(self, query, documents, cr_score, max_new_tokens=150, temperature=0.75, top_p=0.95, top_k=50, post_processing=True, apply_cr_threshold=True):
-        generation_kwargs = {
-            'max_new_tokens': max_new_tokens,
-            'top_k': top_k,
-            'top_p': top_p,
-            'temperature': temperature,
-            'do_sample': True
-            }
-    
+    def run(self, query, documents, cr_score, max_new_tokens:int=150, temperature:float = 0.75, top_p:float = 0.95, top_k:int=50, post_processing = True, apply_cr_threshold=True):
         
+        generation_kwargs={
+                            'max_new_tokens': max_new_tokens,
+                            'top_k': top_k,
+                            'top_p': top_p,
+                            'temperature': temperature,
+                            'do_sample': True
+                            }
+        
+        generator = PromptNode(model_name_or_path = self.model_name,
+                               default_prompt_template = self.prompt_template,
+                               top_k= 1,
+                               model_kwargs = {
+            'model': self.model,
+            'tokenizer': self.tokenizer,
+            'task_name': 'text2text-generation',
+            'device': None,
+            "generation_kwargs": generation_kwargs
+        })
+   
+
         def generate_answer():
-            generator_output, _ = Generator.generator.run(
+            generator_output, _ = generator.run(
                 query=query,
-                documents=documents,
-                generation_kwargs=generation_kwargs
-                )
+                documents=documents)
             
             return post_process_generator_answers(generator_output) if post_processing else generator_output
 
@@ -99,8 +92,9 @@ class Generator(BaseComponent):
 
         if apply_cr_threshold and cr_score <= 0.17:
            result["answers"][0].answer = "Συγγνώμη, αλλά δεν διαθέτω αρκετές πληροφορίες για να σου απαντήσω σε αυτήν την ερώτηση."
-            
-        return result, answer
+
+        result["attempts"] = attempt   
+        return result, "output_1"
 
     def run_batch(self):
         return
@@ -109,11 +103,13 @@ class Generator(BaseComponent):
 def load_model(model_name):
     """Load LLM from the cache directory or download if not available. Load with 4bit quantization to not result in OOM error."""
     
+    #torch.cuda.set_per_process_memory_fraction(0.8)
+
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
         bnb_4bit_use_double_quant=True,
         bnb_4bit_quant_type="nf4",
-        bnb_4bit_compute_dtype=torch.float16,
+        bnb_4bit_compute_dtype=torch.bfloat16,
         load_in_4bit_fp32_cpu_offload=True
     )
 
@@ -122,8 +118,8 @@ def load_model(model_name):
         model_name,
         cache_dir='./models_cache', 
         quantization_config=bnb_config,
-        device_map="auto",
-        offload_folder="./offload_cache"
+        device_map="cuda",
+        #max_memory = {0: '14GB'},
     )
 
     # Enable gradient checkpointing to reduce memory
