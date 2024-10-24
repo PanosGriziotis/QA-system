@@ -3,10 +3,11 @@ from langdetect import detect, DetectorFactory
 from langdetect.lang_detect_exception import LangDetectException
 import re
 import nltk
-from metrics import compute_context_relevance, compute_similarity, compute_answer_relevance, compute_groundedness_rouge_score
 import re
 from haystack.nodes import TransformersTranslator
 import string
+import gc
+import torch
 
 def post_process_generator_answers (result):
     """ 
@@ -85,13 +86,6 @@ def remove_english_text(lines):
     return non_english_lines
 
 
-def is_english(text):
-    DetectorFactory.seed = 0
-    try:
-        return detect(text) == 'en'
-    except LangDetectException:
-        return False
-
 def translate_docs (docs:List[str], use_gpu:bool=False):
     
     max_seq_len = 512
@@ -103,20 +97,9 @@ def translate_docs (docs:List[str], use_gpu:bool=False):
         t_docs = ['<ukn>']
     return t_docs
 
-def join_punctuation(seq, characters='.,;?!:'):
-    characters = set(characters)
-    seq = iter(seq)
-    current = next(seq)
-
-    for nxt in seq:
-        if nxt in characters:
-            current += nxt
-        else:
-            yield current
-            current = nxt
-
-    yield current
-    return ' '.join(seq)
+def flash_cuda_memory():
+    gc.collect()
+    torch.cuda.empty_cache()
 
 
 

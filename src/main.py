@@ -11,16 +11,16 @@ from numpy import ndarray
 import json
 import time
 from schema import QueryRequest, QueryResponse
-import torch
-import gc
+
 from pipelines.query_pipelines import init_rag_pipeline, init_extractive_qa_pipeline
 from pipelines.indexing_pipeline import indexing_pipeline
-from utils.metrics import compute_groundedness_rouge_score, compute_context_relevance
+from utils.data_handling import flash_cuda_memory
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI(title="QA-subsystem API")
+query_pipeline = init_rag_pipeline(use_gpu=False)
 FILE_UPLOAD_PATH = os.getenv("FILE_UPLOAD_PATH", str((Path(__file__).parent / "file-upload").absolute()))
 Path(FILE_UPLOAD_PATH).mkdir(parents=True, exist_ok=True)
 
@@ -95,11 +95,7 @@ def ask_rag_pipeline(request: QueryRequest):
     """
     Use this endpoint to post queries as input to a Retrieval Augmented Generation (RAG) pipeline (The output answer is generated answer given the retrieved documents)
     """
-    
-    # initialize pipeline
-    query_pipeline = init_rag_pipeline(use_gpu=True)
     start_time = time.time()
-    
     params = request.params or {}
 
     # Run query pipeline using input parameters
@@ -110,8 +106,11 @@ def ask_rag_pipeline(request: QueryRequest):
         result["documents"] = []
     if not "answers" in result:
         result["answers"] = []
-    
-    logger.info(
-        json.dumps({"request": request, "response": result, "time": f"{(time.time() - start_time):.2f}"}, default=str, ensure_ascii=False)
+
+    print(
+        json.dumps({"request": request.dict(), "response": result, "time": f"{(time.time() - start_time):.2f}"}, default=str, ensure_ascii=False)
     )
-    return result    
+
+    flash_cuda_memory()
+
+    return result

@@ -15,7 +15,7 @@ sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 from document_store.initialize_document_store import document_store as DOCUMENT_STORE
 from pipelines.ranker import SentenceTransformersRanker
-from utils.data_handling import post_process_generator_answers
+from utils.data_handling import post_process_generator_answers, flash_cuda_memory
 from utils.metrics import ContextRelevanceEvaluator
 from haystack.nodes import JoinDocuments
 
@@ -131,17 +131,20 @@ def load_model(model_name):
     
     # Disable Tensor Parallelism 
     model.config.pretraining_tp = 1
+    
+    flash_cuda_memory()
+    
     return model
 
 def load_retrievers(use_gpu=False):
     """Load document Retrievers (BM25 + SBERT)."""
 
-    bm25_retriever = BM25Retriever(document_store=DOCUMENT_STORE)
+    bm25_retriever = BM25Retriever(document_store=DOCUMENT_STORE, top_k=10)
     dense_retriever = EmbeddingRetriever(
         embedding_model="panosgriz/covid_el_paraphrase-multilingual-MiniLM-L12-v2",
         document_store=DOCUMENT_STORE,
         use_gpu=use_gpu,
-        top_k=20
+        top_k=10
         )
     return bm25_retriever, dense_retriever
 
