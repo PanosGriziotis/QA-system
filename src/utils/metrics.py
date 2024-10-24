@@ -8,33 +8,85 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 from sentence_transformers import SentenceTransformer
-
+import torch
+import gc
 from rouge_score import rouge_scorer
 from nltk.tokenize import word_tokenize
-
+from transliterate import translit
+from haystack.nodes.base import BaseComponent
 import re
+import numpy as np
 
-def compute_similarity (document_1:str, document_2:Union[str, List[str]], model_name_or_path="lighteternal/stsb-xlm-r-greek-transfer"):
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+def cosine_similarity(embedding_1, embedding_2):
     """
-    Generates Cosine Similarity scores between query and a document (or a list of documents) using a Bi-encoder and cosine similarity.
+    Compute cosine similarity between two embeddings. Ensure that embeddings are 1D vectors.
     """
-    # Load Bi-encoder
+    # Flatten the embeddings to 1D arrays
+    embedding_1 = embedding_1.flatten()
+    embedding_2 = embedding_2.flatten()
+
+    # Compute the dot product and norms
+    return np.dot(embedding_1, embedding_2) / (np.linalg.norm(embedding_1) * np.linalg.norm(embedding_2))
+
+def compute_similarity(query: str, documents: Union[str, List[str]], model_name_or_path="lighteternal/stsb-xlm-r-greek-transfer"):
+    """
+    Generates a cosine similarity scores between query and a list of concatenated documents using a bi-encoder model. 
+    """
+    cache_dir = './models_cache'
+
+    # Load Bi-encoder model with cache
+    biencoder_model = os.path.join(SCRIPT_DIR, f'models/{model_name_or_path.split("/")[1]}')
+    if not os.path.exists(biencoder_model):
+        biencoder_model = model_name_or_path
+
+    model = SentenceTransformer(biencoder_model, cache_folder=cache_dir, device="cpu")
+
+    # Ensure documents is a list
+    if isinstance(documents, str):
+        documents = [documents]
+
+    # Transliterate the query and documents (assuming Greek text handling)
+    trans_query = translit(query.lower(), 'el')
+    trans_docs = [translit(doc.lower(), 'el') for doc in documents]
+
+    # --- Step 1: Batch Encoding for Embedding-based similarity ---
+    all_texts = [trans_query] + trans_docs
+    all_embeddings = model.encode(all_texts, convert_to_tensor=True, batch_size=8)  # Use batch encoding
+
+    # Extract the query and document embeddings from the batch
+    query_embedding = all_embeddings[0]  # Query embedding
+    docs_embeddings = all_embeddings[1:]  # Document embeddings
+
+    # --- Step 2: Compute cosine similarity ---
+    cosine_similarities = []
+    for doc_embedding in docs_embeddings:
+        # Compute the cosine similarity between the query and document embeddings
+        sim = cosine_similarity(query_embedding.cpu().numpy(), doc_embedding.cpu().numpy())
+        cosine_similarities.append(sim)
+
+    return cosine_similarities
+
+
+def compute_context_relevance(query: str, documents: List[str]) -> float:
+    """
+    Computes context relevance by averaging similarity scores between a query and a set of concatenated documents.
     
-    model_name_or_path = os.path.join(SCRIPT_DIR, "models/stsb-xlm-r-greek-transfer")
-    if not os.path.exists(model_name_or_path):
+    :param query: The input query string.
+    :param documents: List of document strings to be considered as the context.
+    :return: A context relevance score (average of similarity scores).
+    """
+    similarities = compute_similarity(query, documents)
 
-        model_name_or_path = "lighteternal/stsb-xlm-r-greek-transfer"
-
-    model = SentenceTransformer(model_name_or_path, device= "cuda")
-    embedding_1 = model.encode(document_1)
-    embedding_2 = model.encode(document_2)
+    # If multiple similarities, compute the mean score
+    if len(similarities) > 1:
+        return np.mean(similarities)
+    else:
+        return similarities[0]
     
-    cos_sim = model.similarity(embedding_1, embedding_2)[0].tolist()
-
-    return cos_sim[0]   
-
-
 def generate_questions(answer, context):
+    """Generates 3 artificial queries based on given answer text (and optionally based on a small context window for extractive qa answers spans) Important function for computing answer relevance score."""
 
     from pipelines.query_pipelines import Generator
 
@@ -58,7 +110,7 @@ def generate_questions(answer, context):
     return generated_queries
     
 def compute_answer_relevance(query: str, answer: str, context):
-
+    """"""
     # Keep generating questions until we get at least 3
     generated_queries = []
     max_attempts = 5  # Set a limit to avoid infinite loops
@@ -66,7 +118,6 @@ def compute_answer_relevance(query: str, answer: str, context):
 
     while len(generated_queries) < 3 and attempt < max_attempts:
         generated_queries = generate_questions(answer, context)
-
         attempt += 1
 
     # If we still don't have 3 questions after retries, set relevance to 0
@@ -75,64 +126,44 @@ def compute_answer_relevance(query: str, answer: str, context):
         return 0.0
 
     # Compute relevance if 3 questions are generated
-    scores = []
-    for generated_query in generated_queries:
-        score = compute_similarity(document_1=generated_query, document_2=query)
-        scores.append(score)
-
-    try:
-        answer_relevance = sum(scores) / len(scores)
-    except ZeroDivisionError:
-        print(f"Error: Division by zero occurred when computing relevance for query '{query}' and answer '{answer}'. Returning None.")
-        answer_relevance = 0.0
-    except Exception as e:
-        print(f"An unexpected error occurred: {str(e)}")
-        answer_relevance = 0.0
-
-    return answer_relevance
-
-
-def compute_context_relevance (query:str, retrieved_documents:List):
-
-    if len(retrieved_documents) != 0:
-        scores = []
-
-        for doc in retrieved_documents:
-            cos_sim = compute_similarity(document_1=query, document_2=doc)
-            scores.append(cos_sim)
-        
-        return sum(scores)/len(scores)
-    else: 
-        cos_sim = compute_similarity(document_1=query, document_2=retrieved_documents[0])
-        return cos_sim
-
+    similarities = compute_similarity(document_1=query, documents=generated_queries)
+    return np.mean(similarities)
 
 def compute_groundedness_rouge_score (answer:str, context:str):
     """
-    Determines whether the output answer is grounded on the retrieved documents information using rouge score.
-    Rouge-L precision is chosen because it measures how much of the answer's content is directly derived from the reference context. 
-    By using precision, we avoid the bias where longer answers might artificially achieve higher scores simply due to their length, regardless of their relevance or accuracy.
+    Determines whether the output answer is grounded on the retrieved documents information using rouge-l precision score.
     """
 
     tokenizer = GreekTokenizer()
     scorer = rouge_scorer.RougeScorer(rouge_types = ['rougeL'], tokenizer=tokenizer)
     score = scorer.score(context, answer)["rougeL"].precision
     return score
+
+class ContextRelevanceEvaluator(BaseComponent):
+    """A node to incorporate in query pipeline. CR score is appended and received from next node."""
+    outgoing_edges = 1
+
+    def run (self, query, documents):
+        docs = [doc.content for doc in documents]
+        cr_score = compute_context_relevance(query=query,documents=docs)
+        output={
+            "query": query,
+            "documents": documents,
+            "cr_score": cr_score
+        }
+        return output, "output_1"
     
+    def run_batch(self):
+        return
+
 class GreekTokenizer:
+    
     def __init__(self):
         pass  # No need for initialization with word_tokenize
 
     def tokenize(self, text):
         """
         Tokenizes Greek text into words using NLTK's word tokenizer.
-
-        Args:
-            text (str): The Greek text to be tokenized.
-
-        Returns:
-            list: A list of tokens extracted from the text.
         """
         tokens = word_tokenize(text, language='greek')
         return tokens
-    
