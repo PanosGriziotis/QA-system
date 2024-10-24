@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import pearsonr
 
 def analyze_relevance(directory, percentile=10):
-    scores = {'context_relevance': [], 'answer_relevance_ragas': []}
+    scores = {'context_relevance': [], 'answer_relevance': []}
     #rag_scores = {'context_relevance': [], 'answer_relevance_ragas': []}
 
     # Iterate through all files in the directory
@@ -20,7 +20,7 @@ def analyze_relevance(directory, percentile=10):
                     for item in data:
                         # Extract scores if the required keys exist
                         context_relevance = item['answers'][0]['meta'].get('context_relevance')
-                        answer_relevance = item['answers'][0]['meta'].get('answer_relevance_ragas')
+                        answer_relevance = item['answers'][0]['meta'].get('answer_relevance')
 
                         if context_relevance is not None and answer_relevance is not None:
 

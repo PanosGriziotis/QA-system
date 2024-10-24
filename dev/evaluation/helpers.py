@@ -37,11 +37,17 @@ def load_and_save_npho_datasets():
 
     # Load dataset from Hugging Face hub
     dataset = load_dataset("panosgriz/npho-covid-SQuAD-el")
-
     for key, local_file in npho_files.items():
-        # Save relevant part of the dataset to local file
-        with open(local_file, 'w', encoding='utf-8') as f:
-            f.write(dataset[f"test_npho_{key}tok"].to_json())
+        if key == "10":
+
+            # Save relevant part of the dataset to local file
+            with open(local_file, 'w', encoding='utf-8') as f:
+                
+                json.dump(dataset["test"][0],f, ensure_ascii=False, indent=4)
+        else: 
+                        # Save relevant part of the dataset to local file
+            with open(local_file, 'w', encoding='utf-8') as f:
+                json.dump(dataset["test"][1], f, ensure_ascii=False, indent=4)
 
     print("npho dataset files loaded and saved.")
 
@@ -55,7 +61,7 @@ def plot_retrievers_eval_report(json_path):
         data = json.load(fp)
 
     # Define methods and metrics
-    methods = ['bm25', 'embedding_retriever', 'dpr']
+    methods = ['bm25','dpr', 'emb_base', 'embedding', "hybrid"]
     retriever_types = methods  # Methods already include _&_ranker suffix
     metrics = ["recall_single_hit", 'map', 'mrr', 'ndcg']  # Removed 'precision'
     plot_data = {metric: {method: [] for method in retriever_types} for metric in metrics}
@@ -73,14 +79,11 @@ def plot_retrievers_eval_report(json_path):
                 else:
                     plot_data[metric][method].append((retriever_entry[metric], ranker_entry[metric]))
 
-    # Create the plots
+    # Create individual plots for each metric
     sns.set_theme(style="whitegrid")
 
     # Define distinct colors for the lines
     colors = sns.color_palette('bright', n_colors=len(methods))
-
-    fig, axes = plt.subplots(4, 1, figsize=(12, 24))  # Adjust the grid to fit 4 metrics
-    fig.suptitle('Performance Metrics for Retrieval Methods', fontsize=16)
 
     metric_titles = {
         'recall_single_hit': 'Recall@k',
@@ -91,28 +94,43 @@ def plot_retrievers_eval_report(json_path):
 
     method_titles = {
         'bm25': 'BM25',
-        'embedding_retriever': 'SBERT',
-        'dpr': 'DPR'
+        'emb_base': 'SBERT',
+        'embedding': 'SBERT_adapted',
+        'dpr': 'DPR',
+        'hybrid': 'BM25 + SBERT_adapted'
     }
 
-    for i, metric in enumerate(metrics):
-        ax = axes[i]
-        for j, method in enumerate(methods):
-            retriever_data, ranker_data = zip(*plot_data[metric][method])
-            ax.plot(top_k_values, retriever_data, label=f"{method_titles[method]}", color=colors[j])
-            if metric != 'recall_single_hit':
-                ax.plot(top_k_values, ranker_data, label=f"{method_titles[method]} & Re-ranker", linestyle='--', color=colors[j])
-        ax.set_title(metric_titles[metric])
-        ax.set_xlabel('k: number of retrieved documents')
-        ax.set_ylabel(metric_titles[metric])
-        ax.legend()
+    # Iterate over metrics and create a separate plot for each
+    for metric in metrics:
+        plt.figure(figsize=(12, 6))  # Set figure size for each plot
+        
+        # Plot only the "hybrid" method for 'ndcg' and 'mrr' metrics
+        if metric in ['mrr', 'ndcg']:
+            retriever_data, ranker_data = zip(*plot_data[metric]['hybrid'])
+            plt.plot(top_k_values, retriever_data, label=f"{method_titles['hybrid']}", color=colors[methods.index('hybrid')])
+            plt.plot(top_k_values, ranker_data, label=f"{method_titles['hybrid']} + Re-ranker", linestyle='--', color=colors[methods.index('hybrid')])
+            
+        else:
+            for j, method in enumerate(methods):
+                retriever_data, ranker_data = zip(*plot_data[metric][method])
+                plt.plot(top_k_values, retriever_data, label=f"{method_titles[method]}", color=colors[j])
+                if metric != 'recall_single_hit':
+                    plt.plot(top_k_values, ranker_data, label=f"{method_titles[method]} + Re-ranker", linestyle='--', color=colors[j])
+        
+        plt.xlabel('k: number of retrieved documents')
+        plt.ylabel(metric_titles[metric])
+        plt.legend()
 
-    plt.tight_layout(rect=[0, 0, 1, 0.96])
+        # Set x-axis ticks to integers from 0 to 20, no decimals
+        plt.xticks(range(0, 21, 2))
+        plt.gca().xaxis.get_major_formatter().set_useOffset(False)
 
-    # Derive the output file name from the input JSON file name
-    base_name = os.path.splitext(os.path.basename(json_path))[0]
-    output_path = f'reports/{base_name}_performance_metrics.png'
-    plt.savefig(output_path)
-    print(f"Combined plot saved as {output_path}")
-
-    
+        # Derive the output file name from the input JSON file name
+        base_name = os.path.splitext(os.path.basename(json_path))[0]
+        output_path = f'reports/{base_name}_{metric}.png'
+        
+        # Save the plot
+        plt.tight_layout()
+        plt.savefig(output_path)
+        print(f"Plot for {metric} saved as {output_path}")
+        plt.close()  # Close the current figure to avoid overla

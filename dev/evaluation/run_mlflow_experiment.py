@@ -14,9 +14,9 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.abspath(os.path.join(SCRIPT_DIR, '../../')))
 
 #from src.pipelines.extractive_qa_pipeline import extractive_qa_pipeline
-from src.pipelines.indexing_pipeline import indexing_pipeline
-from src.pipelines.ranker import SentenceTransformersRanker
-from src.pipelines.query_pipelines import init_extractive_qa_pipeline, init_rag_pipeline
+from src_backup.pipelines.indexing_pipeline import indexing_pipeline
+from src_backup.pipelines.ranker import SentenceTransformersRanker
+from src_backup.pipelines.query_pipelines import init_extractive_qa_pipeline, init_rag_pipeline
 from evaluate import index_eval_labels, get_eval_labels_and_paths
 import torch
 import gc

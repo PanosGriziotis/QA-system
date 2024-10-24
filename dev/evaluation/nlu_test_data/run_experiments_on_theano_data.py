@@ -14,7 +14,6 @@ import argparse
 import requests
 from tqdm import tqdm
 import json
-import time
 import pandas as pd
 
 def post_question_request (query:str, params:dict, endpoint:str):
@@ -49,10 +48,11 @@ def generate_results_for_queries_list (queries_intents_pairs:list,
             result = post_question_request(query=query, params=params, endpoint=endpoint)
             result["intent"] = intent
             
-            print (result)
             print (result ["answers"][0]["answer"])
             print ("\tc_rel:\t", result["answers"][0]["meta"]["context_relevance"])
-            print ("\tground:\t", result["answers"][0]["meta"]["groundedness"])
+            if  result["answers"][0]["type"] == "generative":
+                print ("\tgroundedness:\t", result["answers"][0]["meta"]["groundedness"])
+
             results.append (result)
 
         except Exception as e:

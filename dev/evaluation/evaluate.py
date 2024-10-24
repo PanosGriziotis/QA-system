@@ -10,7 +10,7 @@ from haystack import Pipeline
 from haystack.document_stores import InMemoryDocumentStore, ElasticsearchDocumentStore
 from haystack.nodes import PreProcessor
 from haystack.nodes import FARMReader, EmbeddingRetriever, DensePassageRetriever, BM25Retriever, SentenceTransformersRanker
-
+from haystack.nodes import JoinDocuments
 import logging
 import os 
 import sys
@@ -21,7 +21,6 @@ sys.path.append(os.path.abspath(os.path.join(SCRIPT_DIR, '../../')))
 
 logging.basicConfig(format="%(levelname)s - %(name)s -  %(message)s", level=logging.INFO)
 logging.getLogger("haystack").setLevel(logging.INFO)
-import requests
 from transformers import AutoTokenizer
 
 
@@ -37,7 +36,7 @@ def index_eval_labels(document_store, eval_filename: str):
 
     label_preprocessor = PreProcessor(
         split_by="word",
-        split_length=75,
+        split_length=128,
         split_respect_sentence_boundary=False,
         clean_empty_lines=False,
         clean_whitespace=False,
@@ -166,6 +165,62 @@ def evaluate_retriever_ranker_pipeline(
             report = p.eval(
                 labels=labels,
                 params={"top_k": top_k})
+            
+            reports[top_k] = report.calculate_metrics()
+        
+        return reports
+    
+    # Step 2b: Generate evaluation report for single top_k value.
+    report = p.eval(labels=labels,
+            add_isolated_node_eval=True)
+    
+    return report
+
+def evaluate_hybrid_retriever_ranker_pipeline (
+        retrievers,
+        ranker,
+        document_store,
+        eval_filename: str,
+        top_k: Optional[int] = None,
+        top_k_list: Optional[List[int]] = None) -> Dict[int, dict]:
+    
+    """Evaluate both Retriever and Ranker components in a pipeline fashion"""
+
+    # Step 1: Index eval documents and labels in document store and compute doc embeddings for dense retrievers.
+    index_eval_labels(document_store, eval_filename)
+    for retriever in retrievers:
+        if isinstance(retriever, (EmbeddingRetriever, DensePassageRetriever)):
+            dense_retriever = retriever
+            document_store.update_embeddings(retriever=dense_retriever)
+        elif isinstance(retriever, (BM25Retriever)):
+            bm25_retriever = retriever
+    
+    join_documents = JoinDocuments(join_mode="concatenate")
+    # Step 2: Build a pipeline of both components to evaluate.
+    p = Pipeline()
+    p.add_node(bm25_retriever, name="BM25Retriever", inputs=["Query"])
+    p.add_node(dense_retriever, name="DenseRetriever", inputs=["Query"])
+    p.add_node(component=join_documents, name="JoinDocuments", inputs=["BM25Retriever", "DenseRetriever"])
+    p.add_node(component=ranker, name="Ranker", inputs=["JoinDocuments"])
+
+    # Get labels from document store. Note: embeddings are not returned in     
+    labels = document_store.get_all_labels_aggregated()
+
+
+    # Step 2a: Generate evaluation report for each top_k value and save in nested dictionary.
+    if top_k_list is not None:
+        reports = {}
+        for top_k in tqdm(top_k_list):
+            if top_k % 2 == 0:
+                top_k_bm25 = top_k // 2
+                top_k_dense = top_k // 2
+            else:
+                top_k_dense = (top_k // 2) + 1  # Give priority to dense
+                top_k_bm25 = top_k // 2
+                        
+            report = p.eval(
+                labels=labels,
+                params= {"BM25Retriever": {"top_k": top_k_bm25}, "DenseRetriever": {"top_k": top_k_dense}, "JoinDocuments": {"top_k_join": top_k}, "Ranker": {"top_k": top_k}})
             
             reports[top_k] = report.calculate_metrics()
         
