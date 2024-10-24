@@ -19,7 +19,7 @@ if DOCUMENT_STORE is None:
 
 embedding_model = "panosgriz/covid_el_paraphrase-multilingual-MiniLM-L12-v2"
 retriever = EmbeddingRetriever(embedding_model=embedding_model, document_store=DOCUMENT_STORE)
-tokenizer = AutoTokenizer.from_pretrained("ilsp/Meltemi-7B-v1")
+tokenizer = AutoTokenizer.from_pretrained("ilsp/Meltemi-7B-v1.5")
 
 
 preprocessor = PreProcessor(
@@ -28,8 +28,6 @@ preprocessor = PreProcessor(
     split_respect_sentence_boundary=True,
     split_by="token",
     split_length=128,
-    split_overlap=0,
-    language="el",
     tokenizer=tokenizer
     )
 
