@@ -13,7 +13,7 @@ from schema import QueryRequest, QueryResponse
 
 from pipelines.query_pipelines import init_rag_pipeline, init_extractive_qa_pipeline
 from pipelines.indexing_pipeline import indexing_pipeline
-from utils.data_handling import flash_cuda_memory, convert_numpy_scalars
+from utils.data_handling import flush_cuda_memory, convert_numpy_scalars
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -84,7 +84,7 @@ async def ask_extractive_qa_pipeline(request: QueryRequest):
     if not "answers" in result:
         result["answers"] = []
     
-    flash_cuda_memory()
+    flush_cuda_memory()
 
     logging.info(
         json.dumps({"request": request.dict(), "response": result, "time": f"{(time.time() - start_time):.2f}"}, default=str, ensure_ascii=False)
@@ -114,6 +114,6 @@ def ask_rag_pipeline(request: QueryRequest):
         json.dumps({"request": request.dict(), "response": result, "time": f"{(time.time() - start_time):.2f}"}, default=str, ensure_ascii=False)
     )
 
-    flash_cuda_memory()
+    flush_cuda_memory()
 
     return result

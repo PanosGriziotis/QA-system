@@ -92,7 +92,6 @@ def translate_docs (docs:List[str], use_gpu:bool=False):
     
     max_seq_len = 512
     translator = TransformersTranslator(model_name_or_path="Helsinki-NLP/opus-mt-en-el", use_gpu=use_gpu, max_seq_len=max_seq_len)
-    #c_docs = clean_and_split_docs(docs, max_seq_len=max_seq_len)
     try:
         t_docs = translator.translate_batch(documents=docs)[0]
     except AttributeError:
@@ -110,14 +109,15 @@ def convert_numpy_scalars(data):
         return {k: convert_numpy_scalars(v) for k, v in data.items()}
     return data
 
-def flash_cuda_memory():
+def flush_cuda_memory():
+    """cleans cuda memory cache after inference"""
     gc.collect()
     torch.cuda.empty_cache()
 
 class GreekTokenizer:
     
     def __init__(self):
-        pass  # No need for initialization with word_tokenize
+        pass  
 
     def tokenize(self, text):
         """

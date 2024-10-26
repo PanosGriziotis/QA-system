@@ -1,4 +1,4 @@
-############# This is a haystack's ranker script but updated. We have included extra parameters to tokenizer in order for input sequence to fit in max length (e.g.,  padding="max_length") ###########################
+############# This is aN updated version of haystack's ranker script. We have included extra parameters to tokenizer in order for input sequence to fit in max length (e.g.,  padding="max_length") ###########################
 
 from typing import List, Optional, Union, Tuple, Iterator, Any
 import logging

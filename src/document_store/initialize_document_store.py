@@ -6,8 +6,7 @@ from haystack.document_stores import ElasticsearchDocumentStore
 from haystack.utils import launch_es
 
 DOCUMENTSTORE_PARAMS_HOST = os.environ["DOCUMENTSTORE_PARAMS_HOST"] if "DOCUMENTSTORE_PARAMS_HOST" in os.environ else "localhost"
-DOCUMENTSTORE_PARAMS_PORT = int(
-    os.environ['DOCUMENTSTORE_PARAMS_PORT']) if "DOCUMENTSTORE_PARAMS_PORT" in os.environ else 9200
+DOCUMENTSTORE_PARAMS_PORT = int(os.environ['DOCUMENTSTORE_PARAMS_PORT']) if "DOCUMENTSTORE_PARAMS_PORT" in os.environ else 9200
 
 def check_elasticsearch():
     """Check if Elasticsearch is up and running."""

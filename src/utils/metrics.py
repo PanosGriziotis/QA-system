@@ -2,9 +2,9 @@
 import os 
 import sys
 from typing import List, Union
-from haystack.schema import Document
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+CACHE_DIR = os.path.join(SCRIPT_DIR, os.pardir, 'models_cache')
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 from sentence_transformers import SentenceTransformer
@@ -14,7 +14,6 @@ import re
 import numpy as np
 from utils.data_handling import GreekTokenizer
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def cosine_similarity(embedding_1, embedding_2):
     """
@@ -31,14 +30,12 @@ def compute_similarity(query: str, documents: Union[str, List[str]], model_name_
     """
     Generates a cosine similarity score between a query and a list of concatenated documents using a bi-encoder model. 
     """
-    cache_dir = './models_cache'
 
-    # Load Bi-encoder model with cache
     biencoder_model = os.path.join(SCRIPT_DIR, f'models/{model_name_or_path.split("/")[1]}')
     if not os.path.exists(biencoder_model):
         biencoder_model = model_name_or_path
 
-    model = SentenceTransformer(biencoder_model, cache_folder=cache_dir, device="cpu")
+    model = SentenceTransformer(biencoder_model, cache_folder=CACHE_DIR, device="cpu")
 
     # Ensure documents is a list
     if isinstance(documents, str):
@@ -48,15 +45,15 @@ def compute_similarity(query: str, documents: Union[str, List[str]], model_name_
     trans_query = translit(query.lower(), 'el')
     trans_docs = [translit(doc.lower(), 'el') for doc in documents]
 
-    # --- Step 1: Batch Encoding for Embedding-based similarity ---
+    # Step 1: Batch Encoding for Embedding-based similarity ---
     all_texts = [trans_query] + trans_docs
-    all_embeddings = model.encode(all_texts, convert_to_tensor=True, batch_size=8)  # Use batch encoding
+    all_embeddings = model.encode(all_texts, convert_to_tensor=True, batch_size=8) 
 
     # Extract the query and document embeddings from the batch
     query_embedding = all_embeddings[0]  # Query embedding
     docs_embeddings = all_embeddings[1:]  # Document embeddings
 
-    # --- Step 2: Compute cosine similarity ---
+    # Step 2: Compute cosine similarity ---
     cosine_similarities = []
     for doc_embedding in docs_embeddings:
         # Compute the cosine similarity between the query and document embeddings

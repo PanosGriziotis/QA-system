@@ -2,12 +2,13 @@ import os
 import sys
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+CACHE_DIR = os.path.join(SCRIPT_DIR, os.pardir, 'models_cache')
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 from transformers import AutoTokenizer
 from haystack.nodes import  PromptNode, PromptTemplate, AnswerParser 
 from haystack.nodes.base import BaseComponent
-from utils.data_handling import post_process_generator_answers, flash_cuda_memory
+from utils.data_handling import post_process_generator_answers, flush_cuda_memory
 import logging
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 import torch
@@ -47,14 +48,14 @@ class Generator(BaseComponent):
 
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
-            cache_dir='./models_cache',
+            cache_dir=CACHE_DIR,
             quantization_config=bnb_config,
             device_map="cuda"
         )
 
         model.gradient_checkpointing_enable()
         model.config.pretraining_tp = 1
-        flash_cuda_memory()
+        flush_cuda_memory()
         
         return model
     
@@ -106,7 +107,7 @@ class Generator(BaseComponent):
         results["attempts"] = attempt
         results["cr_score"] = cr_score
         results.pop("invocation_context")
-        
+
         return results, "output_1"
 
     def run_batch(self):
