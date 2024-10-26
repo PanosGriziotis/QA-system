@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 if DOCUMENT_STORE is None:
     raise ValueError("the imported document_store is None. Please make sure that the Elasticsearch service is properly launched")
 
-# Initialize Bi-encoder model through embedding retriever class to pre-comput document embeddings and save them in document store
+# Initialize Bi-encoder model through embedding retriever class to pre-compute document embeddings at indexing time
 retriever = EmbeddingRetriever(embedding_model= "panosgriz/covid_el_paraphrase-multilingual-MiniLM-L12-v2", document_store=DOCUMENT_STORE)
 # Initialize tokenizer for preprocessing stage
 tokenizer = AutoTokenizer.from_pretrained("ilsp/Meltemi-7B-v1.5")
@@ -28,7 +28,7 @@ def convert_file_to_doc_pipeline (preprocessor:PreProcessor=None) -> Pipeline:
 
     """Two stage preprocessing pipeline method to prepare input text data for indexing in document store.
     
-    Stage1 (Convert file to documents): routes an input data file (.txt, .json, .jsonl, .pdf, .docx) to the corresponding Converter module and create haystack document objects (dictionaries consisting of raw text along with metadata fields)
+    Stage1 (Convert file to documents): routes an input data file (.txt, .json, .jsonl, .pdf, .docx) to the corresponding Converter module and creates haystack document objects (dictionaries consisting of text and metadata fields)
     Stage2 (Preprocess before indexing): preprocesses document objects from previous stage with a PreProcessor module. Preprocessing includes 1) splitting documents into smaller chunks b) cleaning any trailing whitespaces
     
     Args: preprocessor: custom PreProcessor instance
@@ -65,8 +65,8 @@ def convert_file_to_doc_pipeline (preprocessor:PreProcessor=None) -> Pipeline:
 
 # Initialize preprocessing pipeline
 indexing_pipeline = convert_file_to_doc_pipeline()
-# Compute and store document embeddings in the the document store using the bi-encoder in the DenseRetriever
+# Compute document embeddings
 indexing_pipeline.add_node(component=retriever, name = "DenseRetriever", inputs=["Preprocessor"])
-# Index final document objects in DS
+# Index document objects in DS
 indexing_pipeline.add_node(component=DOCUMENT_STORE, name= "DocumentStore", inputs=["DenseRetriever"])
 
