@@ -8,14 +8,11 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 from sentence_transformers import SentenceTransformer
-import torch
-import gc
 from rouge_score import rouge_scorer
-from nltk.tokenize import word_tokenize
 from transliterate import translit
-from haystack.nodes.base import BaseComponent
 import re
 import numpy as np
+from utils.data_handling import GreekTokenizer
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -32,7 +29,7 @@ def cosine_similarity(embedding_1, embedding_2):
 
 def compute_similarity(query: str, documents: Union[str, List[str]], model_name_or_path="lighteternal/stsb-xlm-r-greek-transfer"):
     """
-    Generates a cosine similarity scores between query and a list of concatenated documents using a bi-encoder model. 
+    Generates a cosine similarity score between a query and a list of concatenated documents using a bi-encoder model. 
     """
     cache_dir = './models_cache'
 
@@ -139,31 +136,3 @@ def compute_groundedness_rouge_score (answer:str, context:str):
     score = scorer.score(context, answer)["rougeL"].precision
     return score
 
-class ContextRelevanceEvaluator(BaseComponent):
-    """A node to incorporate in query pipeline. CR score is appended and received from next node."""
-    outgoing_edges = 1
-
-    def run (self, query, documents):
-        docs = [doc.content for doc in documents]
-        cr_score = compute_context_relevance(query=query,documents=docs)
-        output={
-            "query": query,
-            "documents": documents,
-            "cr_score": cr_score
-        }
-        return output, "output_1"
-    
-    def run_batch(self):
-        return
-
-class GreekTokenizer:
-    
-    def __init__(self):
-        pass  # No need for initialization with word_tokenize
-
-    def tokenize(self, text):
-        """
-        Tokenizes Greek text into words using NLTK's word tokenizer.
-        """
-        tokens = word_tokenize(text, language='greek')
-        return tokens

@@ -8,7 +8,8 @@ from haystack.nodes import TransformersTranslator
 import string
 import gc
 import torch
-import numpy as np 
+import numpy as np
+from nltk.tokenize import word_tokenize
 
 def post_process_generator_answers (result):
     """ 
@@ -113,5 +114,15 @@ def flash_cuda_memory():
     gc.collect()
     torch.cuda.empty_cache()
 
+class GreekTokenizer:
+    
+    def __init__(self):
+        pass  # No need for initialization with word_tokenize
 
+    def tokenize(self, text):
+        """
+        Tokenizes Greek text into words using NLTK's word tokenizer.
+        """
+        tokens = word_tokenize(text, language='greek')
+        return tokens
 

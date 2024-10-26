@@ -1,3 +1,5 @@
+############# This is a haystack's ranker script but updated. We have included extra parameters to tokenizer in order for input sequence to fit in max length (e.g.,  padding="max_length") ###########################
+
 from typing import List, Optional, Union, Tuple, Iterator, Any
 import logging
 from pathlib import Path
@@ -8,8 +10,6 @@ from haystack.errors import HaystackError
 from haystack.schema import Document
 from haystack.nodes.ranker.base import BaseRanker
 from haystack.lazy_imports import LazyImport
-import os 
-import sys
 
 
 logger = logging.getLogger(__name__)

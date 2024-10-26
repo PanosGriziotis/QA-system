@@ -1,7 +1,6 @@
 from typing import List, Optional
-from haystack.schema import Document
 
-from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi import FastAPI, UploadFile, File
 
 from pathlib import Path
 import os
@@ -84,6 +83,8 @@ async def ask_extractive_qa_pipeline(request: QueryRequest):
         result["documents"] = []
     if not "answers" in result:
         result["answers"] = []
+    
+    flash_cuda_memory()
 
     logging.info(
         json.dumps({"request": request.dict(), "response": result, "time": f"{(time.time() - start_time):.2f}"}, default=str, ensure_ascii=False)

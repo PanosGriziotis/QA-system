@@ -39,8 +39,7 @@ def main():
             "temperature": 0.75,     # For controlling randomness in generation
             "max_new_tokens": 130,   # Maximum tokens for LLM generation
             "top_p": 0.95,          # For nucleus sampling in generation
-            "post_processing": True,
-            "apply_cr_threshold": True
+            "post_processing": True
         }
         }
     elif args.ex and not query_params:
@@ -81,7 +80,8 @@ def main():
         r = requests.post(url=url, json=request_body)
         r.raise_for_status()  # Raise an HTTPError for bad responses
         json_response = r.json()
-        print(json_response["answers"])
+        print (json_response["answers"][0]["answer"])
+    
     except requests.exceptions.RequestException as e:
         print(f"Request failed: {e}")
     except KeyError:
