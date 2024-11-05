@@ -2,7 +2,30 @@
 
 This directory contains the code required to train the QA system's models and run evaluation experiments.
 
-# Evaluation
+## Set up
+
+Create a virtual environment and 
+
+Create a virtual env: 
+
+```bash
+python3 -m venv venv
+```
+
+and then activate:
+
+```bash
+source venv/bin/activate
+```
+
+Make sure you have installed all required dependencies from the ``requirements.txt`` file contained in the  ``src`` directory in the repo. 
+
+```bash
+pip intall -r src/requirements.txt
+```
+
+
+## Evaluation
 
 ## Component-wise Evaluation
 
