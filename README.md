@@ -11,7 +11,7 @@ In the `src` directory you can find the following main components:
 - A Question-Asnwering (QA) REST API container: This container integrates the [Haystack](https://docs.haystack.deepset.ai/v1.25/docs/intro) logic and uses pipelines for indexing documents in the Document Store and receiving an answer for a given query. 
 
 ## Architecture Overview
-![alt text](https://github.com/PanosGriziotis/QA-subsystem-thesis/blob/main/qa_system_architecture_overview.png?raw=true)
+![alt text](https://github.com/PanosGriziotis/QA-subsystem-thesis/blob/main/qa_system_architecture_v3.png?raw=true)
 
 ### Retrieval-Augmented Generation (RAG) Query
 
