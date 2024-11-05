@@ -10,6 +10,8 @@ import gc
 import torch
 import numpy as np
 from nltk.tokenize import word_tokenize
+import nltk
+nltk.download('punkt_tab')
 
 def post_process_generator_answers (result):
     """ 
@@ -87,16 +89,6 @@ def remove_english_text(lines):
             non_english_lines.append(line)
     return non_english_lines
 
-
-def translate_docs (docs:List[str], use_gpu:bool=False):
-    
-    max_seq_len = 512
-    translator = TransformersTranslator(model_name_or_path="Helsinki-NLP/opus-mt-en-el", use_gpu=use_gpu, max_seq_len=max_seq_len)
-    try:
-        t_docs = translator.translate_batch(documents=docs)[0]
-    except AttributeError:
-        t_docs = ['<ukn>']
-    return t_docs
 
 def convert_numpy_scalars(data):
     if isinstance(data, (np.float32, np.float64)):

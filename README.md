@@ -1,28 +1,35 @@
-> [!WARNING]
-> This repository is currently a work in progress and is not yet ready for production use. Features and functionalities are being actively developed and tested. Use at your own risk.
 
-# QA-subsystem
+# Description
 
-This repository is part of a project aiming to develop a Greek Question-Answering (QA) system that integrates with a closed-domain virtual assistant (dialogue system). As a case study, a greek-speaking conversational agent for COVID-19 is selected.
+This repository is part of a project aimed at developing a Greek-language Question-Answering (QA) system for integration with a closed-domain virtual assistant (dialogue system) about COVID-19. The project's use case is Theano, the Greek conversational agent for COVID-19.
 
-The repository contains a simple Haystack application with a REST API for indexing and querying purposes.
+The QA system can operate as a standalone application or be accessed via an API for integration into other applications
 
-The application includes:
+In the `src` directory you can find the following main components:
 
-- An Elasticsearch container
-- A Question-Asnwering (QA) REST API container: This container integrates the Haystack logic and uses pipelines for indexing unstructured text data in Elasticsearch document store and querying.
+- An Elasticsearch container that acts as the Document Store.
+- A Question-Asnwering (QA) REST API container: This container integrates the [Haystack](https://docs.haystack.deepset.ai/v1.25/docs/intro) logic and uses pipelines for indexing documents in the Document Store and receiving an answer for a given query. 
 
-You can find more information in the [Haystack documentation](https://docs.haystack.deepset.ai/v1.25/docs/intro).
+## Architecture Overview
+![alt text](https://github.com/PanosGriziotis/QA-subsystem-thesis/blob/main/qa_system_architecture_overview.png?raw=true)
 
-### Steps to Set Up
+### Retrieval-Augmented Generation (RAG) Query
 
-Before you begin, ensure you have Python and Docker installed on your system. 
+- **Description:** This endpoint utilizes a Retrieval-Augmented Generator (RAG) pipeline. The answer is a free text generated from the retrieved documents. The Generative Reader component is based on the monolingual instruction-following LLM [Meltemi-7B-Instruct-v1.5](https://huggingface.co/ilsp/Meltemi-7B-Instruct-v1.5).
+
+### Extractive Question Answering (QA) Query
+
+- **Description:** This endpoint utilizes an Extractive QA pipeline. The answer is extracted as a span from a single document. The Extractive Reader component is a SQuAD 2.0 fine-tuned [multilingual DeBERTaV3](https://huggingface.co/microsoft/mdeberta-v3-base) model which is further adapted on the [COVID-QA-el_small](https://huggingface.co/datasets/panosgriz/COVID-QA-el-small) dataset. 
+
+### Set up steps
+
+Before you begin, ensure you have Python3 and Docker installed on your system. To be able to run the QA system models for inference, you should have a GPU with 10GB of available memory.
 
 1. **Clone this repository.**
 
 2. **Run the services**
 
-    Spin up the multi-container application (Elasticsearch + REST API) using Docker Compose:
+    Spin up the multi-container application (Elasticsearch + Haystack REST API) using Docker Compose:
 
     ```bash
     docker-compose up -d
@@ -40,8 +47,6 @@ Before you begin, ensure you have Python and Docker installed on your system.
 
     Note: The haystack service requires some time to download and load the models after it starts.
 
-## Architecture Overview
-![alt text](https://github.com/PanosGriziotis/QA-subsystem-thesis/blob/main/qa_system_architecture_overview.png?raw=true)
 
 ## Indexing
 
@@ -67,23 +72,24 @@ Note: Acceptable file formats are .txt, .json, .jsonl, .pdf, .docx.
 
 There are two query endpoints available for inferring answers to queries. These endpoints provide different approaches to answering queries:
 
-### Retrieval-Augmented Generation (RAG) Query
-
-- **Description:** This endpoint utilizes a Retrieval-Augmented Generator (RAG) pipeline. It employs a domain-adapted Dense Retriever based on bi-encoder sentence transformer model for retrieving relevant documents followed by a cross-encoder Ranker component. The Generator is based on [Meltemi-7B-Instruct-v1](https://huggingface.co/ilsp/Meltemi-7B-Instruct-v1), an instruct version of Meltemi-7B, the first Greek Large Language Model (LLM).
-
-### Extractive Question Answering (QA) Query
-
-- **Description:** This endpoint utilizes an Extractive QA pipeline based on the Retriever-Reader framework. The answer is extracted as a span from the top-ranked retrieved document. The Reader component is a fine-tuned [multilingual DeBERTaV3](https://huggingface.co/microsoft/mdeberta-v3-base) on SQuAD with further fine-tuning on COVID-QA-el_small, which is a translated small version of the COVID-QA dataset.
 
 ### Querying the application
 
-If you want to test the app and get a direct answer to a query of your choic, you can run the test/ask_question.py script. Include the --ex flag to use the extractive QA endpoint or the --rag flag to use the RAG endpoint for yielding the answer:
+If you want to directly use the app in terminal and pose a query of your choice, you can run the `ask_qa_system.py` script. Include the `--ex` flag to use the extractive QA endpoint or the `--rag` flag to use the RAG endpoint for receiving an answer. 
 
 ```bash
-python3 test/ask_question.py --rag --query "Πώς μεταδίδεται ο covid-19;"
+python3 ask_qa_system.py --rag 
 ```
 
-You can query the endpoint using curl to get the full result response, including the answer, retrieved documents, confidence scores, and more. You can also configure the pipeline's parameters as you wish. For example, to query the application using the RAG query pipeline with specific parameters run:
+You can optionally pass query hyperaparameters for each of the query pipeline components like this: 
+
+```bash
+python3 ask_qa_system.py --rag '{"BM25Retriever": {"top_k": 10}, "DenseRetriever": {"top_k": 10}, "Reranker": {"top_k": 6}, "Generative_Reader": {"max_new_tokens": 130}}
+```
+
+After running the script type your query and get a response. To quit the app just type `quit`. 
+
+To send a POST request to the QA system's API and get the full response, including the answer to your query, retrieved documents, confidence scores, and more, use curl:
 
 ```bash
 curl -X POST http://localhost:8000/rag-query \
@@ -91,9 +97,10 @@ curl -X POST http://localhost:8000/rag-query \
      -d '{
             "query": "Πώς μεταδίδεται η covid-19;", 
             "params": {
-                "Retriever": {"top_k": 10}, 
-                "Ranker": {"top_k": 5}, 
-                "Generator": {"max_new_tokens": 100}
+                "BM25Retriever": {"top_k": 10},
+                "DenseRetriever": {"top_k: 10},
+                "ReRanker": {"top_k": 6}, 
+                "GenerativeReader": {"max_new_tokens": 100}
             }
         }'
 ```

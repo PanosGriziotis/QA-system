@@ -13,14 +13,14 @@ from transformers import AutoTokenizer
 from custom_components.json_file_detector import JsonFileDetector
 from document_store.initialize_document_store import document_store as DOCUMENT_STORE
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 if DOCUMENT_STORE is None:
     raise ValueError("the imported document_store is None. Please make sure that the Elasticsearch service is properly launched")
 
 # Initialize Bi-encoder model through embedding retriever class to pre-compute document embeddings at indexing time
-retriever = EmbeddingRetriever(embedding_model= "panosgriz/covid_el_paraphrase-multilingual-MiniLM-L12-v2", document_store=DOCUMENT_STORE)
+retriever = EmbeddingRetriever(embedding_model= "panosgriz/covid-el-paraphrase-multilingual-MiniLM-L12-v2", document_store=DOCUMENT_STORE)
 # Initialize tokenizer for preprocessing stage
 tokenizer = AutoTokenizer.from_pretrained("ilsp/Meltemi-7B-v1.5")
 

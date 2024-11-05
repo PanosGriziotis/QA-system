@@ -18,6 +18,7 @@ logging.getLogger("haystack").setLevel(logging.INFO)
 
 class Generator(BaseComponent):
     """"Loads a predefined instruction-following LLM for causal generation on a given prompt."""
+
     outgoing_edges = 1
 
     def __init__(self,
@@ -30,13 +31,18 @@ class Generator(BaseComponent):
         self.model_name = model_name
         self.model = self._load_model(self.model_name)
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
-        self.prompt = self.tokenizer.apply_chat_template(prompt_messages, add_generation_prompt=True, tokenize=False)
-        self.prompt_template = PromptTemplate(prompt = self.prompt, output_parser=AnswerParser(pattern = r"(?<=<\|assistant\|>\n)([\s\S]*)")) # pattern = r"(?<=<\|assistant\|>\n)([\s\S]*)"
+        self.set_prompt_messages(prompt_messages)
         
         super().__init__()
 
+    def set_prompt_messages(self, prompt_messages):
+        """Sets new prompt messages and updates the prompt template accordingly"""
+
+        self.prompt = self.tokenizer.apply_chat_template(prompt_messages, add_generation_prompt=True, tokenize=False)
+        self.prompt_template = PromptTemplate(prompt=self.prompt, output_parser=AnswerParser(pattern=r"(?<=<\|assistant\|>\n)([\s\S]*)"))
+
     def _load_model(self, model_name):
-        """Μethod to load the model using 4bit quantization"""
+        """Loads the model using 4bit quantization"""
 
         bnb_config = BitsAndBytesConfig(
             load_in_4bit=True,
@@ -55,11 +61,10 @@ class Generator(BaseComponent):
 
         model.gradient_checkpointing_enable()
         model.config.pretraining_tp = 1
-        flush_cuda_memory()
         
         return model
     
-    def run(self, query, documents, cr_score, max_new_tokens:int=150, temperature:float = 0.75, top_p:float = 0.95, top_k:int=50, post_processing = True):
+    def run(self, query, documents, max_new_tokens:int=150, temperature:float = 0.75, top_p:float = 0.95, top_k:int=50, post_processing = True):
         
         generation_kwargs={
                             'max_new_tokens': max_new_tokens,
@@ -80,15 +85,14 @@ class Generator(BaseComponent):
             "generation_kwargs": generation_kwargs
         })
     
-
-        def generate_answer():
+        def generate_output():
             generator_output, _ = generator.run(
                 query=query,
                 documents=documents)
             
             return post_process_generator_answers(generator_output) if post_processing else generator_output
 
-        results = generate_answer()
+        results = generate_output()
         answer = results["answers"][0].answer.strip()
         attempt = 0
         max_attempts = 3 
@@ -96,7 +100,7 @@ class Generator(BaseComponent):
         # Retry logic with max_attempts in the rare case where the first attempt resulted to invalid answer
         while (answer == '' or answer == "Συγγνώμη, αλλά δεν μπορώ να δώσω μία απάντηση σε αυτήν την ερώτηση.") and attempt < max_attempts:
             logging.warning(f"Empty or invalid answer received. Retrying... Attempt {attempt+1}")
-            results = generate_answer()
+            results = generate_output()
             answer = results["answers"][0].answer.strip() 
             attempt += 1
 
@@ -105,10 +109,10 @@ class Generator(BaseComponent):
             logging.error(f"Failed to generate a valid answer after {max_attempts} attempts.")
 
         results["attempts"] = attempt
-        results["cr_score"] = cr_score
         results.pop("invocation_context")
 
         return results, "output_1"
-
+    
+    
     def run_batch(self):
         return

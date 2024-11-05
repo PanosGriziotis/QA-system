@@ -3,11 +3,7 @@ import json
 import sys
 
 def tokenize (text):
-    
-    #tokenizer = MosesTokenizer(lang='el')
     return text.split (" ")
-    #return     tokenizer.tokenize(text.strip(), return_str=True)
-
 
 def get_all_answers (data):
     answers = []

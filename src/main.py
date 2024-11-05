@@ -1,9 +1,13 @@
 from typing import List, Optional
 
-from fastapi import FastAPI, UploadFile, File
+import os 
+import sys
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(SCRIPT_DIR))
+
+from fastapi import FastAPI, UploadFile, File
 from pathlib import Path
-import os
 import uuid
 import logging
 from numpy import ndarray
@@ -11,6 +15,7 @@ import json
 import time
 from schema import QueryRequest, QueryResponse
 
+from document_store.initialize_document_store import document_store as DOCUMENT_STORE
 from pipelines.query_pipelines import init_rag_pipeline, init_extractive_qa_pipeline
 from pipelines.indexing_pipeline import indexing_pipeline
 from utils.data_handling import flush_cuda_memory, convert_numpy_scalars
@@ -19,7 +24,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI(title="QA-subsystem API")
-query_pipeline = init_rag_pipeline(use_gpu=False)
+query_pipeline = init_rag_pipeline(use_gpu=False) # initialize model
 FILE_UPLOAD_PATH = os.getenv("FILE_UPLOAD_PATH", str((Path(__file__).parent / "file-upload").absolute()))
 Path(FILE_UPLOAD_PATH).mkdir(parents=True, exist_ok=True)
 
@@ -73,7 +78,9 @@ async def ask_extractive_qa_pipeline(request: QueryRequest):
     start_time = time.time()
 
     params = request.params or {}
-
+    if DOCUMENT_STORE.get_document_count() == 0:
+        raise ValueError("Document store index is empty. Esure documents are indexed in document store before runing the query pipeline")
+    
     # Run query pipeline using input parameters
     result = query_pipeline.run(query=request.query, params=params)
     
@@ -100,7 +107,9 @@ def ask_rag_pipeline(request: QueryRequest):
     start_time = time.time()
     params = request.params or {}
 
-    # Run query pipeline using input parameters
+    if DOCUMENT_STORE.get_document_count() == 0:
+        raise ValueError("Document store index is empty. Esure documents are indexed in document store before runing the query pipeline")
+    
     result = query_pipeline.run(query=request.query, params=params)
 
     result = convert_numpy_scalars(result)

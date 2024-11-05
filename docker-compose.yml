@@ -25,6 +25,11 @@ services:
     environment:
       - DOCUMENTSTORE_PARAMS_HOST=elasticsearch
       - DOCUMENTSTORE_PARAMS_PORT=9200
+      - DENSE_RETRIEVER_MODEL=panosgriz/covid-el-paraphrase-multilingual-MiniLM-L12-v2
+      - RERANKER_MODEL=amberoad/bert-multilingual-passage-reranking-msmarco
+      - EXTRACTIVE_READER_MODEL=panosgriz/mdeberta-v3-base-squad2-covid-el-small
+      - GENERATIVE_MODEL=ilsp/Meltemi-7B-Instruct-v1.5
+      - CUDA_VISIBLE_DEVICES=0
     depends_on:
       elasticsearch:
         condition: service_healthy
