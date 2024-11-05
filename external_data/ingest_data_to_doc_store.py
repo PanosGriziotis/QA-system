@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.INFO)
 
 HAYSTACK_SERVICE_HOST = os.environ["HAYSTACK_SERVICE_HOST"] if "HAYSTACK_SERVICE_HOST" in os.environ else "localhost"
 HAYSTACK_SERVICE_PORT = int(
-    os.environ['HAYSTACK_SERVICE_PORT']) if "HAYSTACK_SERVICE_PORT" in os.environ else 8000
+    os.environ['HAYSTACK_SERVICE_PORT']) if "HAYSTACK_SERVICE_PORT" in os.environ else 8001
 
 
 def ingest_data():

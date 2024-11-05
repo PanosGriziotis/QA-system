@@ -1,7 +1,7 @@
 
 # Description
 
-This repository is part of a project aimed at developing a Greek-language Question-Answering (QA) system for integration with a closed-domain virtual assistant (dialogue system) about COVID-19. The project's use case is Theano, the Greek conversational agent for COVID-19.
+This repository is part of a project aimed at developing a Greek-language Question-Answering (QA) system for integration with a closed-domain virtual assistant focused on COVID-19, named [Theano](https://aclanthology.org/2021.nlp4posimpact-1.5/)
 
 The QA system can operate as a standalone application or be accessed via an API for integration into other applications
 
@@ -19,11 +19,11 @@ In the `src` directory you can find the following main components:
 
 ### Extractive Question Answering (QA) Query
 
-- **Description:** This endpoint utilizes an Extractive QA pipeline. The answer is extracted as a span from a single document. The Extractive Reader component is a SQuAD 2.0 fine-tuned [multilingual DeBERTaV3](https://huggingface.co/microsoft/mdeberta-v3-base) model which is further adapted on the [COVID-QA-el_small](https://huggingface.co/datasets/panosgriz/COVID-QA-el-small) dataset. 
+- **Description:** This endpoint utilizes an Extractive QA pipeline. The answer is extracted as a span from a single document. The Extractive Reader component is a fine-tuned [multilingual DeBERTaV3](https://huggingface.co/microsoft/mdeberta-v3-base) model on SQuAD V2 and the [COVID-QA-el_small](https://huggingface.co/datasets/panosgriz/COVID-QA-el-small) dataset. 
 
 ### Set up steps
 
-Before you begin, ensure you have Python3 and Docker installed on your system. To be able to run the QA system models for inference, you should have a GPU with 10GB of available memory.
+Before you begin, ensure that Python version 3.8 or higher and Docker are installed on your system. To run the QA system models for inference, a GPU with at least 10GB of available memory is required.
 
 1. **Clone this repository.**
 
@@ -53,7 +53,7 @@ Before you begin, ensure you have Python3 and Docker installed on your system. T
 To populate the application with data about COVID-19, run the following:
 
 ```bash
-python3 src/external_data/ingest_data_to_doc_store.py
+python3 external_data/ingest_data_to_doc_store.py
 ```
 
 You can also index your own text files using the file-upload endpoint:

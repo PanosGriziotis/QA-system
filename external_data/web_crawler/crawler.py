@@ -167,7 +167,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     INCLUSION_KEYWORDS = ["sars-cov-2", "covid-19", "covid", "covid19" "koronoios", "koronoioy", "koronaios", "koronaioy",  "pandhmias", "pandhmia", "mikroviaki-antochi", "mask"]
-    INCLUSION_KEYWORDS = []
     EXCLUSION_KEYWORDS = ["epidimiologikis-epitirisis", "weekly-report", "covid19-ODIGOS_GIA_TIN_APOMONOSI", "ODIGOS_GIA_TI_DIACHEIRISI_TOY_PENTHOYS_APO_TIN_PANDIMIA_TOY_KORONOIO"]
 
     
@@ -220,7 +219,7 @@ if __name__ == '__main__':
     
     crawled_docs = []
 
-    for crawler in [ecdc_crawler]:
+    for crawler in [ecdc_crawler, eody_crawler, who_crawler, gov_crawler]:
         docs = run_web_crawler(crawler)
         crawled_docs.append(docs)
     

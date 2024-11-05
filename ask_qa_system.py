@@ -54,7 +54,7 @@ def main():
                     "params": query_params
                 }
                 # Send the request to the server
-                response = requests.post(url=f"http://localhost:8000/{endpoint}", json=request_body)
+                response = requests.post(url=f"http://localhost:8001/{endpoint}", json=request_body)
                 response.raise_for_status()  # Raise an HTTPError for bad responses
                 json_response = response.json()
 
