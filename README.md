@@ -13,13 +13,13 @@ In the `src` directory you can find the following main backend components:
 ## Architecture Overview
 ![alt text](https://github.com/PanosGriziotis/QA-subsystem-thesis/blob/main/qa_system_architecture_v3.png?raw=true)
 
-There are two types of query pipelines available for inferring answers to queries. These endpoints provide different approaches to answering queries:
+There are two types of query pipelines available for inferring answers to queries. These pipeline provide different approaches to answering queries:
 
 ### Retrieval-Augmented Generation (RAG) 
 
 - **Description:** This query pipeline utilizes a Retrieval-Augmented Generator (RAG) method. The answer is a free text generated from from retrieved documents. The Generative Reader component is based on the monolingual instruction-following LLM [Meltemi-7B-Instruct-v1.5](https://huggingface.co/ilsp/Meltemi-7B-Instruct-v1.5).
 
-### Extractive Question Answering (QA)
+### Extractive Question Answering
 
 - **Description:** This query pipeline utilizes an Extractive QA method. The answer is extracted as a span from a single document. The Extractive Reader component is a fine-tuned [multilingual DeBERTaV3](https://huggingface.co/microsoft/mdeberta-v3-base) model on SQuAD V2 and the [COVID-QA-el_small](https://huggingface.co/datasets/panosgriz/COVID-QA-el-small) dataset. 
 
