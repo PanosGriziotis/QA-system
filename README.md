@@ -7,7 +7,7 @@ The QA system can operate as a standalone application or be accessed via an API 
 
 In the `src` directory you can find the following main backend components:
 
-- An Elasticsearch container that acts as the Document Store.
+- An [Elasticsearch](https://www.elastic.co/elasticsearch) that acts as the Document Store.
 - A Question-Asnwering (QA) REST API container: This container integrates the [Haystack](https://docs.haystack.deepset.ai/v1.25/docs/intro) logic and uses pipelines for indexing documents in the Document Store and receiving an answer for a given query. 
 
 ## Architecture Overview
