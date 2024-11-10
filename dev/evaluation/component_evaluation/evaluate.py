@@ -2,8 +2,7 @@ from typing import List, Optional, Dict, Any, Union, Callable, Tuple
 from tqdm import tqdm
 import os
 import sys
-import tempfile
-import json
+
 from pathlib import Path
 from typing import List, Optional
 from haystack import Pipeline

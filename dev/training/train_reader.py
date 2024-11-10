@@ -3,14 +3,12 @@ import os
 import logging
 import argparse
 import json
-import os
-from haystack.nodes import FARMReader
-from haystack.utils import EarlyStopping
-from utils.count_squad import get_squad_dataset_counts
-import os
 import sys
+from haystack.nodes import FARMReader
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.abspath(os.path.join(SCRIPT_DIR, '../../')))
+sys.path.append(os.path.abspath(os.path.join(SCRIPT_DIR, '../')))
+from haystack.utils import EarlyStopping
 
 logging.basicConfig(format="%(levelname)s - %(name)s -  %(message)s", level=logging.DEBUG)
 logging.getLogger("haystack").setLevel(logging.DEBUG)
@@ -49,13 +47,14 @@ def fine_tune_reader_model (config: dict):
         early_stopping = config["early_stopping"]
         )
 
+print (os.path.join(SCRIPT_DIR, "/covid_QA_el_small"))
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-m", '--model_name_or_path', default="timpal0l/mdeberta-v3-base-squad2" ,type=str)
-parser.add_argument("-d",'--data_dir', default=os.path.join(SCRIPT_DIR, "covid_QA_el_small/data"), type=str)
+parser.add_argument("-d",'--data_dir', default=os.path.join(SCRIPT_DIR, "data/covid_QA_el_small"), type=str)
 parser.add_argument("-t",'--train_filename', default="COVID-QA-el_small.json", type=str)
 parser.add_argument('--batch_size', type=int, default= 8)
-parser.add_argument('--n_epochs', type=int, default=3)
+parser.add_argument('--n_epochs', type=int, default=1)
 parser.add_argument('--learning_rate', type = float, default = 3e-5)
 parser.add_argument('--dev_filename', type=str, default= None)
 parser.add_argument('--use_gpu', type=bool, default= True)
@@ -78,9 +77,7 @@ if __name__ == '__main__':
         os.mkdir(save_dir)
     training_log_file = os.path.join(save_dir, 'training.log')
     with open (os.path.join(save_dir, "train_config.json"), "w") as file:
-        info = [get_squad_dataset_counts(file) for file in [config["train_filename"], config["dev_filename"]]]
-        info.append (config)
-        json.dump(info, fp=file)
+        json.dump(config, fp=file)
 
 
     fine_tune_reader_model(vars(args))

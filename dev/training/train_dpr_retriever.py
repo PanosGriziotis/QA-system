@@ -5,6 +5,8 @@ import logging
 import argparse
 
 logger = logging.getLogger(__name__)
+logging.basicConfig(format="%(levelname)s - %(name)s -  %(message)s", level=logging.DEBUG)
+logging.getLogger("haystack").setLevel(logging.DEBUG)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()    
@@ -26,8 +28,6 @@ if __name__ == "__main__":
     retriever.train(
         data_dir=args.doc_dir,
         train_filename=args.train_file,
-        test_filename=args.dev_file,
-        max_processes = 128,
         num_hard_negatives=2,
         num_positives=1,
         n_epochs=20,
@@ -35,13 +35,8 @@ if __name__ == "__main__":
         evaluate_every=1000,
         learning_rate = 1e-6,
         epsilon  = 1e-08,
-        weight_decay = 0.0,
-        n_gpu=3,
-        num_warmup_steps  = 100,
         grad_acc_steps = 8,
         optimizer_name = "AdamW",
         save_dir=args.save_dir
 )
-        
-        
         
