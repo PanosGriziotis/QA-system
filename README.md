@@ -5,15 +5,15 @@ This repository is part of a project aimed at developing a Greek-language Questi
 
 The QA system can operate as a standalone application or be accessed via an API for integration into other applications
 
-In the `src` directory you can find the following main backend components:
+The `docker-compose` file enables you to start the main backend services:
 
-- An [Elasticsearch](https://www.elastic.co/elasticsearch) that acts as the Document Store.
-- A Question-Asnwering (QA) REST API container: This container integrates the [Haystack](https://docs.haystack.deepset.ai/v1.25/docs/intro) logic and uses pipelines for indexing documents in the Document Store and receiving an answer for a given query. 
+- An [Elasticsearch](https://www.elastic.co/elasticsearch) container, which serves as the Document Store.
+- A Question-Asnwering (QA) REST API container based on the [Haystack](https://docs.haystack.deepset.ai/v1.25/docs/intro) logic. This API consists of an indexing pipeline for storing text documents in the Document Store and a query pipeline for returning answers to given queries.
 
 ## Architecture Overview
 ![alt text](https://github.com/PanosGriziotis/QA-subsystem-thesis/blob/main/qa_system_architecture_v3.png?raw=true)
 
-There are two types of query pipelines available for inferring answers to queries. These pipeline provide different approaches to answering queries:
+There are two types of query pipelines available for inferring answers to queries, based on the following approaches:
 
 ### Retrieval-Augmented Generation (RAG) 
 
