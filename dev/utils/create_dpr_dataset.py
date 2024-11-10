@@ -219,6 +219,7 @@ def main(
     )
 
 if __name__ == "__main__":
+
     parser = argparse.ArgumentParser(description="Convert a SQuAD JSON format dataset to DPR format.")
     parser.add_argument(
         "--squad_file",

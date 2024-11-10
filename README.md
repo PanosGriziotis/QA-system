@@ -25,7 +25,15 @@ There are two types of query pipelines available for inferring answers to querie
 
 ## Set up steps
 
-Before you begin, ensure that Python version 3.8 or higher and Docker are installed on your system. To be able to run the QA system models for inference, a GPU with at least 10GB of available memory is required.
+Before you begin, ensure that:
+
+- **Python** version 3.8 or higher is installed on your system.
+- **Docker** is installed on your system.
+
+To run the QA system models for inference, you will need:
+
+- A **GPU** with at least 10GB of available memory.
+- **CUDA** version 11.8 or higher.
 
 1. **Clone this repository.**
 

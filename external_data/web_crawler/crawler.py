@@ -5,8 +5,7 @@ import json
 import os
 from tqdm import tqdm
 import unicodedata
-import glob
-import shutil
+import requests
 import re
 import argparse
 from urllib.parse import urlparse
@@ -16,13 +15,11 @@ import sys
 # Get the directory where the current script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 # Add the grandparent directory of SCRIPT_DIR to the Python path
-sys.path.append(os.path.abspath(os.path.join(SCRIPT_DIR, '..', '..')))
+sys.path.append(os.path.abspath(os.path.join(SCRIPT_DIR, '../', '../')))
 
-#from translator import load_translator_model, translate_text
 from haystack.nodes import Crawler
-from utils.file_type_classifier import init_file_to_doc_pipeline
-from utils.data_handling import is_english
-from haystack.nodes import TransformersTranslator
+from src.pipelines.indexing_pipeline import convert_file_to_doc_pipeline
+
 
 
 logging.basicConfig(level=logging.INFO)
@@ -107,18 +104,20 @@ def process_files(files: list):
         if file_basename in file_basenames:
             os.remove(file)
             continue
-        # Run file classifier, extract text and convert to haystack Document object        
-        file_converter_pipeline = init_file_to_doc_pipeline()
+        # Run file classifier, extract text and convert to haystack Document object
+              
+        file_converter_pipeline = convert_file_to_doc_pipeline()
         docs = file_converter_pipeline.run(file_paths=[file])["documents"]
         
         for doc in docs:
 
             content = doc.content
             clean_content = clean_text(content)
-            
-            if is_english(content):
+
+            '''
+            #if is_english(content):
                logging.info(f"Translating english content...")
-               '''
+               
                #tran_content =  translator.translate(documents=[clean_content])[0]
                tran_content = translate_text(text_source = clean_content, translator_model = translator, translator_tokenizer = tokenizer)
                doc.content = tran_content
@@ -165,6 +164,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--save_dir', type=str, default=os.path.dirname(os.path.dirname(os.path.abspath(__file__))), help='filename to save crawled documents')
     args = parser.parse_args()
+    #requests.delete("http://localhost:9200/*") 
 
     INCLUSION_KEYWORDS = ["sars-cov-2", "covid-19", "covid", "covid19" "koronoios", "koronoioy", "koronaios", "koronaioy",  "pandhmias", "pandhmia", "mikroviaki-antochi", "mask"]
     EXCLUSION_KEYWORDS = ["epidimiologikis-epitirisis", "weekly-report", "covid19-ODIGOS_GIA_TIN_APOMONOSI", "ODIGOS_GIA_TI_DIACHEIRISI_TOY_PENTHOYS_APO_TIN_PANDIMIA_TOY_KORONOIO"]
@@ -218,17 +218,20 @@ if __name__ == '__main__':
                                   output_dir="./")
     
     crawled_docs = []
+    
 
-    for crawler in [ecdc_crawler, eody_crawler, who_crawler, gov_crawler]:
+    for crawler in [eody_crawler, ecdc_crawler, who_crawler, gov_crawler]:
         docs = run_web_crawler(crawler)
         crawled_docs.append(docs)
     
     # save all processed crawled docs in a .json file
-    file_path = os.path.join(args.save_dir, f'crawled_docs_ecdc_en.jsonl')
+    file_path = os.path.join(args.save_dir, f'crawled_docs.jsonl')
     print(f"Saving crawled docs to {file_path}")
 
+    
     crawled_docs = [item for sublist in crawled_docs for item in sublist]
 
+    
     with open(file_path, "a") as fp:
         for doc in tqdm(crawled_docs):
             if type(doc) is not dict:
