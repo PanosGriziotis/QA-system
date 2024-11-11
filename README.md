@@ -142,8 +142,8 @@ curl -X POST http://localhost:8001/rag-query \
             "query": "Πώς μεταδίδεται ο covid-19;", 
             "params": {
                 "BM25Retriever": {"top_k": 10},
-                "DenseRetriever": {"top_k: 10},
-                "ReRanker": {"top_k": 6}, 
+                "DenseRetriever": {"top_k": 10},
+                "Reranker": {"top_k": 6}, 
                 "GenerativeReader": {"max_new_tokens": 150}
             }
         }'
