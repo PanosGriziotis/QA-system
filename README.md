@@ -23,7 +23,7 @@ There are two types of query pipelines available for inferring answers to querie
 
 - **Description:** This query pipeline utilizes an Extractive QA method. The answer is extracted as a span from a single document. The Extractive Reader component is a fine-tuned [multilingual DeBERTaV3](https://huggingface.co/microsoft/mdeberta-v3-base) model on SQuAD V2 and the [COVID-QA-el_small](https://huggingface.co/datasets/panosgriz/COVID-QA-el-small) dataset. 
 
-## Set up steps
+## Requirements
 
 Before you begin, ensure that:
 
@@ -34,6 +34,8 @@ To run the QA system models for inference, you will need:
 
 - A **GPU** with at least 10GB of available memory.
 - **CUDA** version 11.8 or higher.
+
+## Set up steps
 
 1. **Clone this repository.**
 
