@@ -1,7 +1,7 @@
 
 # Description
 
-This repository is part of a project aimed at developing a Greek-language Question-Answering (QA) system for integration with a closed-domain virtual assistant focused on COVID-19, named [Theano](https://aclanthology.org/2021.nlp4posimpact-1.5/)
+This repository is part of a project aimed at developing a Greek-language Question-Answering (QA) system for integration with a closed-domain virtual assistant focused on COVID-19, named [Theano](https://aclanthology.org/2021.nlp4posimpact-1.5/).
 
 The QA system can operate as a standalone application or be accessed via an API for integration into other applications
 
