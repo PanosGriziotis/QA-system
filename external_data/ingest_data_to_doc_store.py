@@ -15,7 +15,7 @@ def ingest_data():
     Call the file-upload endpoint with all the files in the index data folder.
     """ 
     
-    data_dir = f"{os.path.dirname(os.path.abspath(__file__))}/data"
+    data_dir = f"{os.path.dirname(os.path.abspath(__file__))}/data/full_corpus"
     for file in glob.glob(f"{data_dir}/*"):
         logging.info(f"Indexing content in {file} to document store")
         with open(file, "rb") as f:
