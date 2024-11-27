@@ -17,7 +17,7 @@ There are two types of query pipelines available for inferring answers to querie
 
 ### Retrieval-Augmented Generation (RAG) 
 
-- **Description:** This query pipeline utilizes a Retrieval-Augmented Generation (RAG) method. The answer is a free text generated from from retrieved documents. The Generative Reader component is based on the monolingual instruction-following LLM [Meltemi-7B-Instruct-v1.5](https://huggingface.co/ilsp/Meltemi-7B-Instruct-v1.5).
+- **Description:** This query pipeline utilizes a Retrieval-Augmented Generation (RAG) method. The answer is a free text generated from retrieved documents. The Generative Reader component is based on the monolingual instruction-following LLM [Meltemi-7B-Instruct-v1.5](https://huggingface.co/ilsp/Meltemi-7B-Instruct-v1.5).
 
 ### Extractive Question Answering
 
