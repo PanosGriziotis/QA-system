@@ -133,7 +133,7 @@ Access the app in your browser at `http://localhost:8501`
 
 ### Using the QA System's REST API
 
-To query the QA system directly via the REST API, send a POST request. This request will return a complete JSON response, including the answer to your query, retrieved documents, confidence scores, and additional details. Depending on the desired method for inferring the answer to the given query, you can use the corresponding endpoint: rag-query employs a RAG query pipeline, while extractive-query utilizes the extractive QA query pipeline.
+To query the QA system directly via the REST API, send a POST request. This request will return a complete JSON response, including the answer to your query, retrieved documents, confidence scores, and additional details. Depending on the desired method for inferring the answer to the given query, you can use the corresponding endpoint: `rag-query` employs a RAG query pipeline, while `extractive-query` utilizes the extractive QA query pipeline.
 
 Replace the query and parameters as needed. The following example is configured to use the RAG pipeline at `http://localhost:8001/rag-query`:
 
